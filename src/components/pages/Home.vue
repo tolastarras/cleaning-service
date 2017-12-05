@@ -45,8 +45,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.carousel {
-  max-width: 1000px;
-  margin: 0 auto;
-}
 </style>

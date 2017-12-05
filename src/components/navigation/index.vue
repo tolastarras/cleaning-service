@@ -23,8 +23,8 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only" color="primary">
-        <v-btn flat v-for="item in menuItems" :key="item.title" :to="item.link">
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn active-class="my-class" flat v-for="item in menuItems" :key="item.title" :to="item.link" exact>
           {{item.title}}
         </v-btn>
       </v-toolbar-items>
@@ -43,5 +43,22 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped lang="css">
+.my-class {
+  background: none;
+  color: #c62828;
+}
+.my-class:hover {
+  color: blue;
+}
+a {
+  border-right: 2px solid #777;
+}
+a:last-of-type {
+  border-right: none;
+}
+a.btn:hover {
+  background: blue;
+  color: #c62828;
+}
 </style>

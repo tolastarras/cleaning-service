@@ -55,13 +55,7 @@ body {
   height: 1.8em;
   background-color: none;
 }
-a {
-  border-right: 1.2px solid black;
-}
-a:last-of-type {
-  border-right: none;
-}
 .btn--active {
-  background: red;
+  background: blue;
 }
 </style>
