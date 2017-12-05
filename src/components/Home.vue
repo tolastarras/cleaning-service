@@ -1,45 +1,13 @@
 <template>
   <div class="">
-    <v-carousel class="carousel">
-      <v-carousel-item
-        v-for="(item,i) in items"
-        v-bind:key="i"
-        v-bind:src="item.src"
-        transition="fade"
-        reverseTransition="fade"
-      ></v-carousel-item>
-    </v-carousel>
-
+    <app-carousel :items="items"></app-carousel>
     <v-layout column>
       <v-flex xs12>
         <v-container fluid grid-list-md>
           <v-layout row wrap>
-            <v-flex
-              v-bind="{ [`xs${card.flex}`]: true }"
-              v-for="card in cards"
-              :key="card.title"
-            >
-            <h1 align-end>{{card.title}}</h1>
-
-              <v-card>
-                <v-card-media
-                  :src="card.src"
-                  height="200px"
-                >
-                </v-card-media>
-                <v-card-actions class="white">
-                  <v-spacer></v-spacer>
-                  <v-btn icon>
-                    <v-icon>favorite</v-icon>
-                  </v-btn>
-                  <v-btn icon>
-                    <v-icon>bookmark</v-icon>
-                  </v-btn>
-                  <v-btn icon>
-                    <v-icon>share</v-icon>
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
+            <v-flex xs12 sm6 md4 v-for="card in cards" :key="card.title">
+              <h1 align-end>{{card.title}}</h1>
+              <card :src="card.src"></card>
             </v-flex>
           </v-layout>
         </v-container>
@@ -49,8 +17,14 @@
 </template>
 
 <script>
+import AppCarousel from '@/components/Carousel'
+import Card from '@/components/Card'
 export default {
   name: 'Home',
+  components: {
+    AppCarousel,
+    Card
+  },
   data () {
     return {
       items: [
