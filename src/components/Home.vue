@@ -18,14 +18,14 @@ export default {
   data () {
     return {
       items: [
-        {src: '/static/kitchen.jpg'},
-        {src: '/static/kitchen.webp'},
-        {src: '/static/bathroom.webp'}
+        {src: '/static/carousel/kitchen.jpg'},
+        {src: '/static/carousel/kitchen.webp'},
+        {src: '/static/carousel/bathroom.webp'}
       ],
       cards: [
-        { title: 'Pre-fab homes', src: '/static/kitchen.jpg', flex: 12 },
-        { title: 'Favorite road trips', src: '/static/kitchen.jpg', flex: 6 },
-        { title: 'Best airlines', src: '/static/kitchen.jpg', flex: 6 }
+        { title: 'Pre-fab homes', src: '/static/carousel/kitchen.jpg', flex: 12 },
+        { title: 'Favorite road trips', src: '/static/carousel/kitchen.jpg', flex: 6 },
+        { title: 'Best airlines', src: '/static/carousel/kitchen.jpg', flex: 6 }
       ]
     }
   }
@@ -36,5 +36,6 @@ export default {
 <style scoped>
 .carousel {
   max-width: 1000px;
+  margin: 0 auto;
 }
 </style>
