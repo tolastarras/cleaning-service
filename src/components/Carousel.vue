@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-carousel class="carousel">
+  <v-carousel>
     <v-carousel-item
       v-for="(item,i) in items"
       v-bind:key="i"
@@ -17,4 +17,8 @@ export default {
 </script>
 
 <style lang="css">
+/*.carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+}*/
 </style>
