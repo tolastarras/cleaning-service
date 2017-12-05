@@ -8,7 +8,7 @@
         app
       >
         <v-list>
-          <v-list-tile 
+          <v-list-tile
             value="true"
             v-for="(item, i) in menuItems"
             :key="i"
@@ -27,14 +27,10 @@
           <v-layout xs6 col>
             <v-flex xs12></v-flex>
           </v-layout>
-          
+
           <div class="text-xs-center">
             <v-btn outline color="red darken-3">Call us today {{phone}}</v-btn>
           </div>
-  
-          <v-layout xs6 col>
-            <v-flex xs12>social media</v-flex>
-          </v-layout>
         </v-content>
       </div>
       <v-toolbar flat>
