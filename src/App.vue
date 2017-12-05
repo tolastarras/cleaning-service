@@ -1,75 +1,31 @@
 <template>
   <v-app style="background:url(/static/bg.png)">
     <v-container style="max-width:1000px;">
-      <v-navigation-drawer
-        temporary
-        absolute
-        v-model="drawer"
-        app
-      >
-        <v-list>
-          <v-list-tile
-            value="true"
-            v-for="(item, i) in menuItems"
-            :key="i"
-          >
-            <v-list-tile-action>
-              <v-icon v-html="item.icon"></v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title v-text="item.title"></v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
-      <div class="toolbar_extension">
-        <v-content>
-          <v-layout xs6 col>
-            <v-flex xs12></v-flex>
-          </v-layout>
-
-          <div class="text-xs-center">
-            <v-btn outline color="red darken-3">Call us today {{phone}}</v-btn>
-          </div>
-        </v-content>
-      </div>
-      <v-toolbar flat>
-        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
-        <v-toolbar-title v-text="title"></v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-xs-only" color="primary">
-          <v-btn flat v-for="item in menuItems" :key="item.title" :to="item.link">
-            {{item.title}}
-          </v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
+      <app-header :menuItems="menuItems" :title="title" :phone="phone"></app-header>
       <v-content>
         <main>
           <router-view></router-view>
         </main>
       </v-content>
-      <v-footer :fixed="fixed" app>
-        <span>&copy; 2017</span>
-      </v-footer>
+      <app-footer :business="title" :phone="phone"></app-footer>
     </v-container>
   </v-app>
 </template>
 
 <script>
+  import AppHeader from '@/components/navigation'
+  import AppFooter from '@/components/Footer'
   export default {
+    components: {
+      AppHeader,
+      AppFooter
+    },
     data () {
       return {
         phone: '786-212-3780',
         clipped: false,
-        drawer: false,
-        fixed: false,
-        items: [{
-          icon: 'bubble_chart',
-          title: 'Inspire'
-        }],
-        miniVariant: false,
         right: true,
-        title: 'Evevides Logo'
+        title: 'Evevides Quality Cleaning Services'
       }
     },
     computed: {
