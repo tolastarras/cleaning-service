@@ -1,16 +1,15 @@
 <template>
   <v-app>
     <v-navigation-drawer
-      fixed
-      :mini-variant="miniVariant"
-      :clipped="clipped"
+      temporary
+      absolute
       v-model="drawer"
       app
     >
       <v-list>
         <v-list-tile 
           value="true"
-          v-for="(item, i) in items"
+          v-for="(item, i) in menuItems"
           :key="i"
         >
           <v-list-tile-action>
@@ -22,22 +21,30 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed app :clipped-left="clipped">
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>remove</v-icon>
-      </v-btn>
+    <div class="toolbar_extension">
+      <v-content>
+        <v-layout xs6 col>
+          <v-flex xs12></v-flex>
+        </v-layout>
+        
+        <div class="text-xs-center">
+          <v-btn outline color="red darken-3">Call us today {{phone}}</v-btn>
+        </div>
+
+        <v-layout xs6 col>
+          <v-flex xs12>social media</v-flex>
+        </v-layout>
+      </v-content>
+    </div>
+    <v-toolbar flat>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>menu</v-icon>
-      </v-btn>
+      <v-toolbar-items class="hidden-xs-only" color="primary">
+        <v-btn flat v-for="item in menuItems" :key="item.title" :to="item.link">
+          {{item.title}}
+        </v-btn>
+      </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -56,21 +63,6 @@
         </v-slide-y-transition>
       </v-container>
     </v-content>
-    <v-navigation-drawer
-      temporary
-      :right="right"
-      v-model="rightDrawer"
-      fixed
-    >
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
     </v-footer>
@@ -81,8 +73,9 @@
   export default {
     data () {
       return {
+        phone: '786-212-3780',
         clipped: false,
-        drawer: true,
+        drawer: false,
         fixed: false,
         items: [{
           icon: 'bubble_chart',
@@ -90,9 +83,37 @@
         }],
         miniVariant: false,
         right: true,
-        rightDrawer: false,
-        title: 'Vuetify.js'
+        title: 'Evevides Logo'
+      }
+    },
+    computed: {
+      menuItems () {
+        return [
+          {icon: 'bubble_chart', title: 'Home', link: '/'},
+          {icon: 'room', title: 'About Us', link: '/about'},
+          {icon: 'person', title: 'Services', link: '/servies'},
+          {icon: 'person', title: 'Contact', link: '/contact'}
+        ]
       }
     }
   }
 </script>
+
+<style scoped lang="css">
+.theme--light .toolbar {
+  background-color: transparent;
+}
+.toolbar__items {
+  height: 1.8em;
+  background-color: none;
+}
+a {
+  border-right: 1.2px solid black;
+}
+a:last-of-type {
+  border-right: none;
+}
+.btn--active {
+  background: red;
+}
+</style>
