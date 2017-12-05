@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="background:url(/static/bg.png)">
     <v-navigation-drawer
       temporary
       absolute
@@ -87,9 +87,15 @@
   }
 </script>
 
-<style scoped lang="css">
+<style lang="css">
+body {
+  background-image: url('/static/bg.png')
+}
 .theme--light .toolbar {
   background-color: transparent;
+}
+.btn--active {
+  color: red;
 }
 .toolbar__items {
   height: 1.8em;
