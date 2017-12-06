@@ -1,24 +1,27 @@
 <template>
-  <div class="">
-    <app-carousel :items="items"></app-carousel>
+  <v-container>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <app-carousel :items="items"></app-carousel>
+      </v-flex>
+    </v-layout>
     <v-layout column>
       <v-flex xs12>
-        <v-container fluid grid-list-md>
+        <v-container fluid grid-list-md pa-0>
           <v-layout row wrap>
-            <v-flex xs12 sm6 md4 v-for="card in cards" :key="card.title">
-              <h1 align-end>{{card.title}}</h1>
-              <card :src="card.src"></card>
+            <v-flex xs12 md4 v-for="(card, index) in cards" :key="card.title">
+              <card :card="card" :index="index" :total="cards.length"></card>
             </v-flex>
           </v-layout>
         </v-container>
       </v-flex>
     </v-layout>
-  </div>
+  </v-container>
 </template>
 
 <script>
-import AppCarousel from '@/components/Carousel'
-import Card from '@/components/Card'
+import AppCarousel from './Carousel'
+import Card from './Card'
 export default {
   name: 'Home',
   components: {
