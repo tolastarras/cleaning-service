@@ -17,42 +17,18 @@
       </v-flex>
       <v-flex xs12 sm6 text-xs-left>
         <v-card-media :src="src" height="500"></v-card-media>
-        <v-container>
-          <h2>Get a free estimate</h2>
-          <v-card color="blue lighten-5" flat>
-            <v-card-text>
-              <v-container fluid>
-                <v-layout row>
-                  <v-flex xs12>
-                    <v-text-field name="input-1-3" label="Name" single-line></v-text-field>
-                  </v-flex>
-                </v-layout>
-                <v-layout row>
-                  <v-flex xs12>
-                    <v-text-field name="input-1-3" label="Email" single-line></v-text-field>
-                  </v-flex>
-                </v-layout>
-                <v-layout row>
-                  <v-flex xs12>
-                    <v-text-field name="input-1-3" label="Phone" single-line></v-text-field>
-                  </v-flex>
-                </v-layout>
-                <v-layout row>
-                  <v-flex xs12>
-                    <v-text-field name="input-1-3" label="Message" multi-line></v-text-field>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-container>
+        <contact-form title="Get a Free Quote"></contact-form>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import ContactForm from '@/components/shared/ContactForm'
 export default {
+  components: {
+    ContactForm
+  },
   data () {
     return {
       phone: '786-212-3780',
