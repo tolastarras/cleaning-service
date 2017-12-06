@@ -32,7 +32,7 @@ export default {
       { title: 'House Cleaning', src: '/static/pages/house-cleaning.jpg' },
       { title: 'Carpet Cleaning', src: '/static/pages/carpet-cleaning.jpg' },
       { title: 'After Party Cleaning', src: '/static/pages/after-party-cleaning.jpg' },
-      { title: 'Bedroom Cleaning', src: '/static/pages/bedroom-cleaning.jpg' },
+      { title: 'Commercial Cleaning', src: '/static/pages/bedroom-cleaning.jpg' },
       { title: 'Move In/Out Cleaning', src: '/static/pages/move-in-move-out-cleaning.jpg' },
       { title: 'Upholstery Cleaning', src: '/static/pages/house-cleaning.jpg' }
     ]
