@@ -1,38 +1,42 @@
 <template lang="html">
-  <v-container>
-    <h1 class="display-1">{{title}}</h1>
-    <v-card flat>
-      <v-card-text>
-        <v-container fluid>
+  <v-container pa-0 pr-3>
+    <v-layout row wrap>
+      <v-flex xs-12>
+        <h1 class="display-1">{{title}}</h1>
+        <v-container>
           <v-layout row>
             <v-flex xs12>
-              <v-text-field name="input-1-3" label="Name" single-line></v-text-field>
+              <v-text-field name="name" label="Name" single-line></v-text-field>
             </v-flex>
           </v-layout>
           <v-layout row>
             <v-flex xs12>
-              <v-text-field name="input-1-3" label="Email" single-line></v-text-field>
+              <v-text-field name="email" label="Email" single-line></v-text-field>
             </v-flex>
           </v-layout>
           <v-layout row>
             <v-flex xs12>
-              <v-text-field name="input-1-3" label="Phone" single-line></v-text-field>
+              <v-text-field name="phone" label="Phone" single-line></v-text-field>
             </v-flex>
           </v-layout>
           <v-layout row>
             <v-flex xs12>
-              <v-text-field name="input-1-3" label="Message" multi-line></v-text-field>
+              <v-text-field name="message" label="Message" multi-line></v-text-field>
             </v-flex>
           </v-layout>
-          <v-btn color="info" :loading="loading" @click.native="loader = 'loading'" :disabled="loading">
-            Submit
-            <span slot="loader" class="custom-loader">
-              <v-icon light>cached</v-icon>
-            </span>
-          </v-btn>
+          <v-layout row>
+            <v-flex xs-12>
+              <v-btn color="info" :loading="loading" @click.native="loader = 'loading'" :disabled="loading">
+                Submit
+                <span slot="loader" class="custom-loader">
+                  <v-icon light>cached</v-icon>
+                </span>
+              </v-btn>
+            </v-flex>
+          </v-layout>
         </v-container>
-      </v-card-text>
-    </v-card>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
