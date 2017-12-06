@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <v-content>
     <v-navigation-drawer temporary absolute v-model="drawer" app>
       <v-list>
         <v-list-tile value="true" v-for="(item, i) in menuItems" :key="i">
@@ -29,7 +29,7 @@
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
-  </div>
+  </v-content>
 </template>
 
 <script>
