@@ -17,8 +17,7 @@ export default {
 </script>
 
 <style lang="css">
-/*.carousel {
-  max-width: 1000px;
-  margin: 0 auto;
-}*/
+.carousel {
+  border: 4px solid lightgray;
+}
 </style>
