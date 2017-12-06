@@ -52,7 +52,7 @@ h1, h2 {
   max-width: 1200px;
 }
 .content {
-  background: white;
+  /*background: white;*/
 }
 .theme--light .toolbar {
   background-color: transparent;
