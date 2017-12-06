@@ -1,13 +1,17 @@
 <template>
   <v-app>
     <v-container class="container">
-      <app-header :menuItems="menuItems" :title="title" :phone="phone"></app-header>
-      <v-content>
-        <main>
-          <router-view></router-view>
-        </main>
-      </v-content>
-      <app-footer :business="title" :phone="phone"></app-footer>
+      <v-layout>
+        <v-flex xs-12>
+          <app-header :menuItems="menuItems" :title="title" :phone="phone"></app-header>
+          <v-content>
+            <main>
+              <router-view></router-view>
+            </main>
+          </v-content>
+          <app-footer :business="title" :phone="phone"></app-footer>
+        </v-flex>
+      </v-layout>
     </v-container>
   </v-app>
 </template>
