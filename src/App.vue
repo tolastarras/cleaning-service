@@ -1,6 +1,6 @@
 <template>
-  <v-app style="background:url(/static/bg.png)">
-    <v-container style="max-width:1000px;">
+  <v-app>
+    <v-container class="container">
       <app-header :menuItems="menuItems" :title="title" :phone="phone"></app-header>
       <v-content>
         <main>
@@ -42,8 +42,17 @@
 </script>
 
 <style lang="css">
-body {
-  background-image: url('/static/bg.png')
+h1, h2 {
+  color: #555
+}
+.application.theme--light {
+  background: url(/static/bg.png) repeat
+}
+.container {
+  max-width: 1200px;
+}
+.content {
+  background: white;
 }
 .theme--light .toolbar {
   background-color: transparent;
