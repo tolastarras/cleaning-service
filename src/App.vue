@@ -33,7 +33,7 @@
         return [
           {icon: 'bubble_chart', title: 'Home', link: '/'},
           {icon: 'room', title: 'About Us', link: '/about'},
-          {icon: 'person', title: 'Services', link: '/servies'},
+          {icon: 'person', title: 'Services', link: '/services'},
           {icon: 'person', title: 'Contact', link: '/contact'}
         ]
       }

@@ -59,7 +59,7 @@ export default {
       title: 'Evevides Quality Cleaning Services',
       src: '/static/pages/room.webp'
     }
-  },
+  }
 }
 </script>
 
