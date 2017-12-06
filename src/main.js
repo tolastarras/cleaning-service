@@ -8,6 +8,8 @@ import 'vuetify/dist/vuetify.css'
 import App from './App'
 import router from './router'
 
+import 'font-awesome/css/font-awesome.min.css'
+
 Vue.use(Vuetify)
 
 Vue.config.productionTip = false

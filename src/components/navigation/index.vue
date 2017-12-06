@@ -13,11 +13,16 @@
       </v-list>
     </v-navigation-drawer>
     <div class="toolbar_extension">
-      <v-content>
-        <div class="text-xs-center">
-          <v-btn outline color="red darken-3">Call us today {{phone}}</v-btn>
-        </div>
-      </v-content>
+      <v-container>
+        <v-layout row>
+          <v-flex xs-12 md-6 text-xs-center text-md-center>
+            <v-btn outline color="red darken-3">Call us today {{phone}}</v-btn>
+          </v-flex>
+          <v-flex xs-12 md1 text-xs-center text-md-right>
+            <social-media></social-media>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </div>
     <v-toolbar flat>
       <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
@@ -33,8 +38,10 @@
 </template>
 
 <script>
+import SocialMedia from '@/components/shared/SocialMedia'
 export default {
   props: ['menuItems', 'title', 'phone'],
+  components: { SocialMedia },
   data () {
     return {
       drawer: false
