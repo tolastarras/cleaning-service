@@ -49,6 +49,9 @@
 h1, h2 {
   color: #555
 }
+.application {
+  /*font-family: 'courier new', 'sans-serif';*/
+}
 .application.theme--light {
   background: url(/static/bg.png) repeat
 }
