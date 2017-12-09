@@ -29,9 +29,9 @@
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn :ripple="false" active-class="my-class" flat v-for="item in menuItems" :key="item.title" :to="item.link" exact>
+        <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
           {{item.title}}
-        </v-btn>
+        </router-link>
       </v-toolbar-items>
     </v-toolbar>
   </v-content>
@@ -44,6 +44,7 @@ export default {
   components: { SocialMedia },
   data () {
     return {
+      path: this.$route.path,
       drawer: false
     }
   }
@@ -51,17 +52,25 @@ export default {
 </script>
 
 <style scoped lang="css">
-.my-class {
-  background-color: none;
+.menuItem {
+  color: #555;
+  width: 7em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
+  height: 2em;
+  line-height: 2em;
+  font-weight: bold;
+}
+.menuItem:hover {
   color: #c62828;
 }
-.my-class:hover {
-  color: blue;
-  background-color: none;
+.router-link-exact-active {
+  color: #c62828;
 }
 a {
   border-right: 2px solid #777;
-  color: #333;
 }
 a:last-of-type {
   border-right: none;

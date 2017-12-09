@@ -35,10 +35,10 @@
     computed: {
       menuItems () {
         return [
-          {icon: 'bubble_chart', title: 'Home', link: '/'},
-          {icon: 'room', title: 'About Us', link: '/about'},
-          {icon: 'person', title: 'Services', link: '/services'},
-          {icon: 'person', title: 'Contact', link: '/contact'}
+          {icon: 'bubble_chart', title: 'Home', url: '/'},
+          {icon: 'room', title: 'About Us', url: '/about'},
+          {icon: 'person', title: 'Services', url: '/services'},
+          {icon: 'person', title: 'Contact', url: '/contact'}
         ]
       }
     }
