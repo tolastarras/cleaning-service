@@ -52,6 +52,7 @@ h1, h2 {
 .display-1 {
   text-transform: uppercase;
   letter-spacing: -2px;
+  font-weight: bold;
 }
 .application {
   /*font-family: 'courier new', 'sans-serif';*/

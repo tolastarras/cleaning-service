@@ -48,9 +48,6 @@ export default {
 </script>
 
 <style scoped lang="css">
-.display-1 {
-  font-weight: bold;
-}
 /*.slide-enter-active, .slide-leave-active {
   transition: all .5s;
   overflow-y: hidden;

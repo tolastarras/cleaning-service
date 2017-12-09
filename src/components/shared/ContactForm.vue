@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container pa-0 ma-0 mr-3>
+  <v-container pa-0 ma-0>
     <v-layout row wrap>
       <v-flex xs-12>
         <h1 class="display-1">{{title}}</h1>
@@ -27,7 +27,7 @@
           <v-layout row>
             <v-flex xs-12>
               <v-btn color="info" :loading="loading" @click.native="loader = 'loading'" :disabled="loading">
-                Submit
+                Send
                 <span slot="loader" class="custom-loader">
                   <v-icon light>cached</v-icon>
                 </span>
