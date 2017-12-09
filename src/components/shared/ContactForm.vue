@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container pa-0 pr-3>
+  <v-container pa-0 ma-0 mr-3>
     <v-layout row wrap>
       <v-flex xs-12>
         <h1 class="display-1">{{title}}</h1>

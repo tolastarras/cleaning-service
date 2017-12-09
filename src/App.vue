@@ -49,6 +49,10 @@
 h1, h2 {
   color: #555
 }
+.display-1 {
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
 .application {
   /*font-family: 'courier new', 'sans-serif';*/
 }
