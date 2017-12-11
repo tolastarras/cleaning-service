@@ -1,0 +1,11 @@
+{
+  "business": {
+    "name": "Evevides Quality Cleaning Services",
+    "address": "123 Apple Street, 2nd Floor <br>Miami, FL 33185",
+    "phone": "786-212-3780",
+    "city": "Miami",
+    "email": "evevides@gmail.com",
+    "since": 2015,
+    "serving": "Kendall"
+  }
+}

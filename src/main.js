@@ -7,6 +7,9 @@ import 'vuetify/dist/vuetify.css'
 
 import App from './App'
 import router from './router'
+import {store} from './store'
+
+import data from './data'
 
 import 'font-awesome/css/font-awesome.min.css'
 
@@ -18,6 +21,10 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  created () {
+    this.$store.dispatch('fetchData', data)
+  }
 })

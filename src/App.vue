@@ -3,13 +3,13 @@
     <v-container class="container">
       <v-layout>
         <v-flex xs-12>
-          <app-header :menuItems="menuItems" :title="title" :phone="phone"></app-header>
+          <app-header :menuItems="menuItems"></app-header>
           <v-content>
             <main>
               <router-view></router-view>
             </main>
           </v-content>
-          <app-footer :business="title" :phone="phone"></app-footer>
+          <app-footer></app-footer>
         </v-flex>
       </v-layout>
     </v-container>
@@ -26,10 +26,8 @@
     },
     data () {
       return {
-        phone: '786-212-3780',
         clipped: false,
-        right: true,
-        title: 'Evevides Quality Cleaning Services'
+        right: true
       }
     },
     computed: {

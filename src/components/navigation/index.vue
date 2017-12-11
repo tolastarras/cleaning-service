@@ -16,7 +16,7 @@
       <v-container>
         <v-layout row>
           <v-flex xs-12 md-6 text-xs-center text-md-center>
-            <v-btn outline color="red darken-3">Call us today {{phone}}</v-btn>
+            <v-btn outline color="red darken-3">Call us today {{ business.phone }}</v-btn>
           </v-flex>
           <v-flex xs-12 md1 text-xs-center text-md-right>
             <social-media></social-media>
@@ -26,7 +26,7 @@
     </div>
     <v-toolbar flat>
       <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <v-toolbar-title v-text="business.name"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
         <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
@@ -40,11 +40,12 @@
 <script>
 import SocialMedia from '@/components/shared/SocialMedia'
 export default {
-  props: ['menuItems', 'title', 'phone'],
+  props: ['menuItems', 'name'],
   components: { SocialMedia },
   data () {
     return {
       path: this.$route.path,
+      business: this.$store.getters.business,
       drawer: false
     }
   }

@@ -4,13 +4,13 @@
     <v-container>
       <v-layout row wrap>
         <v-flex text-xs-center text-sm-left order-xs3 order-sm1 pt-2>
-          <span class="caption">&copy; 2017 by {{ business }}</span>
+          <span class="caption">&copy; 2017 by {{ business.name }}. All Rights Reserved.</span>
           <v-spacer></v-spacer>
         </v-flex>
         <v-flex text-xs-center text-sm-right order-xs1 order-sm2>
           <span class="headline text--red darken-3">
             <b>Call for a free estimate</b>
-            <a :href="phoneLink" class="xs-only d-block">{{ phone }}</a>
+            <a :href="phoneLink" class="xs-only d-block">{{ business.phone }}</a>
           </span>
         </v-flex>
       </v-layout>
@@ -20,15 +20,15 @@
 
 <script>
 export default {
-  props: ['business', 'phone'],
   data () {
     return {
+      business: this.$store.getters.business,
       fixed: false
     }
   },
   computed: {
     phoneLink () {
-      return 'tel:' + this.phone
+      return 'tel:' + this.business.phone
     }
   }
 }
