@@ -1,6 +1,5 @@
 <template lang="html">
-  <v-footer :fixed="fixed" class="footer ma-0 pa-0">
-    <hr>
+  <v-footer :fixed="false" class="footer ma-0 pa-0">
     <v-container>
       <v-layout row wrap>
         <v-flex text-xs-center text-sm-left order-xs3 order-sm1 pt-2>
@@ -22,8 +21,7 @@
 export default {
   data () {
     return {
-      business: this.$store.getters.business,
-      fixed: false
+      business: this.$store.getters.business
     }
   },
   computed: {

@@ -4,7 +4,7 @@
       <v-layout>
         <v-flex xs-12>
           <app-header :menuItems="menuItems"></app-header>
-          <v-content>
+          <v-content class="pa-2">
             <main>
               <router-view></router-view>
             </main>
@@ -45,7 +45,8 @@
 
 <style lang="css">
 h1, h2 {
-  color: #555
+  color: #555;
+  padding-bottom: .5em;
 }
 .display-1 {
   text-transform: uppercase;
@@ -59,7 +60,7 @@ h1, h2 {
   background: url(/static/bg.png) repeat
 }
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
 }
 .content {
   /*background: white;*/
