@@ -1,5 +1,6 @@
 <template lang="html">
   <v-container pa-0 pl-3>
+    <h1 class="display-1">{{title}}</h1>
     <v-layout row wrap>
       <v-flex xs12 class="mb-5" v-for="(testimonial, i) in testimonials" :key="i">
         <div class="testimonial-quote group">
@@ -19,6 +20,7 @@
 
 <script>
 export default {
+  props: ['title'],
   data: () => ({
     testimonials: [
       {
@@ -40,6 +42,13 @@ export default {
         client: {
           name: 'Anonymous',
           city: 'Kendale Lakes'
+        }
+      },
+      {
+        quote: 'Overall, fantastic! I\'d recommend them to anyone looking for a creative, thoughtful, and professional team.”',
+        client: {
+          name: 'Ellie',
+          city: 'Three Lakes'
         }
       }
     ]
