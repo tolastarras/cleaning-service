@@ -48,6 +48,9 @@ h1, h2 {
   color: #555;
   padding-bottom: .5em;
 }
+.card__media__content {
+  border: 5px solid lightgray;
+}
 .display-1 {
   text-transform: uppercase;
   letter-spacing: -2px;
