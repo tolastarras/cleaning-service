@@ -3,7 +3,7 @@
     <h1 class="display-1 pb-4 blue--text">Services</h1>
     <v-layout row wrap>
       <v-flex xs12 sm6 md4 pr-4 pb-4 v-for="card in cards" :key="card.title">
-        <v-card class="elevation-1" style="height: 420px" @mouseover="toggle(card)" @mouseout="toggle(card)">
+        <v-card class="my-3" hover style="height: 420px" @mouseover="toggle(card)" @mouseout="toggle(card)">
           <transition name="slide">
             <div>
               <v-card-media height="200" v-show="card.show" :src="card.src"></v-card-media>
