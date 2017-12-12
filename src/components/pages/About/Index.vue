@@ -69,7 +69,4 @@ export default {
 </script>
 
 <style lang="css">
-.card__media__content {
-  border: 5px solid lightgray;
-}
 </style>
