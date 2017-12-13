@@ -3,15 +3,15 @@
     <v-footer :fixed="false" color="blue darken-3 white--text">
       <v-container>
         <v-layout row wrap justify-space-around>
-          <v-flex class="contact-info" xs12 md4 justify-center>
+          <v-flex class="contact-info" xs12 md3 justify-center>
             <h1 class="title white--text">Email</h1>
             <div v-text="business.email"></div>
           </v-flex>
-          <v-flex class="contact-info" xs12 md4>
+          <v-flex class="contact-info" xs12 md3>
             <h1 class="title white--text">Hours</h1>
             <div v-html="business.hours"></div>
           </v-flex>
-          <v-flex class="contact-info" xs12 md4>
+          <v-flex class="contact-info" xs12 md3>
             <h1 class="title white--text">Location</h1>
             <div v-html="business.address"></div>
           </v-flex>
@@ -76,5 +76,8 @@ a:hover {
 }
 .contact-info {
   padding: 2em;
+}
+.container {
+  margin: 0 auto;
 }
 </style>

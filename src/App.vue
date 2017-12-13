@@ -9,10 +9,10 @@
               <router-view></router-view>
             </main>
           </v-content>
-          <app-footer></app-footer>
         </v-flex>
       </v-layout>
     </v-container>
+    <app-footer></app-footer>
   </v-app>
 </template>
 
