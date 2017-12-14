@@ -24,9 +24,9 @@
         </v-layout>
       </v-container>
     </div> -->
-    <v-toolbar flat class="white--text" style="padding: 1em 0">
+    <v-toolbar flat class="sticky white--text" style="padding: 1em 0">
       <v-layout row wrap style="max-width:1200px;margin: 0 auto">
-        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up white--text" style="border: 1px solid white; border-radius: 4px;"></v-toolbar-side-icon>
         <v-toolbar-title v-text="business.name"></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-xs-only">
@@ -36,7 +36,7 @@
         </v-toolbar-items>
       </v-layout>
     </v-toolbar>
-    <v-parallax src="/static/carousel/kitchen.jpg">
+    <v-parallax src="/static/carousel/kitchen.jpg" style="margin-top:6em;">
     <v-layout column align-center justify-center>
       <h1 class="white--text">Vuetify.js</h1>
       <h4 class="white--text">Build your application today!</h4>
@@ -61,6 +61,12 @@ export default {
 </script>
 
 <style scoped lang="css">
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
 .toolbar {
   background: black;
 }
