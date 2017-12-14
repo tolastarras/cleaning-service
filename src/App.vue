@@ -1,9 +1,9 @@
 <template>
   <v-app>
+    <app-header :menuItems="menuItems"></app-header>
     <v-container class="container">
       <v-layout>
         <v-flex xs-12>
-          <app-header :menuItems="menuItems"></app-header>
           <v-content class="pa-2">
             <main>
               <router-view></router-view>
@@ -63,7 +63,7 @@ h1, h2 {
   background: url(/static/bg.png) repeat
 }
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
 }
 .content {
   /*background: white;*/

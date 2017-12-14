@@ -12,7 +12,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <div class="toolbar_extension">
+    <!-- <div class="toolbar_extension">
       <v-container>
         <v-layout row>
           <v-flex xs-12 md-6 text-xs-center text-md-center>
@@ -23,17 +23,25 @@
           </v-flex>
         </v-layout>
       </v-container>
-    </div>
-    <v-toolbar flat>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
-      <v-toolbar-title v-text="business.name"></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
-        <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
-          {{item.title}}
-        </router-link>
-      </v-toolbar-items>
+    </div> -->
+    <v-toolbar flat class="white--text" style="padding: 1em 0">
+      <v-layout row wrap style="max-width:1200px;margin: 0 auto">
+        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
+        <v-toolbar-title v-text="business.name"></v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-xs-only">
+          <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
+            {{item.title}}
+          </router-link>
+        </v-toolbar-items>
+      </v-layout>
     </v-toolbar>
+    <v-parallax src="/static/carousel/kitchen.jpg">
+    <v-layout column align-center justify-center>
+      <h1 class="white--text">Vuetify.js</h1>
+      <h4 class="white--text">Build your application today!</h4>
+    </v-layout>
+  </v-parallax>
   </v-content>
 </template>
 
@@ -53,9 +61,16 @@ export default {
 </script>
 
 <style scoped lang="css">
+.toolbar {
+  background: black;
+}
+.toolbar__content {
+  color: white;
+  max-width: 1200px;
+  padding: 4em 0;
+}
 .menuItem {
-  color: #555;
-  width: 7em;
+  color: white;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -63,15 +78,16 @@ export default {
   height: 2em;
   line-height: 2em;
   font-weight: bold;
+  padding: 0 1.5em;
 }
 .menuItem:hover {
-  color: #c62828;
+  color: gray;
 }
 .router-link-exact-active {
-  color: #c62828;
+  color: gray;
 }
 a {
-  border-right: 2px solid #777;
+  border-right: 1px solid white;
 }
 a:last-of-type {
   border-right: none;
