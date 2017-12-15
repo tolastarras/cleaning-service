@@ -43,13 +43,6 @@ export default {
           name: 'Anonymous',
           city: 'Kendale Lakes'
         }
-      },
-      {
-        quote: 'Overall, fantastic! I\'d recommend them to anyone looking for a creative, thoughtful, and professional team.”',
-        client: {
-          name: 'Ellie',
-          city: 'Three Lakes'
-        }
       }
     ]
   })
