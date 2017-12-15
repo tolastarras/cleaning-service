@@ -102,8 +102,6 @@ export default {
   text-decoration: none;
   vertical-align: middle;
   display: inline-block;
-  /*height: 2em;*/
-  /*line-height: 2em;*/
   font-weight: bold;
   padding: 0 1.5em;
 }
@@ -132,13 +130,6 @@ export default {
 }
 .toolbar.sticky a.menuItem {
   font-size: 1em;
-}
-.toolbar__content {
-  /*max-width: 1200px;*/
-  /*padding: 2em 0;*/
-}
-.toolbar__items {
-  /*text-align: right;*/
 }
 .router-link-exact-active {
   color: gray;

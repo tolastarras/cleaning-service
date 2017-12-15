@@ -1,14 +1,11 @@
 <template>
   <v-container>
-    <v-layout row wrap>
+    <v-layout column>
       <v-flex xs12>
-        <div class="" style="margin-top:6em;">
-
-        </div>
         <app-carousel :items="items"></app-carousel>
       </v-flex>
     </v-layout>
-    <v-layout column>
+    <v-layout column style="margin-top:33em;">
       <v-flex xs12>
         <v-container fluid grid-list-md pa-0>
           <v-layout row wrap>
@@ -51,4 +48,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contenido {
+  position: relative;
+}
 </style>
