@@ -38,7 +38,7 @@
           <v-layout row wrap>
             <v-flex d-flex xs12 pl-4 pb-5 order-x2>
               <v-card flat light>
-                <v-card-media :src="src" height="400"></v-card-media>
+                <v-card-media :src="src" height="600"></v-card-media>
               </v-card>
             </v-flex>
             <v-flex order-xs4 pl-4 pb-0>
@@ -63,7 +63,7 @@ export default {
   },
   data () {
     return {
-      src: '/static/pages/room.webp',
+      src: '/static/content/about.png',
       business: this.$store.getters.business
     }
   }

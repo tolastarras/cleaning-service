@@ -2,6 +2,9 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12>
+        <div class="" style="margin-top:6em;">
+
+        </div>
         <app-carousel :items="items"></app-carousel>
       </v-flex>
     </v-layout>

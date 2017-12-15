@@ -16,7 +16,7 @@
         <v-layout row wrap>
           <v-flex d-flex xs12 pl-4 pt-4>
             <v-card flat light>
-              <v-card-media :src="src" height="400"></v-card-media>
+              <v-card-media :src="src" height="500"></v-card-media>
             </v-card>
           </v-flex>
         </v-layout>
@@ -33,7 +33,7 @@ export default {
   },
   data () {
     return {
-      src: '/static/pages/flowers.webp',
+      src: '/static/temp/contact4.jpg',
       business: this.$store.getters.business
     }
   }
