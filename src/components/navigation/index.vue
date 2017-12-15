@@ -59,17 +59,17 @@ export default {
         'about': {
           title: 'About Page',
           subtitle: 'ABOUT PAGE SUBTITLE',
-          src: '/static/carousel/kitchen.webp'
+          src: '/static/pages/living_room.jpg'
         },
         'services': {
           title: 'Services Page',
           subtitle: 'SERVICES PAGE SUBTITLE',
-          src: '/static/carousel/bathroom.webp'
+          src: '/static/pages/living2.jpg'
         },
         'contact': {
-          title: 'Contact Page',
-          subtitle: 'CONTACT PAGE SUBTITLE',
-          src: '/static/carousel/bedroom.webp'
+          title: 'We want to hear from you!',
+          subtitle: 'GIVE US A CALL, EMAIL US OR USE OUR MESSAGE FORM',
+          src: '/static/pages/office.jpg'
         }
       }
 

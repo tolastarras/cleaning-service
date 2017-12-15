@@ -1,8 +1,9 @@
 <template lang="html">
   <v-parallax :src="data.src" v-if="data.src">
     <v-layout column align-center justify-center>
-      <h1 class="white--text">{{ data.title }}</h1>
-      <h4 class="white--text">{{ data.subtitle }}</h4>
+      <h2 class="white--text">{{ data.title }}</h2>
+      <h1 class="white--text">{{ data.subtitle }}</h1>
+      <v-btn dark color="blue darken-4">SAME SOMETHING</v-btn>
     </v-layout>
   </v-parallax>
 </template>
@@ -15,7 +16,11 @@ export default {
 
 <style scoped lang="css">
   .parallax {
-    /*width: 100%;*/
-    height: 600px;
+    height: 800px;
+  }
+  .parallax__image {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    transform: translate(0, 500px);
   }
 </style>
