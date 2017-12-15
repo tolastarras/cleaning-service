@@ -72,7 +72,7 @@ h1 {
     margin: 0;
     position: relative;
     text-shadow: 0 1px white;
-    z-index: 600;
+    z-index: 1;
 }
 .testimonial-quote blockquote * {
     box-sizing: border-box;

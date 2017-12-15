@@ -24,7 +24,7 @@
         </v-layout>
       </v-container>
     </div> -->
-    <v-toolbar flat class="sticky white--text" style="padding: 1em 0">
+    <v-toolbar flat v-bind:class="{standard: !scrolled, sticky: scrolled}" class="white--text">
       <v-layout row wrap style="max-width:1200px;margin: 0 auto">
         <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up white--text" style="border: 1px solid white; border-radius: 4px;"></v-toolbar-side-icon>
         <v-toolbar-title v-text="business.name"></v-toolbar-title>
@@ -48,6 +48,7 @@ export default {
   components: { SocialMedia, Parallax },
   data () {
     return {
+      scrolled: false,
       path: this.$route.path,
       business: this.$store.getters.business,
       drawer: false
@@ -74,41 +75,70 @@ export default {
       }
 
       let page = this.$route.path.replace('/', '')
-      console.log('PAGE', page)
       return items[`${page}`]
     }
+  },
+  methods: {
+    handleScroll () {
+      this.scrolled = window.scrollY > 0
+
+      console.log('scrolled', this.scrolled)
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
 
 <style scoped lang="css">
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-.toolbar {
-  background: black;
-}
-.toolbar__content {
-  color: white;
-  /*max-width: 1200px;*/
-  padding: 4em 0;
-}
 .menuItem {
   color: white;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   vertical-align: middle;
-  height: 2em;
-  line-height: 2em;
+  display: inline-block;
+  /*height: 2em;*/
+  /*line-height: 2em;*/
   font-weight: bold;
   padding: 0 1.5em;
 }
+.menuItem:last-of-type {
+  padding: 0 0 0 1.5em;
+}
 .menuItem:hover {
   color: gray;
+}
+.toolbar__content {
+  height: 40px;
+}
+.toolbar.standard {
+  background-color: rgba(0, 0 , 0, 0.2);
+  position: absolute;
+  z-index: 2;
+  padding: 1em 0;
+}
+.toolbar.sticky {
+  position: fixed;
+  background-color: black;
+  z-index: 2;
+}
+.toolbar.standard a.menuItem {
+  font-size: 1.2em;
+}
+.toolbar.sticky a.menuItem {
+  font-size: 1em;
+}
+.toolbar__content {
+  /*max-width: 1200px;*/
+  /*padding: 2em 0;*/
+}
+.toolbar__items {
+  /*text-align: right;*/
 }
 .router-link-exact-active {
   color: gray;
