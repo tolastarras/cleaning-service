@@ -6,6 +6,7 @@ import Vuetify from 'vuetify'
 // components
 import App from './App'
 import Alert from './components/shared/Alert'
+import Parallax from './components/shared/Parallax'
 
 import router from './router'
 import {store} from './store'
@@ -19,6 +20,7 @@ Vue.use(Vuetify)
 
 // register components
 Vue.component('app-alert', Alert)
+Vue.component('parallax', Parallax)
 
 Vue.config.productionTip = false
 

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-layout row wrap>
-      <v-flex xs12>
+      <v-flex xs12 mt-5>
         <app-carousel :items="items"></app-carousel>
       </v-flex>
     </v-layout>
