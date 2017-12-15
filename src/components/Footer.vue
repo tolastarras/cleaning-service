@@ -22,7 +22,8 @@
       <v-container>
         <v-layout row wrap>
           <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-2>
-            <span class="caption">&copy; 2017 by {{ business.name }}. All Rights Reserved.</span>
+            <div class="caption">&copy; Copyright 2017 - {{ business.name }}. - All Rights Reserved.</div>
+            <div class="built-by"><strong>Built by Nuriki Software</strong></div>
             <v-spacer></v-spacer>
           </v-flex>
           <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>
@@ -79,5 +80,8 @@ a:hover {
 }
 .container {
   margin: 0 auto;
+}
+.built-by {
+  margin-left: 2px;
 }
 </style>
