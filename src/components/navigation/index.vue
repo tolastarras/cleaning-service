@@ -36,25 +36,46 @@
         </v-toolbar-items>
       </v-layout>
     </v-toolbar>
-    <v-parallax src="/static/carousel/kitchen.jpg" style="margin-top:6em;">
-    <v-layout column align-center justify-center>
-      <h1 class="white--text">Vuetify.js</h1>
-      <h4 class="white--text">Build your application today!</h4>
-    </v-layout>
-  </v-parallax>
+    <parallax v-if="parallaxData" :data="parallaxData"></parallax>
   </v-content>
 </template>
 
 <script>
 import SocialMedia from '@/components/shared/SocialMedia'
+import Parallax from '@/components/shared/Parallax'
 export default {
   props: ['menuItems', 'name'],
-  components: { SocialMedia },
+  components: { SocialMedia, Parallax },
   data () {
     return {
       path: this.$route.path,
       business: this.$store.getters.business,
       drawer: false
+    }
+  },
+  computed: {
+    parallaxData () {
+      let items = {
+        'about': {
+          title: 'About Page',
+          subtitle: 'ABOUT PAGE SUBTITLE',
+          src: '/static/carousel/kitchen.webp'
+        },
+        'services': {
+          title: 'Services Page',
+          subtitle: 'SERVICES PAGE SUBTITLE',
+          src: '/static/carousel/bathroom.webp'
+        },
+        'contact': {
+          title: 'Contact Page',
+          subtitle: 'CONTACT PAGE SUBTITLE',
+          src: '/static/carousel/bedroom.webp'
+        }
+      }
+
+      let page = this.$route.path.replace('/', '')
+      console.log('PAGE', page)
+      return items[`${page}`]
     }
   }
 }
@@ -72,7 +93,7 @@ export default {
 }
 .toolbar__content {
   color: white;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   padding: 4em 0;
 }
 .menuItem {

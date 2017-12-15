@@ -5,9 +5,7 @@
       <v-layout>
         <v-flex xs-12>
           <v-content class="pa-2">
-            <main>
-              <router-view></router-view>
-            </main>
+            <router-view></router-view>
           </v-content>
         </v-flex>
       </v-layout>
@@ -62,7 +60,7 @@ h1, h2 {
 .application.theme--light {
   background: url(/static/bg.png) repeat
 }
-.container {
+.main-content {
   max-width: 1200px;
 }
 .content {
