@@ -1,12 +1,5 @@
 <template lang="html">
   <v-container fluid grid-list-md>
-    <v-parallax src="/static/carousel/kitchen.webp" height="300">
-      <v-layout column align-center justify-center>
-        <h1 class="blue--text">We want to hear from you!</h1>
-        <h1 class="display-1 white--text">Give us a call, email us or use our quoting form!</h1>
-        <v-btn dark color="blue">Get a quote</v-btn>
-      </v-layout>
-    </v-parallax>
     <v-layout row wrap>
       <v-flex xs12 md7>
         <v-layout row wrap>

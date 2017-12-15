@@ -66,6 +66,9 @@ h1, h2 {
 .content {
   /*background: white;*/
 }
+.container {
+  max-width: 1200px;
+}
 .theme--light .toolbar {
   background-color: transparent;
 }
