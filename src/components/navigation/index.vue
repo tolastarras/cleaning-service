@@ -26,10 +26,10 @@
     </div> -->
     <v-toolbar flat v-bind:class="{standard: !scrolled, sticky: scrolled}" class="white--text">
       <v-layout row wrap style="max-width:1200px;margin: 0 auto">
-        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up white--text" style="border: 1px solid white; border-radius: 4px;"></v-toolbar-side-icon>
-        <v-toolbar-title><img src="/static/logo.svg" height="40" :alt="business.name"/></v-toolbar-title>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text" style="border: 1px solid white; border-radius: 4px;"></v-toolbar-side-icon>
+        <v-toolbar-title><img src="/static/logo.svg" :alt="business.name"/></v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-xs-only">
+        <v-toolbar-items class="hidden-sm-and-down">
           <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
             {{item.title}}
           </router-link>
@@ -81,8 +81,6 @@ export default {
   methods: {
     handleScroll () {
       this.scrolled = window.scrollY > 0
-
-      console.log('scrolled', this.scrolled)
     }
   },
   created () {
@@ -95,6 +93,11 @@ export default {
 </script>
 
 <style scoped lang="css">
+img {
+  height: 64px;
+  position: absolute;
+  top: .8em;
+}
 .menuItem {
   color: white;
   text-align: center;
@@ -106,24 +109,34 @@ export default {
   padding: 0 1.5em;
 }
 .menuItem:last-of-type {
-  padding: 0 0 0 1.5em;
+  /* padding: 0 0 0 1.5em; */
 }
 .menuItem:hover {
   color: gray;
 }
 .toolbar__content {
-  height: 40px;
+  /* height: 40px; */
+}
+.toolbar {
+  /* padding: 1em 0; */
 }
 .toolbar.standard {
   background-color: rgba(0, 0 , 0, 0.2);
   position: absolute;
   z-index: 2;
-  padding: 1em 0;
+  height: 7em;
+  padding-top: 1em;
+  /* padding: 1em 0; */
 }
 .toolbar.sticky {
   position: fixed;
   background-color: black;
   z-index: 2;
+  height: 4.5em;
+}
+.toolbar.sticky img {
+  top: .6em;
+  height: 40px;
 }
 .toolbar.standard a.menuItem {
   font-size: 1.2em;
