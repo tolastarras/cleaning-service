@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <app-header :menuItems="menuItems"></app-header>
-    <v-container class="container">
+    <v-container style="max-width: 1200px;">
       <v-layout>
         <v-flex xs-12>
           <v-content class="pa-2">
@@ -66,9 +66,6 @@ h1, h2 {
 .content {
   /*background: white;*/
 }
-.container {
-  max-width: 1200px;
-}
 .theme--light .toolbar {
   background-color: transparent;
 }
@@ -81,5 +78,8 @@ h1, h2 {
 }
 .btn--active {
   background: blue;
+}
+.parallax__image {
+  transform: translate(-50%, 50px) !important;
 }
 </style>

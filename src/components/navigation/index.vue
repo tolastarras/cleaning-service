@@ -99,7 +99,7 @@ img {
   top: .8em;
 }
 .menuItem {
-  color: white;
+  color: lightgray;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -108,25 +108,15 @@ img {
   font-weight: bold;
   padding: 0 1.5em;
 }
-.menuItem:last-of-type {
-  /* padding: 0 0 0 1.5em; */
-}
 .menuItem:hover {
-  color: gray;
-}
-.toolbar__content {
-  /* height: 40px; */
-}
-.toolbar {
-  /* padding: 1em 0; */
+  color: white;
 }
 .toolbar.standard {
   background-color: rgba(0, 0 , 0, 0.2);
   position: absolute;
   z-index: 2;
   height: 7em;
-  padding-top: 1em;
-  /* padding: 1em 0; */
+  padding-top: 1.2em;
 }
 .toolbar.sticky {
   position: fixed;
@@ -145,7 +135,10 @@ img {
   font-size: 1em;
 }
 .router-link-exact-active {
-  color: gray;
+  color: white;
+}
+.router-link-exact-active:hover {
+  cursor: default;
 }
 a {
   border-right: 1px solid white;
