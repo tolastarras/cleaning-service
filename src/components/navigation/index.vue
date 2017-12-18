@@ -120,7 +120,7 @@ img {
 }
 .toolbar.sticky {
   position: fixed;
-  background-color: black;
+  background-color: #111;
   z-index: 2;
   height: 4.5em;
 }
