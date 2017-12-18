@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="">
-    <v-footer :fixed="false" color="blue darken-3 white--text">
+    <v-footer :fixed="false" class="top-footer" color="white--text">
       <v-container>
         <v-layout row wrap justify-space-around>
           <v-flex class="contact-info" xs12 md3 justify-center>
-            <h1 class="white--text">Email</h1>
-            <div v-text="business.email"></div>
+            <h1 class="white--text">{{business.email.title}}</h1>
+            <div v-text="business.email.text"></div>
           </v-flex>
           <v-flex class="contact-info" xs12 md3>
             <h1 class="white--text">Hours</h1>
@@ -18,12 +18,12 @@
         </v-layout>
       </v-container>
     </v-footer>
-    <v-footer :fixed="false" class="footer" color="ma-0 blue darken-4 white--text">
+    <v-footer :fixed="false" class="footer ma-0" color="gray darken-5 white--text">
       <v-container>
         <v-layout row wrap>
           <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-2>
             <div class="caption">&copy; Copyright 2017 - {{ business.name }}. - All Rights Reserved.</div>
-            <div class="built-by"><strong>Built by Nuriki Software</strong></div>
+            <div class="built-by"><strong><a href="http://www.nuriki.com">Built by Nuriki Software</a></strong></div>
             <v-spacer></v-spacer>
           </v-flex>
           <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>
@@ -59,12 +59,18 @@ a {
   color: #777;
 }
 a:hover {
-  text-decoration: underline;
+  color: #2196f3;
+}
+.footer2 {
+  background-color: red;
 }
 .footer {
   padding: 2em;
   margin-top: 1em;
-  background: none;
+  background-color: #111;
+}
+.top-footer {
+  background-color: #222 !important;
 }
 .headline b {
   letter-spacing: -1px;
