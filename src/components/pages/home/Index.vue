@@ -31,10 +31,10 @@ export default {
   data () {
     return {
       items: [
-        {src: '/static/carousel/living.jpg'},
-        {src: '/static/carousel/kitchen.jpg'},
-        {src: '/static/carousel/bedroom.jpg'},
-        {src: '/static/carousel/bathroom.jpg'}
+        {src: '/static/carousel/living.jpg', title: 'living space', subtitle: 'Living Area Cleaning, Installation and Restoration'},
+        {src: '/static/carousel/kitchen.jpg', title: 'kitchen space', subtitle: 'Kitchen Cleaning, Installation and Restoration'},
+        {src: '/static/carousel/bedroom.jpg', title: 'bedroom space', subtitle: 'Bedroom Cleaning, Installation and Restoration'},
+        {src: '/static/carousel/bathroom.jpg', title: 'bathroom space', subtitle: 'Bathroom Cleaning, Installation and Restoration'}
       ],
       cards: [
         { title: 'Quality Cleaning', src: '/static/card/sink.webp', flex: 4 },

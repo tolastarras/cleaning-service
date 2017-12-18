@@ -4,15 +4,15 @@
       <v-container>
         <v-layout row wrap justify-space-around>
           <v-flex class="contact-info" xs12 md3 justify-center>
-            <h1 class="title white--text">Email</h1>
+            <h1 class="white--text">Email</h1>
             <div v-text="business.email"></div>
           </v-flex>
           <v-flex class="contact-info" xs12 md3>
-            <h1 class="title white--text">Hours</h1>
+            <h1 class="white--text">Hours</h1>
             <div v-html="business.hours"></div>
           </v-flex>
           <v-flex class="contact-info" xs12 md3>
-            <h1 class="title white--text">Location</h1>
+            <h1 class="white--text">Location</h1>
             <div v-html="business.address"></div>
           </v-flex>
         </v-layout>

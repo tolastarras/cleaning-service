@@ -41,7 +41,4 @@ export default {
 </script>
 
 <style lang="css">
-.parallax__content {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 </style>

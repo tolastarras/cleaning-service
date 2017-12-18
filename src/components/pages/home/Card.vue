@@ -3,7 +3,9 @@
     <v-layout row wrap>
       <v-flex xs-12>
         <v-card flat :class="marginRight">
-          <v-card-media :src="card.src"></v-card-media>
+          <v-card-media :src="card.src">
+            <v-layout class="media-content"></v-layout>
+          </v-card-media>
           <v-card-text>
             <h2 class="text-xs-center text-md-left" v-html="title"></h2>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -43,5 +45,8 @@ b {
 }
 .card__media {
   height: 200px !important;
+}
+.media-content {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 </style>

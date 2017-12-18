@@ -79,4 +79,7 @@ h1, h2 {
 .parallax__image {
   transform: translate(-50%, 50px) !important;
 }
+.parallax__content {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 </style>
