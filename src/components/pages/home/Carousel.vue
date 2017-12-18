@@ -18,6 +18,6 @@ export default {
 
 <style lang="css">
 .carousel {
-  border: 4px solid lightgray;
+  height: 700px !important;
 }
 </style>
