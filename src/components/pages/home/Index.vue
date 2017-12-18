@@ -5,7 +5,7 @@
         <app-carousel :items="items"></app-carousel>
       </v-flex>
     </v-layout>
-    <v-layout column style="margin-top:33em;">
+    <v-layout column class="cards">
       <v-flex xs12>
         <v-container fluid grid-list-md pa-0>
           <v-layout row wrap>
@@ -31,10 +31,10 @@ export default {
   data () {
     return {
       items: [
+        {src: '/static/carousel/living.jpg'},
         {src: '/static/carousel/kitchen.jpg'},
-        {src: '/static/carousel/kitchen.webp'},
-        {src: '/static/carousel/bathroom.webp'},
-        {src: '/static/carousel/bedroom.webp'}
+        {src: '/static/carousel/bedroom.jpg'},
+        {src: '/static/carousel/bathroom.jpg'}
       ],
       cards: [
         { title: 'Quality Cleaning', src: '/static/card/sink.webp', flex: 4 },
@@ -53,7 +53,7 @@ export default {
   top: 0;
   left: 0;
 }
-.contenido {
-  position: relative;
+.cards {
+   margin-top: 38em;
 }
 </style>

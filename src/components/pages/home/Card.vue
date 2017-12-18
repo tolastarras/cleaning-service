@@ -2,9 +2,12 @@
   <v-container pa-0>
     <v-layout row wrap>
       <v-flex xs-12>
-        <h1 class="display-1 pt-4 pb-4 text-xs-center" v-html="title"></h1>
         <v-card flat :class="marginRight">
-          <v-card-media :src="card.src" height="280"></v-card-media>
+          <v-card-media :src="card.src"></v-card-media>
+          <v-card-text>
+            <h2 class="text-xs-center text-md-left" v-html="title"></h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </v-card-text>
         </v-card>
       </v-flex>
     </v-layout>
@@ -27,14 +30,18 @@ export default {
 </script>
 
 <style scoped lang="css">
+h2 {
+  text-transform: uppercase;
+}
 b {
   letter-spacing: -5px;
   color: red;
 }
-.test {
-  color: blue;
-}
 .card {
-  border: 5px solid lightgray;
+  border: 14px solid white;
+  z-index: 1;
+}
+.card__media {
+  height: 200px !important;
 }
 </style>
