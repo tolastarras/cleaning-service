@@ -16,7 +16,7 @@
 
 <script>
   import AppHeader from '@/components/navigation'
-  import AppFooter from '@/components/Footer'
+  import AppFooter from '@/components/footer'
   export default {
     components: {
       AppHeader,
@@ -43,7 +43,7 @@
 
 <style lang="css">
 h1, h2 {
-  color: #555;
+  color: #333;
   padding-bottom: .5em;
 }
 .display-1 {

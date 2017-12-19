@@ -1,15 +1,16 @@
 {
   "business": {
     "name": "Evevides Quality Cleaning Services",
-    "address": "123 Apple Street, 2nd Floor <br>Miami, FL 33185",
+    "address": "123 Apple Street, 2nd Floor <br>Miami Beach, FL 33139",
     "phone": "786-212-3780",
     "city": "Miami",
-    "email": {
-      "title": "Email",
-      "text": "info@evevides.com"
-    },
+    "email": "info@evevides.com",
     "since": 2015,
     "serving": "Kendall",
-    "hours": "Monday-Friday: 8:30-5:00 EST<br>Saturday: 9:00-4:00 EST<br>Sunday: by appointment ONLY"
+    "hours": "Monday-Friday: 8:30-5:00 EST<br>Saturday: 9:00-4:00 EST<br>Sunday: by appointment ONLY",
+    "about": {
+      "title": "About Evevides",
+      "text": "We are a professional team of women specialized in offering general maintenance in what you need. We adapt our cleaning services to meet your needs at the best market price."
+    }
   }
 }
