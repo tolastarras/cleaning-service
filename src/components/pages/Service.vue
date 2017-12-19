@@ -1,17 +1,17 @@
 <template lang="html">
   <v-container>
-    <h1 class="display-1 pb-4 blue--text">Services</h1>
+    <h1 class="display-1">Our Services</h1>
     <v-layout row wrap>
-      <v-flex xs12 sm6 md4 pr-4 pb-4 v-for="card in cards" :key="card.title">
-        <v-card class="my-3" hover style="height: 420px" @mouseover="toggle(card)" @mouseout="toggle(card)">
+      <v-flex xs12 sm6 md4 v-for="(card, i) in cards" :key="i">
+        <v-card class="my-3" :style="marginRight(i)" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
           <transition name="slide">
             <div>
-              <v-card-media height="200" v-show="card.show" :src="card.src"></v-card-media>
+              <v-card-media v-show="card.show" :src="card.src"></v-card-media>
               <v-card-title>
-                <div class="text-xs-center" style="width: 100%">
+                <div class="card-content text-xs-center">
                   <div class="headline pt-4">{{card.title}}</div>
                   <p class="pt-4">1hr | $20.00</p>
-                  <v-card-text v-show="!card.show" style="height: 200px;">
+                  <v-card-text v-show="!card.show">
                     Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive. A great description gets readers in the mood, and makes them more likely to go ahead and book.
                   </v-card-text>
                 </div>
@@ -19,7 +19,7 @@
             </div>
           </transition>
           <v-card-actions>
-            <v-btn dark color="blue" style="margin: 0 auto">Book Now</v-btn>
+            <v-btn dark color="blue">Book Now</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -42,17 +42,30 @@ export default {
   methods: {
     toggle (card) {
       card.show = !card.show
+    },
+    marginRight (index) {
+      console.log('index', index)
+      return (index + 1) % 3 === 0 ? 'margin-right: 0' : 'margin-right: 2em'
     }
   }
 }
 </script>
 
 <style scoped lang="css">
-/*.slide-enter-active, .slide-leave-active {
-  transition: all .5s;
-  overflow-y: hidden;
+.card {
+  /* margin-right: 2em; */
 }
-.slide-enter, .slide-leave-to {
-  transform: translateY(300px);
-}*/
+.card__media, .card__text {
+  height: 200px !important;
+}
+.card-content {
+  width: 100%;
+}
+.btn {
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+.card:last-of-type {
+  /* margin-right: 0 !important; */
+}
 </style>

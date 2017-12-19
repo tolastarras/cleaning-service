@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container pa-0>
+  <v-container>
     <v-layout row wrap>
       <v-flex xs-12>
         <v-card flat :class="marginRight">
@@ -8,7 +8,7 @@
           </v-card-media>
           <v-card-text>
             <h2 class="text-xs-center text-md-left" v-html="title"></h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            {{ card.content }}
           </v-card-text>
         </v-card>
       </v-flex>
@@ -34,6 +34,8 @@ export default {
 <style scoped lang="css">
 h2 {
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 b {
   letter-spacing: -5px;
@@ -45,6 +47,17 @@ b {
 }
 .card__media {
   height: 230px !important;
+}
+.card__text {
+  margin-top: 1.2em;
+  /* margin: 0; */
+  /* padding: 0 auto; */
+  padding: 0 .4em;
+  height: 16em !important;
+  overflow-y: auto;
+}
+.card__text h2 {
+  margin-bottom: .5em;
 }
 .media-content {
   background-color: rgba(0, 0, 0, 0.1);
