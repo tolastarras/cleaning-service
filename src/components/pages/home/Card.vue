@@ -44,7 +44,7 @@ b {
   z-index: 1;
 }
 .card__media {
-  height: 200px !important;
+  height: 230px !important;
 }
 .media-content {
   background-color: rgba(0, 0, 0, 0.1);

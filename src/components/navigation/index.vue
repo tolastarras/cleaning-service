@@ -58,8 +58,8 @@ export default {
     parallaxData () {
       let items = {
         'about': {
-          title: 'About Page',
-          subtitle: 'ABOUT PAGE SUBTITLE',
+          title: 'We are a professional team of women specialized in offering general maintenance in what you need. We adapt our cleaning services to meet your needs at the best market price.',
+          subtitle: '',
           src: '/static/header/living_room.jpg'
         },
         'services': {

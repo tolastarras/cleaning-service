@@ -1,14 +1,12 @@
 <template lang="html">
   <v-container style="width:1200px;" fluid grid-list-md>
-    <h1 class="display-1 pb-4 blue--text">About Us</h1>
     <v-layout row wrap>
       <v-flex xs12 md6>
         <v-layout row wrap>
           <v-flex mb-4 order-xs1>
             <v-card flat light>
-              <v-card-text class="grey lighten-4" pa-0 ma-0 style="border: 2px solid red;">
-                <h1 class="display-1">Serving the {{business.serving}} Area Since {{business.since}}</h1>
-                <p>We are a professional team of women specialized in offering general maintenance in what you need. We adapt our cleaning services to meet your needs at the best market price.</p>
+              <v-card-text class="grey--text">
+                <h1 class="display-1">Serving the {{business.serving}} Area</h1>
 
                 <p>Since we started, we've attracted a loyal clientele based our exceptional customer service. Our customers range from stay-at-home mothers in need of a breather to office dwelling professionals with a little time to spare. With a full range of cleaning services, {{business.city}} based {{business.name}} offers clients a chance to sit back and relax with professional cleaners taking over their chores.</p>
 
@@ -35,9 +33,9 @@
       </v-flex>
       <v-flex xs12 md6>
         <v-layout row wrap>
-          <v-flex d-flex xs12 pl-4 pb-5 order-x2>
-            <v-card flat light>
-              <v-card-media :src="src" height="600"></v-card-media>
+          <v-flex d-flex xs12 pl-5 pb-5 order-x2>
+            <v-card flat light style="text-align:right;">
+              <img :src="src" alt=""/>
             </v-card>
           </v-flex>
           <v-flex order-xs4 pl-4 pb-0>
@@ -68,6 +66,8 @@ export default {
 }
 </script>
 
-<style lang="css">
-
+<style scoped lang="css">
+.card__media__content {
+  border: 10px solid blue;
+}
 </style>
