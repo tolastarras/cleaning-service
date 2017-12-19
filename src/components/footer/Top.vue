@@ -38,15 +38,12 @@ h2 {
   padding: 2em;
   background-color: #222;
 }
-.layout {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .contact-info {
   padding: 1em 3em;
   /* padding-bottom: 0; */
 }
 .container {
   margin: 0 auto;
+  max-width: 1200px;
 }
 </style>

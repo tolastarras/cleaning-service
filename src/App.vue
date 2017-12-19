@@ -1,10 +1,10 @@
 <template>
   <v-app>
     <app-header :menuItems="menuItems"></app-header>
-    <v-container style="max-width: 1200px;">
+    <v-container>
       <v-layout>
         <v-flex xs-12>
-          <v-content class="pa-2">
+          <v-content class="main-content">
             <router-view></router-view>
           </v-content>
         </v-flex>
@@ -46,28 +46,32 @@ h1, h2 {
   color: #333;
   padding-bottom: .5em;
 }
+#app {
+  margin: 0 auto;
+  font-family: 'arial', 'sans-serif';
+}
 .display-1 {
   text-transform: uppercase;
   letter-spacing: -2px;
   font-weight: bold;
 }
-.application {
-  /*font-family: 'courier new', 'sans-serif';*/
-}
 .application.theme--light {
   background: url(/static/bg.png) repeat
 }
+.container {
+  padding: 0;
+}
 .main-content {
   max-width: 1200px;
-}
-.content {
-  /*background: white;*/
+  margin: 0 auto;
+  background: white;
+  padding: 2em;
 }
 .theme--light .toolbar {
   background-color: transparent;
 }
 .btn--active {
-  color: red;
+  /* color: red; */
 }
 .toolbar__items {
   height: 1.8em;

@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex xs12 md7>
         <v-layout row wrap>
-          <v-flex text-xs-center pt-4 pb-2>
+          <v-flex text-xs-center>
             <v-card flat light>
               <v-card-text>
                 <contact-form title="Send us a Message"></contact-form>
@@ -14,7 +14,7 @@
       </v-flex>
       <v-flex xs12 md5>
         <v-layout row wrap>
-          <v-flex d-flex xs12 pl-4 pt-4>
+          <v-flex d-flex xs12 pl-4>
             <v-card flat light>
               <v-card-media :src="src" height="500"></v-card-media>
             </v-card>

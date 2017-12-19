@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container style="width:1200px;" fluid grid-list-md>
+  <v-container fluid grid-list-md>
     <v-layout row wrap>
       <v-flex xs12 md6>
         <v-layout row wrap>
