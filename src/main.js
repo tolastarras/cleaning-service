@@ -22,6 +22,19 @@ Vue.use(Vuetify)
 Vue.component('app-alert', Alert)
 Vue.component('parallax', Parallax)
 
+Vue.mixin({
+  methods: {
+    formatTitle: str => {
+      let index = str.indexOf(' ')
+      let str1 = str.substring(0, index)
+      let str2 = str.substring(index + 1)
+      // let [str1, str2] = str.split(/\s/)
+
+      return `<b style="letter-spacing: -1px; color: #2196f3">${str1}</b> <span style="color: #555">${str2}</span>`
+    }
+  }
+})
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

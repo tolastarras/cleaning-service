@@ -4,7 +4,7 @@
       <v-layout row wrap>
         <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-2>
           <div class="caption">&copy; Copyright 2017 - {{ business.name }}. - All Rights Reserved.</div>
-          <div><strong><a href="http://www.nuriki.com">Built by Nuriki Software</a></strong></div>
+          <div><a href="http://www.nuriki.com">Built by Nuriki Software</a></div>
           <v-spacer></v-spacer>
         </v-flex>
         <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>
@@ -42,7 +42,7 @@ a:hover {
   color: #2196f3;
 }
 .footer {
-  padding: 1em;
+  padding: 2em;
   background-color: #111;
 }
 .layout {

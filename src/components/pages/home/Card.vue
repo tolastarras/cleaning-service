@@ -24,8 +24,7 @@ export default {
       return this.index + 1 < this.total ? 'mr-2' : ''
     },
     title () {
-      let [t1, t2] = this.card.title.split(/\s/)
-      return '<b style="letter-spacing: -1px">' + t1 + '</b> ' + t2
+      return this.formatTitle(this.card.title)
     }
   }
 }
@@ -50,11 +49,10 @@ b {
 }
 .card__text {
   margin-top: 1.2em;
-  /* margin: 0; */
-  /* padding: 0 auto; */
+
   padding: 0 .4em;
-  height: 16em !important;
-  overflow-y: auto;
+  /* height: 16em !important;
+  overflow-y: auto; */
 }
 .card__text h2 {
   margin-bottom: .5em;
