@@ -27,7 +27,7 @@
     <v-toolbar flat v-bind:class="{standard: !scrolled, sticky: scrolled}" class="white--text">
       <v-layout row wrap style="max-width:1200px;margin: 0 auto">
         <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text" style="border: 1px solid white; border-radius: 4px;"></v-toolbar-side-icon>
-        <v-toolbar-title><img src="/static/logo.svg" :alt="business.name"/></v-toolbar-title>
+        <v-toolbar-title><img :src="logo" :alt="business.name"/></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
@@ -41,14 +41,18 @@
 </template>
 
 <script>
-import SocialMedia from '@/components/shared/SocialMedia'
+// import SocialMedia from '@/components/shared/SocialMedia'
 import Parallax from '@/components/shared/Parallax'
 export default {
   props: ['menuItems', 'name'],
-  components: { SocialMedia, Parallax },
+  components: {
+    // SocialMedia,
+    Parallax
+  },
   data () {
     return {
       scrolled: false,
+      logo: require('@/assets/logo.svg'),
       path: this.$route.path,
       business: this.$store.getters.business,
       drawer: false
@@ -60,17 +64,17 @@ export default {
         'about': {
           title: 'We are a professional team of women specialized in offering general maintenance in what you need. We adapt our cleaning services to meet your needs at the best market price.',
           subtitle: '',
-          src: '/static/header/living_room.jpg'
+          src: require('@/assets/header/living.jpg')
         },
         'services': {
           title: 'Services Page',
           subtitle: 'SERVICES PAGE SUBTITLE',
-          src: '/static/header/living2.jpg'
+          src: require('@/assets/header/living2.jpg')
         },
         'contact': {
           title: 'We want to hear from you!',
           subtitle: 'GIVE US A CALL, EMAIL US OR USE OUR MESSAGE FORM',
-          src: '/static/header/office.jpg'
+          src: require('@/assets/header/office.jpg')
         }
       }
 

@@ -31,27 +31,43 @@ export default {
   data () {
     return {
       items: [
-        {src: '/static/carousel/living.jpg', title: 'living space', subtitle: 'Living Area Cleaning, Installation and Restoration'},
-        {src: '/static/carousel/kitchen.jpg', title: 'kitchen space', subtitle: 'Kitchen Cleaning, Installation and Restoration'},
-        {src: '/static/carousel/bedroom.jpg', title: 'bedroom space', subtitle: 'Bedroom Cleaning, Installation and Restoration'},
-        {src: '/static/carousel/bathroom.jpg', title: 'bathroom space', subtitle: 'Bathroom Cleaning, Installation and Restoration'}
+        {
+          src: require('@/assets/carousel/living.jpg'),
+          title: 'living space',
+          subtitle: 'Living Area Cleaning, Installation and Restoration'
+        },
+        {
+          src: require('@/assets/carousel/kitchen.jpg'),
+          title: 'kitchen space',
+          subtitle: 'Kitchen Cleaning, Installation and Restoration'
+        },
+        {
+          src: require('@/assets/carousel/bedroom.jpg'),
+          title: 'bedroom space',
+          subtitle: 'Bedroom Cleaning, Installation and Restoration'
+        },
+        {
+          src: require('@/assets/carousel/bathroom.jpg'),
+          title: 'bathroom space',
+          subtitle: 'Bathroom Cleaning, Installation and Restoration'
+        }
       ],
       cards: [
         {
           title: 'Quality Cleaning',
-          src: '/static/card/sink.webp',
+          src: require('@/assets/card/sink.jpg'),
           flex: 4,
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
         },
         {
           title: 'Professional Staff',
-          src: '/static/card/mirror.webp',
+          src: require('@/assets/card/mirror.jpg'),
           flex: 4,
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         },
         {
           title: 'Affordable Rates',
-          src: '/static/card/save.webp',
+          src: require('@/assets/card/save.jpg'),
           flex: 4,
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         }

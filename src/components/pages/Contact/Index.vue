@@ -33,7 +33,7 @@ export default {
   },
   data () {
     return {
-      src: '/static/temp/contact4.jpg',
+      src: require('@/assets/contact.jpg'),
       business: this.$store.getters.business
     }
   }
