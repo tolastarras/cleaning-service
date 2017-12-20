@@ -31,12 +31,12 @@
 export default {
   data: () => ({
     cards: [
-      { id: 1, title: 'House Cleaning', src: '/static/content/house-cleaning.jpg', show: true },
-      { id: 2, title: 'Carpet Cleaning', src: '/static/content/carpet-cleaning.jpg', show: true },
-      { id: 3, title: 'After Party Cleaning', src: '/static/content/after-party-cleaning.jpg', show: true },
-      { id: 4, title: 'Commercial Cleaning', src: '/static/content/office.jpg', show: true },
-      { id: 5, title: 'Move In/Out Cleaning', src: '/static/content/move-in-move-out-cleaning.jpg', show: true },
-      { id: 6, title: 'Upholstery Cleaning', src: '/static/content/upholstery-cleaning.jpg', show: true }
+      { id: 1, title: 'House Cleaning', src: require('@/assets/content/house-cleaning.jpg'), show: true },
+      { id: 2, title: 'Carpet Cleaning', src: require('@/assets/content/carpet-cleaning.jpg'), show: true },
+      { id: 3, title: 'After Party Cleaning', src: require('@/assets/content/after-party-cleaning.jpg'), show: true },
+      { id: 4, title: 'Commercial Cleaning', src: require('@/assets/content/office.jpg'), show: true },
+      { id: 5, title: 'Move In/Out Cleaning', src: require('@/assets/content/move-in-move-out-cleaning.jpg'), show: true },
+      { id: 6, title: 'Upholstery Cleaning', src: require('@/assets/content/upholstery-cleaning.jpg'), show: true }
     ]
   }),
   methods: {

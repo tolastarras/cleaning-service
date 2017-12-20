@@ -59,7 +59,7 @@ export default {
   },
   data () {
     return {
-      src: '/static/content/about.png',
+      src: require('@/assets/about.png'),
       business: this.$store.getters.business
     }
   }
@@ -67,7 +67,4 @@ export default {
 </script>
 
 <style scoped lang="css">
-.card__media__content {
-  border: 10px solid blue;
-}
 </style>
