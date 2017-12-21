@@ -32,9 +32,9 @@
       menuItems () {
         return [
           {icon: 'bubble_chart', title: 'Home', url: '/'},
-          {icon: 'room', title: 'About Us', url: '/about'},
-          {icon: 'person', title: 'Services', url: '/services'},
-          {icon: 'person', title: 'Contact Us', url: '/contact'}
+          {icon: 'room', title: 'About Us', url: '/about/'},
+          {icon: 'person', title: 'Services', url: '/services/'},
+          {icon: 'person', title: 'Contact Us', url: '/contact/'}
         ]
       }
     }
