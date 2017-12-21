@@ -62,18 +62,18 @@ export default {
     parallaxData () {
       let items = {
         'about': {
-          title: 'We are a professional team of women specialized in offering general maintenance in what you need. We adapt our cleaning services to meet your needs at the best market price.',
-          subtitle: '',
+          title: 'We are a professional team of women specialized in offering general maintenance.',
+          subtitle: 'We adapt our cleaning services to meet your needs at the best market price.',
           src: require('@/assets/header/living.jpg')
         },
         'services': {
-          title: 'Services Page',
-          subtitle: 'SERVICES PAGE SUBTITLE',
+          title: 'Single and recurring cleanings available!',
+          subtitle: 'Our Expert cleaners will make your home sparkle.',
           src: require('@/assets/header/living2.jpg')
         },
         'contact': {
           title: 'We want to hear from you!',
-          subtitle: 'GIVE US A CALL, EMAIL US OR USE OUR MESSAGE FORM',
+          subtitle: 'Give us a call, email us or use our message form',
           src: require('@/assets/header/office.jpg')
         }
       }
