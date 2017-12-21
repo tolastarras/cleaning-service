@@ -44,7 +44,6 @@ export default {
       card.show = !card.show
     },
     marginRight (index) {
-      console.log('index', index)
       return (index + 1) % 3 === 0 ? 'margin-right: 0' : 'margin-right: 2em'
     }
   }
@@ -62,10 +61,7 @@ export default {
   width: 100%;
 }
 .btn {
-  margin: 0 auto;
-  margin-bottom: 2em;
-}
-.card:last-of-type {
-  /* margin-right: 0 !important; */
+  margin: 0 auto !important;
+  margin-bottom: 2em !important;
 }
 </style>

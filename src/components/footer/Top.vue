@@ -43,7 +43,7 @@ h2 {
   /* padding-bottom: 0; */
 }
 .container {
-  margin: 0 auto;
+  margin: 0 auto !important;
   max-width: 1200px;
 }
 </style>

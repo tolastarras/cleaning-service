@@ -78,7 +78,7 @@ export default {
         }
       }
 
-      let page = this.$route.path.replace('/', '')
+      let page = this.$route.path.replace(/\//g, '')
       return items[`${page}`]
     }
   },
