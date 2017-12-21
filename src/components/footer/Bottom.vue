@@ -43,7 +43,7 @@ a:hover {
 }
 .footer {
   padding: 2em;
-  background-color: #111;
+  background-color: #111 !important;
 }
 .layout {
   max-width: 1200px;

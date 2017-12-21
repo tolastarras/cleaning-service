@@ -36,7 +36,7 @@ h2 {
 }
 .footer {
   padding: 2em;
-  background-color: #222;
+  background-color: #222 !important;
 }
 .contact-info {
   padding: 1em 3em;
