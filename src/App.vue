@@ -60,9 +60,10 @@ h1, h2 {
 }
 .container {
   padding: 0;
+  margin: 0 auto;
 }
 .main-content {
-  max-width: 1200px;
+  max-width: 1200px !important;
   margin: 0 auto;
   background: white;
   padding: 2em;
