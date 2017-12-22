@@ -1,7 +1,7 @@
-<template lang="html">
+300<template lang="html">
   <v-container pa-0 ma-0>
     <h1 class="display-1">{{title}}</h1>
-    <app-alert v-if="showAlert" text="Your message was sent"></app-alert>
+    <app-alert v-if="alert.show" :alert="alert"></app-alert>
     <v-form v-model="valid" ref="form">
       <v-text-field
         label="Name"
@@ -39,15 +39,20 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   props: ['title'],
   data: () => ({
     loader: null,
     loading: false,
     valid: false,
-    showAlert: false,
+    alert: {
+      show: false,
+      type: '',
+      text: ''
+    },
     name: '',
-    maxMessageChars: 200,
+    maxMessageChars: 300,
     nameRules: [
       v => !!v || 'Name is required',
       v => v.length > 3 || 'Name must be more than 3 characters in length'
@@ -66,7 +71,7 @@ export default {
     message: '',
     messageRules: [
       v => !!v || 'Message is required',
-      v => v.length <= 200 || 'Message must be less than 200 characters'
+      v => v.length <= 300 || 'Message must be less than 300 characters'
     ]
   }),
   watch: {
@@ -84,8 +89,6 @@ export default {
   },
   methods: {
     onSubmit () {
-      this.showAlert = true
-      // send email or something ...
       console.log('name', this.name)
       console.log('phone', this.phone)
       console.log('email', this.email)
