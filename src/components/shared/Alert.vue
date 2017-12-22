@@ -1,30 +1,32 @@
 <template lang="html">
-  <v-alert class="mb-4" outline icon="check_circle" color="success" dismissible @click="onClose" :value="alert">
-    {{ text }}
+  <v-alert class="mb-4" :icon="icon" :color="alert.type" dismissible outline @click="onClose" v-model="show">
+    {{ alert.text }}
   </v-alert>
 </template>
 
 <script>
 export default {
-  props: ['text'],
+  props: ['alert'],
   data () {
     return {
-      alert: true
+      show: true
     }
   },
   methods: {
     onClose () {
       this.alert = false
     }
+  },
+  computed: {
+    icon () {
+      return this.alert.type === 'error' ? 'warning' : 'check_circle'
+    }
   }
 }
 </script>
 
-<style lang="css">
-.application a {
-  color: #4caf50;
-}
-.alert > div {
-  font-size: 1.4em;
+<style scoped lang="css">
+.alert.alert--dismissible.alert--outline.error--text {
+  font-size: 1.5em !important;
 }
 </style>

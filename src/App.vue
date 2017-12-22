@@ -55,8 +55,11 @@ h1, h2 {
   letter-spacing: -2px;
   font-weight: bold;
 }
+.application a {
+  color: none;
+}
 .application.theme--light {
-  background: url(/static/bg.png) repeat
+  /* background: url(/static/bg.png) repeat */
 }
 .container {
   padding: 0;
