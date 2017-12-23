@@ -1,4 +1,4 @@
-300<template lang="html">
+<template lang="html">
   <v-container pa-0 ma-0>
     <h1 class="display-1">{{title}}</h1>
     <app-alert v-if="alert.show" :alert="alert"></app-alert>
@@ -55,7 +55,7 @@ export default {
     maxMessageChars: 300,
     nameRules: [
       v => !!v || 'Name is required',
-      v => v.length > 3 || 'Name must be more than 3 characters in length'
+      v => (v && v.length > 3) || 'Name must be more than 3 characters in length'
     ],
     email: '',
     emailRules: [
@@ -71,7 +71,7 @@ export default {
     message: '',
     messageRules: [
       v => !!v || 'Message is required',
-      v => v.length <= 300 || 'Message must be less than 300 characters'
+      v => (v && v.length <= 300) || 'Message must be less than 300 characters'
     ]
   }),
   watch: {
@@ -89,10 +89,30 @@ export default {
   },
   methods: {
     onSubmit () {
-      console.log('name', this.name)
-      console.log('phone', this.phone)
-      console.log('email', this.email)
-      console.log('message', this.message)
+      // axios.post('http://nuriki.com/api/message/', {
+      axios.post('http://localhost:3000/api/message/', {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        message: this.message
+      })
+      .then(response => {
+        console.log('response', response)
+        this.alert = {
+          show: true,
+          type: 'success',
+          text: response.data
+        }
+        this.$refs.form.reset()
+      })
+      .catch(error => {
+        console.log('ERROR', error)
+        this.alert = {
+          show: true,
+          type: 'error',
+          text: 'Unable to Send Message: ' + error.message
+        }
+      })
     }
   }
 }
