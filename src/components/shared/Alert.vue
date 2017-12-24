@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped lang="css">
-.alert.alert--dismissible.alert--outline.error--text {
+.alert.alert--dismissible.alert--outline {
   font-size: 1.5em !important;
 }
 </style>

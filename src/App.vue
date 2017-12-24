@@ -56,10 +56,7 @@ h1, h2 {
   font-weight: bold;
 }
 .application a {
-  color: none;
-}
-.application.theme--light {
-  /* background: url(/static/bg.png) repeat */
+  color: inherit !important;
 }
 .container {
   padding: 0;
@@ -73,9 +70,6 @@ h1, h2 {
 }
 .theme--light .toolbar {
   background-color: transparent;
-}
-.btn--active {
-  /* color: red; */
 }
 .toolbar__items {
   height: 1.8em;
