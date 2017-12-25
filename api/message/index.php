@@ -19,29 +19,42 @@ if (empty($_SERVER['HTTP_REFERER'])) {
 if (isset($_POST) ) {
   // $_POST = json_decode(file_get_contents('php://input'), true);
   $inputData = my_json_decode(file_get_contents('php://input'));
-  // echo 'Name:' . $inputData['name'] . "\n";
-  // echo 'Email: ' . $inputData['email'] . "\n";
-  // echo 'Message: ' . $inputData['message'] . "\n";
-
   list($firstName, $part) = preg_split('/\s/', $inputData['name']);
 
   // double check form data
   // todo ...
+  $message = preg_replace('/\\\n/', '<br>', $inputData['message']);
+  if (empty($message)) return;
 
   // email recipient
-  $email = "rafael.sobrino@yahoo.com";
-  $headers = "From: info@evevides.com" . "\r\n" . "CC: testxxxxxxxxxxxxx@gmail.com";
-  $content = 'HELLO WORLD!';
-  // "<pre>
-  //   Name: {$inputData['name']}\n
-  //   Email: {$inputData['email']}\n
-  // </pre>";
+  $to = "rafael.sobrino@yahoo.com";
+  $from = "contact@evevides.com";
+  $subject = "Comment";
+  $headers = "From: " . strip_tags($from) . "\r\n";
+  $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
+  // $headers .= "CC: susan@example.com\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+  $content = "
+  <!DOCTYPE html>
+  <html>
+    <body>
+      <div style='padding:0;margin:0;'>
+        <b>Name:</b> {$inputData['name']}<br>
+        <b>Email:</b> {$inputData['email']}<br>
+        <b>Phone:</b> {$inputData['phone']}<br>
+        <b>Message:</b><br>
+        {$message}
+      </div>
+    </body>
+  </html>";
 
   try {
-    mail($email, 'Comment', $content, $headers);
+    mail($to, $subject, $content, $headers);
     echo 'Message Sent. Thank you ' . ucfirst($firstName) . '!';
   } catch (Exception $e) {
-    print_r($e);
+    // print_r($e);
     echo 'Unable to Send Message!';
   }
 }
