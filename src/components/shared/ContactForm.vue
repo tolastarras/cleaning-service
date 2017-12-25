@@ -89,8 +89,9 @@ export default {
   },
   methods: {
     onSubmit () {
-      // axios.post('http://nuriki.com/api/message/', {
-      axios.post('http://localhost:3000/api/message/', {
+      // axios.post('/api/message/', {
+      axios.post('http://nuriki.com/api/message/', {
+      // axios.post('http://localhost:3000/api/message/', {
         name: this.name,
         email: this.email,
         phone: this.phone,
