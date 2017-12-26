@@ -74,7 +74,7 @@ export default {
         'contact': {
           title: 'We want to hear from you!',
           subtitle: 'Give us a call, email us or use our message form',
-          src: require('@/assets/header/office.jpg')
+          src: this.parallaxImage('office')
         }
       }
 
@@ -85,10 +85,25 @@ export default {
   methods: {
     handleScroll () {
       this.scrolled = window.scrollY > 0
+    },
+    handleResize () {
+      // to do ...
+    },
+    parallaxImage (name) {
+      let width = document.body.clientWidth
+      let size = '320x480'
+      if (width >= 1280) {
+        size = '1280x960'
+      } else if (width >= 800) {
+        size = '800x600'
+      }
+
+      return require(`@/assets/header/${name}_${size}.jpg`)
     }
   },
   created () {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleResize)
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
