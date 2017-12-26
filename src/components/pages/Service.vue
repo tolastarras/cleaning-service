@@ -39,7 +39,7 @@ export default {
       },
       {
         id: 2,
-        title: 'Floor Cleaning',
+        title: 'Carpet Care',
         src: require('@/assets/content/carpet-cleaning.jpg'),
         show: true,
         price: '1hr | $24.99',
@@ -55,8 +55,8 @@ export default {
       },
       {
         id: 4,
-        title: 'Office Cleaning',
-        src: require('@/assets/content/office.jpg'),
+        title: 'Office Space',
+        src: require('@/assets/content/office_lg.jpg'),
         show: true,
         price: 'Contact Us',
         description: 'A clean, well-kept office helps employees stay motivated and content. Treat your employees and your business to a spotless interior with comprehensive office cleaning services from us. No matter the size or layout of your company, we can get your office looking its best without disrupting your schedule.'

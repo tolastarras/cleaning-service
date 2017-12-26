@@ -10,7 +10,7 @@
     "hours": "Monday-Friday: 8:30-5:00 EST<br>Saturday: 9:00-4:00 EST<br>Sunday: by appointment ONLY",
     "about": {
       "title": "About Evevides",
-      "text": "We are a professional team of women offering quality service to meet your needs at the best market price."
+      "html": "We are a professional team of women offering quality service to meet your needs at the best market price. <a href='/about/'>(read more)</a>"
     }
   }
 }
