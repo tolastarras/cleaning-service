@@ -29,14 +29,14 @@ export default {
 
 <style scoped lang="css">
 h1 {
-  font-size: 56px;
+  font-size: 4em;
   /* max-width: 1200px; */
   /* font-weight: normal; */
   text-transform: uppercase;
 }
 h2 {
   color: gold;
-  font-size: 30px;
+  font-size: 3em;
   /* font-weight: normal; */
   /* max-width: 800px; */
   /* letter-spacing: -1px; */
@@ -44,5 +44,14 @@ h2 {
 }
 .parallax {
   height: 700px !important;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    margin-top: 3.5em;
+    font-size: 1.5em;
+  }
 }
 </style>
