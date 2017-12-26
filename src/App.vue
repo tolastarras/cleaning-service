@@ -48,7 +48,7 @@ h1, h2 {
 }
 #app {
   margin: 0 auto;
-  font-family: 'arial', 'sans-serif';
+  font-family: 'Roboto', sans-serif;
 }
 .display-1 {
   text-transform: uppercase;

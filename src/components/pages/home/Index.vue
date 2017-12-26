@@ -33,22 +33,22 @@ export default {
       items: [
         {
           src: require('@/assets/carousel/living.jpg'),
-          title: 'living space',
-          subtitle: 'Living Area Cleaning, Installation and Restoration'
+          title: 'Home',
+          subtitle: 'Specialized Cleaning'
         },
         {
           src: require('@/assets/carousel/kitchen.jpg'),
-          title: 'kitchen space',
-          subtitle: 'Kitchen Cleaning, Installation and Restoration'
+          title: 'Kitchens',
+          subtitle: 'Consistency & Detail'
         },
         {
           src: require('@/assets/carousel/bedroom.jpg'),
-          title: 'bedroom space',
-          subtitle: 'Bedroom Cleaning, Installation and Restoration'
+          title: 'General & Deep Cleaning',
+          subtitle: 'Outstanding Cleaning Services With Flat Rate Pricing. No Hidden Fees and No Surprises'
         },
         {
-          src: require('@/assets/carousel/bathroom.jpg'),
-          title: 'bathroom space',
+          src: require('@/assets/carousel/office_1280x960.jpg'),
+          title: 'Business Offices',
           subtitle: 'Bathroom Cleaning, Installation and Restoration'
         }
       ],
@@ -57,7 +57,7 @@ export default {
           title: 'Quality Cleaning',
           src: require('@/assets/card/sink.jpg'),
           flex: 4,
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+          content: 'We deliver happiness through home cleaning and other home and commercial services in Miami. We offer simple flat rate pricing for home cleaning services based on the size of the home given the number of bedrooms. Our home cleaning services come with a satisfaction guarantee and our professional team works hard to provide each and every customer with the very best cleaning services Miami has to offer.'
         },
         {
           title: 'Professional Staff',

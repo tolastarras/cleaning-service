@@ -3,8 +3,8 @@
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-2>
-          <div class="caption">&copy; Copyright 2017 - {{ business.name }}. - All Rights Reserved.</div>
-          <div><a href="http://www.nuriki.com">Built by Nuriki Software</a></div>
+          <div class="text-xs-center caption">&copy; Copyright 2017 {{ business.name }}. All Rights Reserved.</div>
+          <div><a href="http://www.nuriki.com">Built by Nuriki &reg;</a></div>
           <v-spacer></v-spacer>
         </v-flex>
         <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>
