@@ -1,19 +1,23 @@
 <template lang="html">
-  <v-parallax :src="data.src" v-if="data.src">
+  <v-parallax :style="parallaxHeight" :src="data.src" v-if="data.src">
     <v-layout column align-center justify-center text-xs-center>
-      <h2 class="pl-5 pr-5">{{ data.title }}</h2>
-      <h1 class="white--text pl-5 pr-5">{{ data.subtitle }}</h1>
+      <div class="parallax-content_">
+        <h2 class="pl-5 pr-5">{{ data.title }}</h2>
+        <h1 class="white--text pl-5 pr-5">{{ data.subtitle }}</h1>
+      </div>
       <v-btn @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" dark color="blue darken-4">SAY SOMETHING <v-icon v-show="showIcon">keyboard_arrow_right</v-icon></v-btn>
     </v-layout>
   </v-parallax>
 </template>
 
 <script>
+import { MEDIUM } from '@/config'
 export default {
   props: ['data'],
   data () {
     return {
-      showIcon: false
+      showIcon: false,
+      windowSize: this.$store.getters.documentWidth
     }
   },
   methods: {
@@ -22,7 +26,25 @@ export default {
     },
     handleMouseLeave () {
       this.showIcon = false
+    },
+    handleResize () {
+      this.windowSize = this.$store.getters.documentWidth
     }
+  },
+  computed: {
+    parallaxHeight () {
+      if (this.$store.getters.documentWidth > MEDIUM) {
+        return 'height: 700px !important'
+      }
+      // default of 500 px
+      return null
+    }
+  },
+  created () {
+    window.addEventListener('resize', this.handleResize)
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.handleResize)
   }
 }
 </script>
@@ -30,22 +52,22 @@ export default {
 <style scoped lang="css">
 h1 {
   font-size: 4em;
-  /* max-width: 1200px; */
-  /* font-weight: normal; */
   text-transform: uppercase;
+  padding: 0;
 }
 h2 {
   color: gold;
   font-size: 3em;
-  /* font-weight: normal; */
-  /* max-width: 800px; */
-  /* letter-spacing: -1px; */
   text-transform: uppercase;
 }
-.parallax {
-  height: 700px !important;
+.parallax-content {
+  border: 1px solid white;
+  width: 70%;
+  padding: 4em 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   h1 {
     font-size: 1.8em;
   }
