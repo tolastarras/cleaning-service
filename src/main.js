@@ -31,6 +31,18 @@ Vue.mixin({
       // let [str1, str2] = str.split(/\s/)
 
       return `<b style="letter-spacing: -1px; color: #2196f3">${str1}</b> <span style="color: #555">${str2}</span>`
+    },
+    getImage: (name, width) => {
+      let size = '320x480'
+      if (width >= 1280) {
+        size = '1280x960'
+      } else if (width >= 800) {
+        size = '800x600'
+      }
+
+      console.log('IMAGE SIZE', size)
+
+      return require(`@/assets/header/${name}_${size}.jpg`)
     }
   }
 })
@@ -44,7 +56,16 @@ new Vue({
   store,
   template: '<App/>',
   components: { App },
+  methods: {
+    handleResize () {
+      this.$store.dispatch('changeDocumentWidth', document.body.clientWidth)
+    }
+  },
   created () {
     this.$store.dispatch('fetchData', data)
+    window.addEventListener('resize', this.handleResize)
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.handleResize)
   }
 })

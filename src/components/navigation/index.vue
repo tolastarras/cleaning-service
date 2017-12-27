@@ -12,18 +12,6 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <!-- <div class="toolbar_extension">
-      <v-container>
-        <v-layout row>
-          <v-flex xs-12 md-6 text-xs-center text-md-center>
-            <v-btn outline color="red darken-3">Call us today {{ business.phone }}</v-btn>
-          </v-flex>
-          <v-flex xs-12 md1 text-xs-center text-md-right>
-            <social-media></social-media>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </div> -->
     <v-toolbar flat v-bind:class="{standard: !scrolled, sticky: scrolled}" class="white--text">
       <v-layout row wrap style="max-width:1200px;margin: 0 auto">
         <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text" style="border: 1px solid white; border-radius: 4px;"></v-toolbar-side-icon>
@@ -41,12 +29,10 @@
 </template>
 
 <script>
-// import SocialMedia from '@/components/shared/SocialMedia'
 import Parallax from '@/components/shared/Parallax'
 export default {
   props: ['menuItems', 'name'],
   components: {
-    // SocialMedia,
     Parallax
   },
   data () {
@@ -55,26 +41,29 @@ export default {
       logo: require('@/assets/logo.svg'),
       path: this.$route.path,
       business: this.$store.getters.business,
-      drawer: false
+      drawer: false,
+      documentWidth: this.$store.getters.documentWidth,
+      image: null
     }
   },
   computed: {
     parallaxData () {
+      let width = this.$store.getters.documentWidth
       let items = {
         'about': {
           title: 'We are a professional team of women specialized in offering general maintenance.',
           subtitle: 'We adapt our cleaning services to meet your needs at the best market price.',
-          src: require('@/assets/header/living.jpg')
+          src: this.getImage('living2', width)
         },
         'services': {
           title: 'Single and recurring cleanings available!',
           subtitle: 'Our Expert cleaners will make your home sparkle.',
-          src: require('@/assets/header/living2.jpg')
+          src: this.getImage('living', width)
         },
         'contact': {
           title: 'We want to hear from you!',
           subtitle: 'Give us a call, email us or use our message form',
-          src: this.parallaxImage('office')
+          src: this.getImage('office', width)
         }
       }
 
@@ -87,23 +76,17 @@ export default {
       this.scrolled = window.scrollY > 0
     },
     handleResize () {
-      // to do ...
-    },
-    parallaxImage (name) {
-      let width = document.body.clientWidth
-      let size = '320x480'
-      if (width >= 1280) {
-        size = '1280x960'
-      } else if (width >= 800) {
-        size = '800x600'
-      }
-
-      return require(`@/assets/header/${name}_${size}.jpg`)
+      this.documentWidth = this.$store.getters.documentWidth
+    }
+  },
+  watch: {
+    documentWidth () {
+      console.log('store', this.$store.getters.documentWidth)
+      return this.$store.getters.documentWidth
     }
   },
   created () {
     window.addEventListener('scroll', this.handleScroll)
-    window.addEventListener('resize', this.handleResize)
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
