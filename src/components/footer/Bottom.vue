@@ -3,7 +3,7 @@
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-2>
-          <div class="text-xs-center caption">&copy; Copyright 2017 {{ business.name }}. All Rights Reserved.</div>
+          <div class="text-xs-center text-md-left caption">&copy; Copyright 2017 {{ business.name }}. All Rights Reserved.</div>
           <div><a href="http://www.nuriki.com">Built by Nuriki &reg;</a></div>
           <v-spacer></v-spacer>
         </v-flex>
@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style scoped lang="css">
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
 a {
   text-decoration: none;
   color: #777;
@@ -42,7 +43,7 @@ a:hover {
   color: #2196f3;
 }
 .footer {
-  padding: 2em;
+  padding: 2em !important;
   background-color: #111 !important;
 }
 .layout {
