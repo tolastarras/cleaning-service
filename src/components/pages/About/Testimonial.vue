@@ -1,17 +1,16 @@
 <template lang="html">
-  <v-container pa-0 pl-3>
+  <v-container>
     <h1 class="display-1">{{ title }}</h1>
     <v-layout row wrap>
-      <v-flex xs12 class="mb-5" v-for="(testimonial, i) in testimonials" :key="i">
-        <div class="testimonial-quote group">
-          <div class="quote-container">
-            <blockquote>
-              <p>{{testimonial.quote}}</p>
-            </blockquote>
-            <cite>
-              <span>{{testimonial.client.name}}</span>, {{testimonial.client.city}}
-            </cite>
-          </div>
+      <v-flex xs12 class="testimonial" v-for="(testimonial, i) in testimonials" :key="i">
+        <div class="testimonial-quote group" :class="lastChild(i)">
+          <blockquote>
+            <p>{{testimonial.quote}}</p>
+          </blockquote>
+          <cite>
+            <span>{{testimonial.client.name}}</span>, {{testimonial.client.city}}
+          </cite>
+        </div>
         </div>
       </v-flex>
     </v-layout>
@@ -21,6 +20,12 @@
 <script>
 export default {
   props: ['title'],
+  methods: {
+    lastChild (i) {
+      console.log('i: ' + this.testimonials.length)
+      return (i + 1) === this.testimonials.length ? 'last' : ''
+    }
+  },
   data: () => ({
     testimonials: [
       {
@@ -51,27 +56,27 @@ export default {
 
 <style scoped lang="css">
 h1 {
-  font-size: 16px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: .6em;
 }
 .testimonial-quote {
-    font-size: 16px;
+    font-size: 1em;
+    position: relative;
+}
+.testimonial-quote.group {
+  padding-left: 2em;
+  padding-bottom: 3em;
+}
+.testimonial-quote.group.last {
+  padding-bottom: 0;
 }
 .testimonial-quote blockquote {
-    border: 0;
-    margin: 0;
-    padding: 0;
-
-    background: none;
-    color: gray;
     font-family: Georgia, serif;
     font-size: 1.5em;
     font-style: italic;
     line-height: 1.4 !important;
     margin: 0;
     position: relative;
-    text-shadow: 0 1px white;
     z-index: 1;
 }
 .testimonial-quote blockquote * {
@@ -83,7 +88,8 @@ h1 {
 }
 .testimonial-quote blockquote p:first-child:before {
     content: '\201C';
-    color: #81bedb;
+    /* color: #81bedb; */
+    color: #2196f3;
     font-size: 7.5em;
     font-weight: 700;
     opacity: .3;
@@ -91,23 +97,17 @@ h1 {
     top: -.4em;
     left: -.2em;
     text-shadow: none;
-    z-index: -300;
+    /* z-index: -1; */
 }
 .testimonial-quote cite {
     color: gray;
     display: block;
-    font-size: .8em;
+    font-size: 1em;
 }
 .testimonial-quote cite span {
     color: #5e5e5e;
+    font-weight: 500;
     font-size: 1em;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 1px;
-    /*text-transform: uppercase;*/
     text-shadow: 0 1px white;
-}
-.testimonial-quote {
-    position: relative;
 }
 </style>

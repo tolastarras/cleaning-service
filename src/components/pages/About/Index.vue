@@ -1,12 +1,13 @@
 <template lang="html">
   <v-container fluid grid-list-md>
     <v-layout row wrap>
-      <v-flex xs12 md6>
+      <v-flex xs12>
         <v-layout row wrap>
-          <v-flex mb-4 order-xs1>
+          <v-flex order-xs1>
             <v-card flat light>
-              <v-card-text class="grey--text">
-                <h1 class="display-1">Serving the {{ business.serving }} Area</h1>
+              <v-card-text>
+                <h1 class="display-1 text-xs-center text-md-left">Serving the {{ business.serving }} Area</h1>
+                <img :src="src" :alt="business.name" align="right"/>
 
                 <p>Since we started, we've attracted a loyal clientele based our exceptional customer service. Our customers range from stay-at-home mothers in need of a breather to office dwelling professionals with a little time to spare. With a full range of cleaning services, {{ business.city }} based {{ business.name }} offers clients a chance to sit back and relax with professional cleaners taking over their chores.</p>
 
@@ -22,25 +23,22 @@
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex order-xs3 text-xs-center pb-4>
+        </v-layout>
+      </v-flex>
+      <v-flex xs12 md6>
+        <v-layout row wrap>
+          <v-flex order-xs3 text-xs-center>
             <v-card flat light>
-              <v-card-text>
-                <contact-form title="Get a Free Quote"></contact-form>
-              </v-card-text>
+              <contact-form title="Get a Free Quote"></contact-form>
             </v-card>
           </v-flex>
         </v-layout>
       </v-flex>
       <v-flex xs12 md6>
         <v-layout row wrap>
-          <v-flex d-flex xs12 pl-5 pb-5 order-x2>
-            <v-card flat light style="text-align:right;">
-              <img :src="src" alt=""/>
-            </v-card>
-          </v-flex>
-          <v-flex order-xs4 pl-4 pb-0>
-            <v-card flat light>
-              <testimonial title="Our clients comments!"></testimonial>
+          <v-flex order-xs4>
+            <v-card class="testimonials" flat light>
+              <testimonial title="Clients comments!"></testimonial>
             </v-card>
           </v-flex>
         </v-layout>
@@ -67,4 +65,20 @@ export default {
 </script>
 
 <style scoped lang="css">
+img {
+   margin-left: 5em !important;
+   margin-bottom: 1em;
+   margin: 0 auto;
+}
+@media (max-width: 960px) {
+  img {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .testimonials {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+}
 </style>

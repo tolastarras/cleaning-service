@@ -66,7 +66,7 @@ h1, h2 {
 .main-content {
   max-width: 1200px !important;
   margin: 0 auto;
-  background: white;
+  background: #eee;
   padding: 2em;
 }
 .theme--light .toolbar {
@@ -84,5 +84,13 @@ h1, h2 {
 }
 .parallax__content {
   background-color: rgba(0, 0, 0, 0.5);
+}
+.card__text {
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0em;
+  }
 }
 </style>
