@@ -66,7 +66,8 @@ h1, h2 {
 .main-content {
   max-width: 1200px !important;
   margin: 0 auto;
-  background: #eee;
+  /* background: #eee; */
+  background: white;
   padding: 2em;
 }
 .theme--light .toolbar {
@@ -90,7 +91,7 @@ h1, h2 {
 }
 @media (max-width: 600px) {
   .main-content {
-    padding: 0em;
+    padding: 1em;
   }
 }
 </style>
