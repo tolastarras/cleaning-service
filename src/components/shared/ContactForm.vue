@@ -1,41 +1,43 @@
 <template lang="html">
-  <v-container pa-0 ma-0>
-    <h1 class="display-1">{{title}}</h1>
+  <div class="">
     <app-alert v-if="alert.show" :alert="alert"></app-alert>
-    <v-form v-model="valid" ref="form">
-      <v-text-field
-        label="Name"
-        v-model="name"
-        :rules="nameRules"
-        required
-      ></v-text-field>
-      <v-text-field
-        label="E-mail"
-        v-model="email"
-        :rules="emailRules"
-        required
-      ></v-text-field>
-      <v-text-field
-        label="Phone"
-        v-model="phone"
-        hint="For example, 3055551212"
-        :rules="phoneRules"
-        required
-      ></v-text-field>
-      <v-text-field
-        label="Message" multi-line
-        v-model="message"
-        :rules="messageRules"
-        :counter="maxMessageChars"
-        required
-      ></v-text-field>
-      <v-btn color="info" :loading="loading" @click="onSubmit" :disabled="loading || !valid">Send
-        <span slot="loader" class="custom-loader">
-          <v-icon light>cached</v-icon>
-        </span>
-      </v-btn>
-    </v-form>
-  </v-container>
+    <v-container pa-0 ma-0>
+      <h1 class="display-1 header">{{title}}</h1>
+      <v-form v-model="valid" ref="form">
+        <v-text-field
+          label="Name"
+          v-model="name"
+          :rules="nameRules"
+          required
+        ></v-text-field>
+        <v-text-field
+          label="E-mail"
+          v-model="email"
+          :rules="emailRules"
+          required
+        ></v-text-field>
+        <v-text-field
+          label="Phone"
+          v-model="phone"
+          hint="For example, 3055551212"
+          :rules="phoneRules"
+          required
+        ></v-text-field>
+        <v-text-field
+          label="Message" multi-line
+          v-model="message"
+          :rules="messageRules"
+          :counter="maxMessageChars"
+          required
+        ></v-text-field>
+        <v-btn color="info" :loading="loading" @click="onSubmit" :disabled="loading || !valid">Send
+          <span slot="loader" class="custom-loader">
+            <v-icon light>cached</v-icon>
+          </span>
+        </v-btn>
+      </v-form>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -120,9 +122,24 @@ export default {
 </script>
 
 <style scoped lang="css">
-.custom-loader {
+  form {
+    padding: 2em;
+  }
+  .header {
+    background: #444;
+    padding: .5em 0 !important;
+    color: white;
+    padding: 0;
+    margin: 0;
+  }
+  .custom-loader {
     animation: loader 1s infinite;
     display: flex;
+  }
+  .container {
+    /* padding: 2em !important; */
+    border: 12px solid #444;
+    border-radius: 4px;
   }
   @-moz-keyframes loader {
     from {
