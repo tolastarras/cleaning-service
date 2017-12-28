@@ -1,22 +1,40 @@
 <template lang="html">
-  <v-container fluid grid-list-md pa-0>
-    <v-layout row>
-      <v-flex xs12 md8>
+  <v-container>
+    <v-layout row wrap>
+      <v-flex xs12 md5>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card flat light>
+              <div class="contact-info">
+                <h1 class="display-1 blue--text">Contact Us</h1>
+                <div class="address">
+                  <v-icon>fa-map-marker</v-icon>
+                  <span v-html="business.address"></span>
+                </div>
+                <div>
+                  <v-icon>fa-phone</v-icon>
+                  <span>{{ business.phone }}</span>
+                </div>
+                <div>
+                  <v-icon>fa-envelope-o</v-icon>
+                  <span>{{ business.email }}</span>
+                </div>
+                <div class="hours">
+                  <v-icon>fa-clock-o</v-icon>
+                  <span v-html="business.hours"></span>
+                </div>
+              </div>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+      <v-flex xs12 md7>
         <v-layout row wrap>
           <v-flex text-xs-center>
             <v-card flat light>
               <v-card-text>
                 <contact-form title="Send us a Message"></contact-form>
               </v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-flex>
-      <v-flex xs12 md4>
-        <v-layout row wrap>
-          <v-flex d-flex xs12 pl-4>
-            <v-card flat light>
-              <v-card-media :src="src" height="500"></v-card-media>
             </v-card>
           </v-flex>
         </v-layout>
@@ -40,5 +58,31 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped lang="css">
+.icon {
+  vertical-align: top;
+  border: 2px solid #daa520;
+  color: #daa520 !important;
+  border-radius: 5px;
+  padding: .5em;
+  text-align: center;
+  width: 2.3em !important;
+  margin-right: .3em;
+  /* margin-bottom: 1em; */
+  /* border-box:  */
+}
+.contact-info {
+  font-size: 1.4em;
+  color: #daa520;
+}
+.contact-info > div {
+  margin-bottom: .7em;
+}
+.contact-info > div > span {
+  display: inline-block;
+  line-height: 2.2em;
+}
+.contact-info > div.address > span {
+  line-height: 1em;
+}
 </style>
