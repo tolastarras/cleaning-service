@@ -1,7 +1,7 @@
 <template lang="html">
-  <v-container fluid grid-list-md>
-    <v-layout row wrap>
-      <v-flex xs12 md7>
+  <v-container fluid grid-list-md pa-0>
+    <v-layout row>
+      <v-flex xs12 md8>
         <v-layout row wrap>
           <v-flex text-xs-center>
             <v-card flat light>
@@ -12,7 +12,7 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs12 md5>
+      <v-flex xs12 md4>
         <v-layout row wrap>
           <v-flex d-flex xs12 pl-4>
             <v-card flat light>

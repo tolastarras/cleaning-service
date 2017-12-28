@@ -41,7 +41,7 @@ b {
   color: red;
 }
 .card {
-  border: 14px solid white;
+  border: 1em solid white;
   z-index: 1;
 }
 .card__media {
@@ -49,7 +49,6 @@ b {
 }
 .card__text {
   margin-top: 1.2em;
-
   padding: 0 .4em;
   /* height: 16em !important;
   overflow-y: auto; */
