@@ -43,6 +43,9 @@
 
 <style lang="css">
 @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+h1 {
+  font-size: 8em;
+}
 h1, h2 {
   color: #333;
   padding-bottom: .5em;
@@ -55,6 +58,12 @@ h1, h2 {
   text-transform: uppercase;
   letter-spacing: -2px;
   font-weight: bold;
+}
+.display-2 {
+  /* font-family: arial; */
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
 }
 .application a {
   color: inherit !important;
