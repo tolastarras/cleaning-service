@@ -5,7 +5,9 @@
         <h2 class="pl-5 pr-5">{{ data.title }}</h2>
         <h1 class="white--text pl-5 pr-5">{{ data.subtitle }}</h1>
       </div>
-      <v-btn @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" dark color="blue darken-4">SAY SOMETHING <v-icon v-show="showIcon">keyboard_arrow_right</v-icon></v-btn>
+      <v-btn @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" dark outline white--text>
+        SAY SOMETHING <v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
+      </v-btn>
     </v-layout>
   </v-parallax>
 </template>

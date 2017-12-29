@@ -82,7 +82,7 @@ export default {
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
-  width: 85%;
+  width: 80%;
 }
 .contact-info > div.hours > span {
   line-height: 1.3em;
