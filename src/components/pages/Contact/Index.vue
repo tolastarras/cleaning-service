@@ -59,15 +59,6 @@ export default {
 </script>
 
 <style scoped lang="css">
-.bottom-line:after {
-  content: "";
-  display: block;
-  width: 45px;
-  height: 4px;
-  background-color: #333;
-  margin-top: .4em;
-  margin-bottom: .5em;
-}
 .icon {
   vertical-align: top;
   border: 2px solid #daa520;

@@ -1,6 +1,6 @@
 <template lang="html">
   <v-container>
-    <h1 class="display-1">Our Cleaning Services</h1>
+    <h1 class="display-2 bottom-line">Cleaning Services</h1>
     <v-layout row wrap>
       <v-flex xs12 sm6 md4 v-for="(card, i) in cards" :key="i">
         <v-card class="my-3" :style="marginRight(i)" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
