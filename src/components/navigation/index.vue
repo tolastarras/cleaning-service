@@ -101,7 +101,7 @@ img {
   top: .8em;
 }
 .menuItem {
-  color: lightgray;
+  color: #ccc !important;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -109,9 +109,10 @@ img {
   display: inline-block;
   font-weight: bold;
   padding: 0 1.5em;
+  border-right: 1px solid white;
 }
 .menuItem:hover {
-  color: white;
+  color: white !important;
 }
 .toolbar.standard {
   background-color: rgba(0, 0 , 0, 0.2);
@@ -137,13 +138,10 @@ img {
   font-size: 1em;
 }
 .router-link-exact-active {
-  color: white;
+  color: white !important;
 }
 .router-link-exact-active:hover {
   cursor: default;
-}
-a {
-  border-right: 1px solid white;
 }
 a:last-of-type {
   border-right: none;
