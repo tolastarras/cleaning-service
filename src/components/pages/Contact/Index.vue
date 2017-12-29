@@ -6,7 +6,7 @@
           <v-flex xs12>
             <v-card flat light>
               <div class="contact-info">
-                <h1 class="display-1 blue--text">Contact Us</h1>
+                <h1 class="display-2 bottom-line">Contact Us</h1>
                 <div class="address">
                   <v-icon>fa-map-marker</v-icon>
                   <span v-html="business.address"></span>
@@ -30,7 +30,7 @@
       </v-flex>
       <v-flex xs12 md7>
         <v-layout row wrap>
-          <v-flex text-xs-center>
+          <v-flex text-xs-center pt-4>
             <v-card flat light>
               <v-card-text>
                 <contact-form title="Send us a Message"></contact-form>
@@ -59,6 +59,15 @@ export default {
 </script>
 
 <style scoped lang="css">
+.bottom-line:after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 4px;
+  background-color: #333;
+  margin-top: .4em;
+  margin-bottom: .5em;
+}
 .icon {
   vertical-align: top;
   border: 2px solid #daa520;
@@ -68,8 +77,6 @@ export default {
   text-align: center;
   width: 2.3em !important;
   margin-right: .3em;
-  /* margin-bottom: 1em; */
-  /* border-box:  */
 }
 .contact-info {
   font-size: 1.4em;
@@ -81,8 +88,12 @@ export default {
 .contact-info > div > span {
   display: inline-block;
   line-height: 2.2em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  width: 85%;
 }
-.contact-info > div.address > span {
-  line-height: 1em;
+.contact-info > div.hours > span {
+  line-height: 1.3em;
 }
 </style>
