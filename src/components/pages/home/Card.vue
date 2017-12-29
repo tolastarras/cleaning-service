@@ -10,6 +10,9 @@
             <h2 class="text-xs-center text-md-left" v-html="title"></h2>
             {{ card.content }}
           </v-card-text>
+          <v-card-actions>
+            <v-btn dark outline color="blue" @click="readMore">Read More</v-btn>
+          </v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>
@@ -25,6 +28,11 @@ export default {
     },
     title () {
       return this.formatTitle(this.card.title)
+    }
+  },
+  methods: {
+    readMore () {
+      this.$router.push('/about/')
     }
   }
 }
@@ -50,8 +58,9 @@ b {
 .card__text {
   margin-top: 1.2em;
   padding: 0 .4em;
-  /* height: 16em !important;
-  overflow-y: auto; */
+  height: 10em !important;
+  overflow: hidden;
+  /* overflow-y: auto; */
 }
 .card__text h2 {
   margin-bottom: .5em;
@@ -59,4 +68,12 @@ b {
 .media-content {
   background-color: rgba(0, 0, 0, 0.1);
 }
+.btn {
+  margin: 1.2em auto;
+}
+/* .btn {
+  position: absolute;
+  bottom: 2em;
+  margin: 0 auto !important;
+} */
 </style>

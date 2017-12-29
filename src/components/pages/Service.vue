@@ -17,7 +17,7 @@
             </div>
           </transition>
           <v-card-actions>
-            <v-btn dark color="blue">Book Now</v-btn>
+            <v-btn dark outline color="blue" @click="bookNow">Book Now</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -80,6 +80,10 @@ export default {
     ]
   }),
   methods: {
+    bookNow () {
+      // find out which button was clicked to prefill the message area with text
+      this.$router.push('/contact/')
+    },
     toggle (card) {
       card.show = !card.show
     },
