@@ -38,6 +38,24 @@
               required
             ></v-text-field>
           </v-flex>
+          <v-flex xs12 sm6 class="pr-4" v-if="quote">
+            <v-select
+              label="Service"
+              v-model="service"
+              :items="services"
+              :rules="serviceRules"
+              required
+            ></v-select>
+          </v-flex>
+          <v-flex xs12 sm6 v-if="quote">
+            <v-select
+              label="Frequency"
+              v-model="frequency"
+              :items="frequencies"
+              :rules="frequencyRules"
+              required
+            ></v-select>
+          </v-flex>
         </v-layout>
         <v-text-field
           label="Message" multi-line
@@ -59,7 +77,7 @@
 <script>
 import axios from 'axios'
 export default {
-  props: ['title'],
+  props: ['title', 'quote'],
   data: () => ({
     loader: null,
     loading: false,
@@ -87,6 +105,25 @@ export default {
       v => !!v || 'Phone is required',
       v => /^\d{10}$/.test(v) || 'Phone must be 10 digits in length'
     ],
+    service: null,
+    services: [
+      'House Cleaning',
+      'Carpet Care',
+      'After Party Cleaning',
+      'Office Space',
+      'Move In/Out',
+      'Commercial Cleaning'
+    ],
+    serviceRules: [v => !!v || 'Item is required'],
+    frequency: null,
+    frequencies: [
+      'Daily',
+      'Weekly',
+      'Bi Monthly',
+      'Monthly',
+      'One Time Event'
+    ],
+    frequencyRules: [v => !!v || 'Item is required'],
     message: '',
     messageRules: [
       v => !!v || 'Message is required',
@@ -97,18 +134,23 @@ export default {
     valid () {
       return this.$refs.form.validate()
     }
-    // loader () {
-    //   const l = this.loader
-    //   this[l] = !this[l]
-    //
-    //   setTimeout(() => (this[l] = false), 3000)
-    //
-    //   this.loader = null
-    // }
   },
   methods: {
     closeAlert () {
       setTimeout(() => (this.alert.show = false), 5000)
+    },
+    data () {
+      return {
+        items: ['Commercial', 'Office Space', 'House Cleaning'],
+        services: [
+          'Daily',
+          'Weekly',
+          'Bi Monthly',
+          'Monthly',
+          'Occasional',
+          'One Time Event'
+        ]
+      }
     },
     onSubmit () {
       this.loading = true

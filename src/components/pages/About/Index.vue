@@ -29,7 +29,7 @@
         <v-layout row wrap>
           <v-flex order-xs3 text-xs-center>
             <v-card flat light>
-              <contact-form title="Get a Free Quote"></contact-form>
+              <contact-form title="Get a Free Quote" :quote="true"></contact-form>
             </v-card>
           </v-flex>
         </v-layout>
