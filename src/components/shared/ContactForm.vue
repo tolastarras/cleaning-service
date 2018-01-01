@@ -1,8 +1,7 @@
 <template lang="html">
   <div class="">
-    <app-alert v-if="alert.show" :alert="alert"></app-alert>
     <v-container pa-0 ma-0>
-      <h1 class="display-1 header">{{title}}</h1>
+      <h1 class="display-1 header" v-text="title"></h1>
       <v-form v-model="valid" ref="form">
         <v-layout row wrap>
           <v-flex xs12 sm6>
@@ -38,7 +37,7 @@
               required
             ></v-text-field>
           </v-flex>
-          <v-flex xs12 sm6 class="pr-4" v-if="quote">
+          <v-flex xs12 sm6 class="pr-4" v-if="quote || this.$route.params.quote">
             <v-select
               label="Service"
               v-model="service"
@@ -47,7 +46,7 @@
               required
             ></v-select>
           </v-flex>
-          <v-flex xs12 sm6 v-if="quote">
+          <v-flex xs12 sm6 v-if="quote || this.$route.params.quote">
             <v-select
               label="Frequency"
               v-model="frequency"
@@ -69,6 +68,7 @@
             <v-icon light>cached</v-icon>
           </span>
         </v-btn>
+        <!-- <p>SERVICE: {{ this.$route.params }}</p> -->
       </v-form>
     </v-container>
   </div>
@@ -77,8 +77,9 @@
 <script>
 import axios from 'axios'
 export default {
-  props: ['title', 'quote'],
+  props: ['quote'],
   data: () => ({
+    title: '',
     loader: null,
     loading: false,
     valid: false,
@@ -105,17 +106,10 @@ export default {
       v => !!v || 'Phone is required',
       v => /^\d{10}$/.test(v) || 'Phone must be 10 digits in length'
     ],
-    service: null,
-    services: [
-      'House Cleaning',
-      'Carpet Care',
-      'After Party Cleaning',
-      'Office Space',
-      'Move In/Out',
-      'Commercial Cleaning'
-    ],
+    service: '',
+    services: [],
     serviceRules: [v => !!v || 'Item is required'],
-    frequency: null,
+    frequency: '',
     frequencies: [
       'Daily',
       'Weekly',
@@ -130,27 +124,42 @@ export default {
       v => (v && v.length <= 300) || 'Message must be less than 300 characters'
     ]
   }),
+  created () {
+    this.onLoad()
+  },
   watch: {
     valid () {
       return this.$refs.form.validate()
     }
   },
   methods: {
+    // fetchData () {
+    //   this.error = this.post = null
+    //   this.loading = true
+    //   // replace `getPost` with your data fetching util / API wrapper
+    //   getPost(this.$route.params.id, (err, post) => {
+    //     this.loading = false
+    //     if (err) {
+    //       this.error = err.toString()
+    //     } else {
+    //       this.post = post
+    //     }
+    //   })
+    // },
     closeAlert () {
       setTimeout(() => (this.alert.show = false), 5000)
     },
-    data () {
-      return {
-        items: ['Commercial', 'Office Space', 'House Cleaning'],
-        services: [
-          'Daily',
-          'Weekly',
-          'Bi Monthly',
-          'Monthly',
-          'Occasional',
-          'One Time Event'
-        ]
-      }
+    onLoad () {
+      let params = this.$route.params
+      // console.log(this.$store.getters.services)
+      let services = this.$store.getters.services.map(element => {
+        return element.title
+      })
+
+      this.services = services
+      this.service = params.service
+      this.message = params.message
+      this.title = params.quote ? 'Get a Free Quote' : 'Send us a Message'
     },
     onSubmit () {
       this.loading = true
