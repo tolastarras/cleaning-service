@@ -43,6 +43,9 @@ Vue.mixin({
       console.log('IMAGE SIZE', size)
 
       return require(`@/assets/header/${name}_${size}.jpg`)
+    },
+    getCardImage: imagePath => {
+      return require(`@/assets/content/${imagePath}`)
     }
   }
 })

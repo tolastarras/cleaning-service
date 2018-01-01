@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     business: null,
+    services: null,
     documentWidth: document.body.clientWidth
   },
   mutations: {
@@ -14,15 +15,22 @@ export const store = new Vuex.Store({
     },
     setDocumentWidth (state, payload) {
       state.documentWidth = payload
+    },
+    setServices (state, payload) {
+      state.services = payload
     }
   },
   actions: {
     fetchData ({commit}, payload) {
+      console.log(payload.services)
       commit('setBusinessInfo', payload)
+      commit('setServices', payload.services)
     },
     changeDocumentWidth ({commit}, payload) {
-      console.log('payload', payload)
       commit('setDocumentWidth', payload)
+    },
+    loadServices ({commit}, payload) {
+      commit('setServices', payload)
     }
   },
   getters: {
@@ -31,6 +39,9 @@ export const store = new Vuex.Store({
     },
     documentWidth (state) {
       return state.documentWidth
+    },
+    services (state) {
+      return state.services
     }
   }
 })
