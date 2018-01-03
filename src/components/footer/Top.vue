@@ -8,19 +8,14 @@
         </v-flex>
         <v-flex class="contact-info contact-us" xs12 md4 d-block>
           <h2 class="blue--text">Contact Us</h2>
-          <div class="phone">
-            {{ business.phone }}
-            <v-icon class="icon-phone" dark large>fa-phone</v-icon>
+          <div>
+            <v-icon class="icon-phone" dark small>fa-phone</v-icon> {{ business.phone }}
           </div>
-          <div class="email">
-            {{ business.email }}
-            <v-icon class="icon-email" dark large>fa-envelope-o</v-icon>
+          <div>
+            <v-icon class="icon-email" dark small>fa-envelope-o</v-icon> {{ business.email }}
           </div>
-          <div class="address" v-html="business.address">
-            <v-icon class="icon-address" dark large>fa-map-marker</v-icon>
-          </div>
-          <div class="">
-            <v-icon class="icon-question" dark large>fa-question</v-icon>
+          <div>
+            <v-icon class="icon-address" dark small>fa-map-marker</v-icon> {{ business.address }}
           </div>
         </v-flex>
         <v-flex class="contact-info" xs12 md4>
@@ -71,15 +66,8 @@ a:hover {
   padding-right: 1em;
   padding-left: 1em;
 }
-.icon-phone, .icon-address, .icon-email, .icon-question, .icon-clock {
+.icon-clock {
   display: none;
-}
-.phone:hover, .email:hover, .address:hover {
-  /* cursor: pointer; */
-  /* background: #111; */
-}
-.phone:hover .icon-phone, .email:hover .icon-email, .address:hover .icon-address {
-  /* display: inline; */
 }
 .contact-info:last-child {
   margin-right: 0;
@@ -89,9 +77,9 @@ a:hover {
   max-width: 1200px;
 }
 .icon {
-  position: absolute;
-  top: 2em;
-  right: .6em;
+  width: 1.2em;
+  text-align: center;
+  margin-right: .2em;
 }
 /* media queries */
 @media (max-width: 959px) {
