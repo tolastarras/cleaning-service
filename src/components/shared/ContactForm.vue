@@ -68,7 +68,6 @@
             <v-icon light>cached</v-icon>
           </span>
         </v-btn>
-        <!-- <p>SERVICE: {{ this.$route.params }}</p> -->
       </v-form>
     </v-container>
   </div>
@@ -108,7 +107,7 @@ export default {
     ],
     service: '',
     services: [],
-    serviceRules: [v => !!v || 'Item is required'],
+    serviceRules: [v => !!v || 'Service is required'],
     frequency: '',
     frequencies: [
       'Daily',
@@ -117,7 +116,7 @@ export default {
       'Monthly',
       'One Time Event'
     ],
-    frequencyRules: [v => !!v || 'Item is required'],
+    frequencyRules: [v => !!v || 'Frequency is required'],
     message: '',
     messageRules: [
       v => !!v || 'Message is required',
@@ -151,7 +150,6 @@ export default {
     },
     onLoad () {
       let params = this.$route.params
-      // console.log(this.$store.getters.services)
       let services = this.$store.getters.services.map(element => {
         return element.title
       })
