@@ -6,7 +6,7 @@
           <h2 class="blue--text">About Us</h2>
           <div v-html="business.about.html"></div>
         </v-flex>
-        <v-flex v-show="!showInfo" class="contact-info" xs12 md4>
+        <v-flex v-show="!showInfo" class="contact-info services" xs12 md4>
           <h2 class="blue--text">Services</h2>
           <div v-html="business.service.html"></div>
         </v-flex>
@@ -73,7 +73,7 @@ a:hover {
   padding-left: 2em;
   padding-right: 0;
 }
-.contact-us {
+.contact-us, .services {
   padding-right: 1em;
   padding-left: 1em;
 }
