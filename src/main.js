@@ -15,6 +15,7 @@ import data from './data'
 
 import 'vuetify/dist/vuetify.css'
 import 'font-awesome/css/font-awesome.min.css'
+// import 'animate.css/animate.min.css'
 
 Vue.use(Vuetify)
 
@@ -40,8 +41,7 @@ Vue.mixin({
         size = '800x600'
       }
 
-      console.log('IMAGE SIZE', size)
-
+      // console.log('IMAGE SIZE', size)
       return require(`@/assets/header/${name}_${size}.jpg`)
     },
     getCardImage: imagePath => {

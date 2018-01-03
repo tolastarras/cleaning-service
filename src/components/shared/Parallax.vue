@@ -1,12 +1,12 @@
 <template lang="html">
   <v-parallax :style="parallaxHeight" :src="data.src" v-if="data.src">
     <v-layout column align-center justify-center text-xs-center>
-      <div class="parallax-content_">
+      <div class="parallax-content">
         <h2 class="pl-5 pr-5">{{ data.title }}</h2>
         <h1 class="white--text pl-5 pr-5">{{ data.subtitle }}</h1>
       </div>
-      <v-btn @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" @click="bookNow" dark outline white--text>
-        Get a Free Quote<v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
+      <v-btn v-show="data.btnText" @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" @click="bookNow" dark outline white--text>
+        {{ data.btnText }} <v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
       </v-btn>
     </v-layout>
   </v-parallax>
@@ -65,12 +65,17 @@ h2 {
   font-size: 3em;
   text-transform: uppercase;
 }
+.btn {
+  margin-top: 1em;
+  font-size: 1.4em;
+}
 .parallax-content {
-  border: 1px solid white;
+  /* border: 1px solid white;
   width: 70%;
   padding: 4em 0;
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
+  border-radius: 4px; */
+  max-width: 1200px;
 }
 @media screen and (max-width: 900px) {
   h1 {

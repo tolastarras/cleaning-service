@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "axios": "^0.17.1",
     "font-awesome": "^4.7.0",
     "prerender-spa-plugin": "^2.1.0",
