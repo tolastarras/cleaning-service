@@ -49,9 +49,6 @@ export default {
 </script>
 
 <style scoped lang="css">
-.card {
-  /* margin-right: 2em; */
-}
 .card__media, .card__text {
   height: 200px !important;
 }

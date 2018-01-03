@@ -19,17 +19,20 @@
   "parallaxItems": {
     "about": {
       "title": "We are a professional team of women specialized in offering general maintenance.",
-      "subtitle": "We adapt our cleaning services to meet your needs at the best market price.",
+      "subtitle": "",
+      "btnText": "Get a Free Quote",
       "src": "living"
     },
     "services": {
       "title": "Single and recurring cleanings available!",
       "subtitle": "Our Expert cleaners will make your home sparkle.",
+      "btnText": "Get a Free Quote",
       "src": "living2"
     },
     "contact": {
       "title": "We want to hear from you!",
       "subtitle": "Give us a call, email us or use our message form",
+      "btnText": "",
       "src": "office"
     }
   },

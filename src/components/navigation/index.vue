@@ -49,26 +49,13 @@ export default {
   computed: {
     parallaxData () {
       let width = this.$store.getters.documentWidth
-      let items = {
-        'about': {
-          title: 'We are a professional team of women specialized in offering general maintenance.',
-          subtitle: 'We adapt our cleaning services to meet your needs at the best market price.',
-          src: this.getImage('living2', width)
-        },
-        'services': {
-          title: 'Single and recurring cleanings available!',
-          subtitle: 'Our Expert cleaners will make your home sparkle.',
-          src: this.getImage('living', width)
-        },
-        'contact': {
-          title: 'We want to hear from you!',
-          subtitle: 'Give us a call, email us or use our message form',
-          src: this.getImage('office', width)
-        }
-      }
-
       let page = this.$route.path.replace(/\//g, '')
-      return items[`${page}`]
+      let parallaxData = this.$store.getters.parallax[`${page}`]
+      // console.log('here.....', parallaxData.title)
+      return {
+        ...parallaxData,
+        src: this.getImage(parallaxData.src, width)
+      }
     }
   },
   methods: {

@@ -1,7 +1,7 @@
 <template lang="html">
   <v-carousel hide-controls hide-delimiters :cycle="cycle" interval="7000">
     <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" transition="fade" @mouseover="toggle" mouseout="toggle">
-    <v-layout class="carousel-content" column align-center justify-center>
+    <v-layout class="carousel-content" column align-center justify-center transition="fadeLeft">
       <h1 class="title white--text mb-0 pb-0">{{item.title}}</h1>
       <h2 class="subtitle pl-5 pr-5">{{item.subtitle}}</h2>
     </v-layout>

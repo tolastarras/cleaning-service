@@ -7,6 +7,7 @@ export const store = new Vuex.Store({
   state: {
     business: null,
     services: null,
+    parallax: null,
     documentWidth: document.body.clientWidth
   },
   mutations: {
@@ -18,13 +19,17 @@ export const store = new Vuex.Store({
     },
     setServices (state, payload) {
       state.services = payload
+    },
+    setParallax (state, payload) {
+      state.parallax = payload
     }
   },
   actions: {
     fetchData ({commit}, payload) {
-      console.log(payload.services)
+      // console.log(payload.parallaxItems)
       commit('setBusinessInfo', payload)
       commit('setServices', payload.services)
+      commit('setParallax', payload.parallaxItems)
     },
     changeDocumentWidth ({commit}, payload) {
       commit('setDocumentWidth', payload)
@@ -42,6 +47,9 @@ export const store = new Vuex.Store({
     },
     services (state) {
       return state.services
+    },
+    parallax (state) {
+      return state.parallax
     }
   }
 })

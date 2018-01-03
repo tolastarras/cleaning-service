@@ -180,7 +180,7 @@ export default {
         this.closeAlert()
       })
       .catch(error => {
-        console.log('ERROR', error)
+        // console.log('ERROR', error)
         this.loading = false
         this.alert = {
           show: true,
