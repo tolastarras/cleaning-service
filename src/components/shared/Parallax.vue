@@ -5,8 +5,8 @@
         <h2 class="pl-5 pr-5">{{ data.title }}</h2>
         <h1 class="white--text pl-5 pr-5">{{ data.subtitle }}</h1>
       </div>
-      <v-btn @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" dark outline white--text>
-        SAY SOMETHING <v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
+      <v-btn @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" @click="bookNow" dark outline white--text>
+        Get a Free Quote<v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
       </v-btn>
     </v-layout>
   </v-parallax>
@@ -31,6 +31,9 @@ export default {
     },
     handleResize () {
       this.windowSize = this.$store.getters.documentWidth
+    },
+    bookNow () {
+      this.$router.push({name: 'Contact', params: { quote: true }})
     }
   },
   computed: {
