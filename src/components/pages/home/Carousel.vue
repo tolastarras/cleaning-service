@@ -14,7 +14,7 @@ export default {
   props: ['items'],
   methods: {
     toggle () {
-      this.cycle = !this.cycle
+      // this.cycle = !this.cycle
     }
   },
   data () {
@@ -38,10 +38,12 @@ h1.title {
   font-weight: bold !important;
   text-transform: uppercase !important;
   text-align: center;
+  margin-bottom: .3em !important;
 }
 h2.subtitle {
   font-size: 2.8em;
   text-align: center;
   color: gold;
+  max-width: 1200px;
 }
 </style>

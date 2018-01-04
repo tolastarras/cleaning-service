@@ -3,8 +3,8 @@
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-2>
-          <div class="text-xs-center text-md-left caption">&copy; Copyright 2017 {{ business.name }}. All Rights Reserved.</div>
-          <div><a href="http://www.nuriki.com">Built by Nuriki &reg;</a></div>
+          <div class="text-xs-center text-md-left caption">&copy; 2017 {{ business.name }}. <span>All Rights Reserved.</span></div>
+          <div class="built-by"><a href="http://www.nuriki.com">Built by Nuriki &reg;</a></div>
           <v-spacer></v-spacer>
         </v-flex>
         <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>
@@ -34,7 +34,16 @@ export default {
 </script>
 
 <style scoped lang="css">
-@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed'); */
+.caption, .built-by {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  /* color: #727272; */
+}
+.caption > span {
+  text-transform: uppercase;
+}
 a {
   text-decoration: none;
   color: #777;
