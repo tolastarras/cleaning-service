@@ -31,10 +31,10 @@
     computed: {
       menuItems () {
         return [
-          {icon: 'bubble_chart', title: 'Home', url: '/'},
-          {icon: 'room', title: 'About Us', url: '/about/'},
-          {icon: 'person', title: 'Services', url: '/services/'},
-          {icon: 'person', title: 'Contact Us', url: '/contact/'}
+          {icon: 'home', title: 'Home', url: '/'},
+          {icon: 'people', title: 'About Us', url: '/about/'},
+          {icon: 'fa-tasks', title: 'Services', url: '/services/'},
+          {icon: 'phone_in_talk', title: 'Contact Us', url: '/contact/'}
         ]
       }
     }
