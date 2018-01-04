@@ -61,7 +61,8 @@ new Vue({
   components: { App },
   methods: {
     handleResize () {
-      this.$store.dispatch('changeDocumentWidth', document.body.clientWidth)
+      // this.$store.dispatch('changeDocumentWidth', document.body.clientWidth)
+      this.$store.dispatch('changeDocumentWidth', window.innerWidth)
     }
   },
   created () {
