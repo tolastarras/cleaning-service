@@ -9,7 +9,7 @@
               <v-card-media v-show="card.show" :src="getCardImage(card.src)"></v-card-media>
               <v-card-title>
                 <div class="card-content text-xs-left">
-                  <div class="headline pt-4 text-xs-center">{{ card.title }}</div>
+                  <div class="headline pt-4 text-xs-center" v-html="getTitle(card.title)"></div>
                   <p class="pt-4 text-xs-center">{{ card.price }}</p>
                   <v-card-text v-show="!card.show" v-html="card.description"></v-card-text>
                 </div>
@@ -27,13 +27,15 @@
 
 <script>
 export default {
-  // src: require('@/assets/content/upholstery-cleaning.jpg'),
   data () {
     return {
       services: this.$store.getters.services
     }
   },
   methods: {
+    getTitle (title) {
+      return this.formatTitle(title)
+    },
     bookNow (title) {
       // find out which button was clicked to prefill the message area with text
       this.$router.push({name: 'Contact', params: { service: title, quote: true }})
@@ -58,6 +60,9 @@ export default {
 <style scoped lang="css">
 .card__media, .card__text {
   height: 200px !important;
+}
+.headline {
+  text-transform: uppercase;
 }
 .card-content {
   width: 100%;

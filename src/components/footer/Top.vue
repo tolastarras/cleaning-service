@@ -46,6 +46,7 @@ export default {
 </script>
 
 <style scoped lang="css">
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 h2 {
   text-transform: uppercase;
   padding: .4em 0;
@@ -65,9 +66,12 @@ a:hover {
   position: relative;
   line-height: 1.6em;
   font-size: 1.1em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 200;
   padding-right: 2em;
+}
+.contact-info > h2 {
+  font-family: 'Roboto', sans-serif;
 }
 .contact-info:last-child {
   padding-left: 2em;
@@ -101,7 +105,7 @@ a:hover {
   .contact-info:last-child {
     padding-left: 0;
   }
-  .contact-us {
+  .contact-us, .services {
     padding: 1.6em 0;
   }
 }

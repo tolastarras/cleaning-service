@@ -43,7 +43,7 @@
       "src": "house-cleaning.jpg",
       "show": true,
       "price": "1hr | $24.99",
-      "description": "If you have recurring needs on a weekly or monthly basis, we will be happy to pitch in. Our crew is always punctual, and we have more than 10 years of experience. Clients concerned about costs are always glad to hear that we provide free estimates and all our equipment and supplies come at no additional charge. Place a call to our office today and tell us which areas you require assistance with."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       "id": 2,
@@ -55,16 +55,16 @@
     },
     {
       "id": 3,
-      "title": "After Party Cleaning",
-      "src": "after-party-cleaning.jpg",
+      "title": "After Party",
+      "src": "after-party.jpg",
       "show": true,
       "price": "1hr | $24.99",
       "description": "Cleaning up after a big event can be a major undertaking, especially when there\\'s food and drink involved. And depending on the extent of the clean-up, you may even have to rent the right equipment to get the job done. Instead of struggling to restore your space to order, consider a better option: our event cleaning services."
     },
     {
       "id": 4,
-      "title": "Office Space",
-      "src": "office_lg.jpg",
+      "title": "Office Cleaning",
+      "src": "office.jpg",
       "show": true,
       "price": "Contact Us",
       "description": "A clean, well-kept office helps employees stay motivated and content. Treat your employees and your business to a spotless interior with comprehensive office cleaning services from us. No matter the size or layout of your company, we can get your office looking its best without disrupting your schedule."
@@ -72,18 +72,18 @@
     {
       "id": 5,
       "title": "Move In/Out",
-      "src": "move-in-move-out-cleaning.jpg",
+      "src": "move-in-move-out.jpg",
       "show": true,
       "price": "As low as $140",
       "description": "Now that the rooms are empty – or nearly empty – it’s time to get your home or apartment looking even better. Many house or apartment contracts require a \"broom-clean.\" Others require a thorough checklist that covers everything from baseboards to the microwave oven."
     },
     {
       "id": 6,
-      "title": "Upholstery Cleaning",
-      "src": "upholstery-cleaning.jpg",
+      "title": "Commercial Space",
+      "src": "commercial.jpg",
       "show": true,
-      "price": "1 piece | $29.99",
-      "description": "Upholstery can be made from many different fibers or combinations of fibers, and each one may need to be cleaned in a specific way. We will identify your upholstery fabric and select from a variety of cleaning methods to treat your upholstery safely and effectively."
+      "price": "1hr | $24.99",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   ]
 }

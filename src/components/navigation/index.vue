@@ -48,13 +48,12 @@ export default {
   },
   computed: {
     parallaxData () {
-      let width = this.$store.getters.documentWidth
       let page = this.$route.path.replace(/\//g, '')
       let parallaxData = this.$store.getters.parallax[`${page}`]
-      // console.log('here.....', parallaxData.title)
-      return {
+
+      return parallaxData === undefined ? false : {
         ...parallaxData,
-        src: this.getImage(parallaxData.src, width)
+        src: this.getImage(parallaxData.src, this.$store.getters.documentWidth)
       }
     }
   },
@@ -68,7 +67,6 @@ export default {
   },
   watch: {
     documentWidth () {
-      console.log('store', this.$store.getters.documentWidth)
       return this.$store.getters.documentWidth
     }
   },

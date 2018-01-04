@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import Home from '@/components/pages/home'
 import About from '@/components/pages/about'
-import Service from '@/components/pages/Service'
+import Service from '@/components/pages/service'
 import Contact from '@/components/pages/contact'
 
 Vue.use(Router)
