@@ -8,7 +8,8 @@ export const store = new Vuex.Store({
     business: null,
     services: null,
     parallax: null,
-    documentWidth: document.body.clientWidth
+    // documentWidth: document.body.clientWidth
+    documentWidth: window.innerWidth
   },
   mutations: {
     setBusinessInfo (state, payload) {

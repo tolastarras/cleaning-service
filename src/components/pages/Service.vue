@@ -3,7 +3,7 @@
     <h1 class="display-2 bottom-line">Cleaning Services</h1>
     <v-layout row wrap>
       <v-flex xs12 sm6 md4 v-for="(card, i) in services" :key="i">
-        <v-card class="my-3" :style="marginRight(i)" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
+        <v-card class="my-3" :style="{'margin-right': marginRight(i)}" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
           <transition name="slide">
             <div>
               <v-card-media v-show="card.show" :src="getCardImage(card.src)"></v-card-media>
@@ -42,7 +42,14 @@ export default {
       card.show = !card.show
     },
     marginRight (index) {
-      return (index + 1) % 3 === 0 ? 'margin-right: 0' : 'margin-right: 2em'
+      let cardsPerLine = 3
+      let width = this.$store.getters.documentWidth
+      if (width < 600) {
+        cardsPerLine = 1
+      } else if (width < 960) {
+        cardsPerLine = 2
+      }
+      return (index + 1) % cardsPerLine === 0 ? '0' : '2em'
     }
   }
 }
