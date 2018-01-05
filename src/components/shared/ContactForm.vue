@@ -37,8 +37,8 @@
               required
             ></v-text-field>
           </v-flex>
-          <v-flex xs12 sm6 class="pr-4" v-if="quote || this.$route.params.quote">
-            <v-select
+          <v-flex xs12 sm6 v-if="quote || this.$route.params.quote">
+            <v-select class="pr-4"
               label="Service"
               v-model="service"
               :items="services"
@@ -157,7 +157,7 @@ export default {
       this.services = services
       this.service = params.service
       this.message = params.message
-      this.title = params.quote ? 'Get a Free Quote' : 'Send us a Message'
+      this.title = this.quote || params.quote ? 'Get a Free Quote' : 'Send us a Message'
     },
     onSubmit () {
       this.loading = true
