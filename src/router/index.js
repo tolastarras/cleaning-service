@@ -6,29 +6,27 @@ import About from '@/components/pages/about'
 import Service from '@/components/pages/service'
 import Contact from '@/components/pages/contact'
 
-import { PROJECT_PATH } from '@/config/'
-
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: `${PROJECT_PATH}/`,
+      path: '/',
       name: 'Home',
       component: Home
     },
     {
-      path: `${PROJECT_PATH}/about/`,
+      path: '/about/',
       name: 'About',
       component: About
     },
     {
-      path: `${PROJECT_PATH}/services/`,
+      path: '/services/',
       name: 'Service',
       component: Service
     },
     {
-      path: `${PROJECT_PATH}/contact/`,
+      path: '/contact/',
       name: 'Contact',
       component: Contact
     }
@@ -43,5 +41,3 @@ export default new Router({
     return { x: 0, y: 0 }
   }
 })
-
-// router.replace({ path: `*', redirect: '/projects/evevides/' })

@@ -46,16 +46,6 @@ Vue.mixin({
     },
     getCardImage: imagePath => {
       return require(`@/assets/content/${imagePath}`)
-    },
-    getPage: path => {
-      // remove double forward slashes from path and split url into array of words > 0
-      let values = path
-        // .replace(/\/\//g, '/')
-        .split('/')
-        .filter(param => param.length > 0)
-
-      // return the last value (the page)
-      return values[values.length - 1]
     }
   }
 })

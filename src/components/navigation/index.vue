@@ -61,8 +61,7 @@ export default {
   },
   computed: {
     parallaxData () {
-      // let page = this.$route.path.replace(/\//g, '')
-      let page = this.getPage(this.$route.path)
+      let page = this.$route.path.replace(/\//g, '')
       let parallaxData = this.$store.getters.parallax[`${page}`]
 
       return parallaxData === undefined ? false : {
@@ -73,6 +72,7 @@ export default {
   },
   methods: {
     goto (url) {
+      console.log('URL', url)
       this.$router.push({ path: url })
     },
     handleScroll () {
