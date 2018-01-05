@@ -6,7 +6,7 @@
           <v-flex order-xs1>
             <v-card flat light>
               <v-card-text>
-                <h1 class="display-2 bottom-line text-xs-center text-md-left">Serving the {{ business.serving }} Area</h1>
+                <h1 class="display-2 bottom-line">Serving the {{ business.serving }} Area</h1>
                 <img :src="src" :alt="business.name" align="right"/>
 
                 <p>Since we started, we've attracted a loyal clientele based our exceptional customer service. Our customers range from stay-at-home mothers in need of a breather to office dwelling professionals with a little time to spare. With a full range of cleaning services, {{ business.city }} based {{ business.name }} offers clients a chance to sit back and relax with professional cleaners taking over their chores.</p>
@@ -29,7 +29,7 @@
         <v-layout row wrap>
           <v-flex order-xs3 text-xs-center>
             <v-card flat light>
-              <contact-form title="Get a Free Quote" :quote="true"></contact-form>
+              <contact-form :quote="true"></contact-form>
             </v-card>
           </v-flex>
         </v-layout>

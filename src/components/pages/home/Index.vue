@@ -10,7 +10,7 @@
         <v-container fluid grid-list-md pa-0>
           <v-layout row wrap>
             <v-flex xs12 md4 v-for="(card, index) in cards" :key="card.title">
-              <card :card="card" :index="index" :total="cards.length"></card>
+              <card :card="card" :class="lastCard(index)" :style="spacing(index)" :index="index" :total="cards.length"></card>
             </v-flex>
           </v-layout>
         </v-container>
@@ -27,6 +27,22 @@ export default {
   components: {
     AppCarousel,
     Card
+  },
+  methods: {
+    lastCard (index) {
+      console.log('INDEX', index)
+      console.log('LAST CARD', this.cards.length - 1)
+      return (index === this.cards.length - 1) ? 'last-card' : ''
+    },
+    spacing (index) {
+      if (index === 0) {
+        return 'padding-left: 0;padding-right: 1em;'
+      } else if (index === 1) {
+        return 'padding-left: .5em;padding-right: .5em;'
+      } else if (index === 2) {
+        return 'padding-left: 1em; padding-right: 0;'
+      }
+    }
   },
   data () {
     return {
@@ -56,20 +72,17 @@ export default {
         {
           title: 'Quality Cleaning',
           src: require('@/assets/card/sink.jpg'),
-          flex: 4,
-          content: 'We deliver happiness through home cleaning and other home and commercial services in Miami. We offer simple flat rate pricing for home cleaning services based on the size of the home given the number of bedrooms. Our home cleaning services come with a satisfaction guarantee and our professional team works hard to provide each and every customer with the very best cleaning services Miami has to offer.'
+          content: 'Our professional team works hard to provide each and every customer with the very best cleaning service Miami has to offer.'
         },
         {
           title: 'Professional Staff',
           src: require('@/assets/card/mirror.jpg'),
-          flex: 4,
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+          content: 'We deliver happiness through home cleaning and other home and commercial services. Our cleaning services come with a satisfaction guarantee.'
         },
         {
           title: 'Affordable Rates',
           src: require('@/assets/card/save.jpg'),
-          flex: 4,
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+          content: 'We offer simple flat rate pricing for home cleaning services based on the size of the home given the number of rooms.'
         }
       ]
     }
@@ -86,5 +99,13 @@ export default {
 }
 .cards {
    margin-top: 38em;
+}
+@media (max-width: 959px) {
+  .container {
+    padding: 0 0 1em 0 !important;
+  }
+  .last-card {
+    padding-bottom: 0 !important;
+  }
 }
 </style>

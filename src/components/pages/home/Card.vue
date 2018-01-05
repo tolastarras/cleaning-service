@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs-12>
-        <v-card flat :class="marginRight">
+        <v-card>
           <v-card-media :src="card.src">
             <v-layout class="media-content"></v-layout>
           </v-card-media>
@@ -23,9 +23,6 @@
 export default {
   props: ['card', 'index', 'total'],
   computed: {
-    marginRight () {
-      return this.index + 1 < this.total ? 'mr-2' : ''
-    },
     title () {
       return this.formatTitle(this.card.title)
     }
@@ -60,7 +57,7 @@ b {
   padding: 0 .4em;
   height: 10em !important;
   overflow: hidden;
-  /* overflow-y: auto; */
+  overflow-y: auto;
 }
 .card__text h2 {
   margin-bottom: .5em;
@@ -68,12 +65,15 @@ b {
 .media-content {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.btn {
-  margin: 1.2em auto;
+.card__actions {
+  padding: 0 0 1em 0 !important;
 }
-/* .btn {
-  position: absolute;
-  bottom: 2em;
-  margin: 0 auto !important;
-} */
+.btn {
+  margin: 0 auto;
+}
+@media (max-width: 959px) {
+  .card__media {
+    /* height: 25em !important; */
+  }
+}
 </style>

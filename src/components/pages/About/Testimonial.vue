@@ -22,7 +22,6 @@ export default {
   props: ['title'],
   methods: {
     lastChild (i) {
-      console.log('i: ' + this.testimonials.length)
       return (i + 1) === this.testimonials.length ? 'last' : ''
     }
   },
@@ -109,5 +108,10 @@ h1 {
     font-weight: 500;
     font-size: 1em;
     text-shadow: 0 1px white;
+}
+@media (max-width: 959px) {
+  .testimonial-quote.group {
+    padding-left: 1em;
+  }
 }
 </style>
