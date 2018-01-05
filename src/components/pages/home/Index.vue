@@ -30,8 +30,6 @@ export default {
   },
   methods: {
     lastCard (index) {
-      console.log('INDEX', index)
-      console.log('LAST CARD', this.cards.length - 1)
       return (index === this.cards.length - 1) ? 'last-card' : ''
     },
     spacing (index) {

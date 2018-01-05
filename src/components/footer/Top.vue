@@ -37,9 +37,7 @@ export default {
   props: ['business'],
   computed: {
     showInfo () {
-      let page = this.$route.path.replace(/\//g, '')
-      console.log('PAGE', page)
-      return page !== 'contact'
+      return this.getPage(this.$route.path) !== 'contact'
     }
   }
 }
