@@ -28,12 +28,12 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs12 md7>
+      <v-flex xs12 md7 id="quote">
         <v-layout row wrap>
           <v-flex text-xs-center pt-4>
             <v-card flat light>
               <v-card-text>
-                <contact-form title="Send us a Message"></contact-form>
+                <contact-form></contact-form>
               </v-card-text>
             </v-card>
           </v-flex>

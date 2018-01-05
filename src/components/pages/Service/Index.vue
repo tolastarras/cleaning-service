@@ -38,7 +38,7 @@ export default {
     },
     bookNow (title) {
       // find out which button was clicked to prefill the message area with text
-      this.$router.push({name: 'Contact', params: { service: title, quote: true }})
+      this.$router.push({ name: 'Contact', params: { service: title, quote: true } })
     },
     toggle (card) {
       card.show = !card.show
