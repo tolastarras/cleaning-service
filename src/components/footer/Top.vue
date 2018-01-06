@@ -4,11 +4,11 @@
       <v-layout row wrap>
         <v-flex class="contact-info" xs12 md4>
           <h2 class="blue--text">About Us</h2>
-          <div v-html="business.about.html"></div>
+          <div v-html="changeRoute(business.about.html)"></div>
         </v-flex>
         <v-flex v-show="!showInfo" class="contact-info services" xs12 md4>
           <h2 class="blue--text">Services</h2>
-          <div v-html="business.service.html"></div>
+          <div v-html="changeRoute(business.service.html)"></div>
         </v-flex>
         <v-flex v-show="showInfo" class="contact-info contact-us" xs12 md4 d-block>
           <h2 class="blue--text">Contact Us</h2>
@@ -33,8 +33,14 @@
 </template>
 
 <script>
+import { PROJECT_PATH } from '@/config/'
 export default {
   props: ['business'],
+  methods: {
+    changeRoute (html) {
+      return html.replace(/\[PROJECT_PATH\]/, PROJECT_PATH)
+    }
+  },
   computed: {
     showInfo () {
       return this.getPage(this.$route.path) !== 'contact'
