@@ -37,9 +37,7 @@ export default {
   props: ['business'],
   computed: {
     showInfo () {
-      let page = this.$route.path.replace(/\//g, '')
-      console.log('PAGE', page)
-      return page !== 'contact'
+      return this.getPage(this.$route.path) !== 'contact'
     }
   }
 }
@@ -107,6 +105,11 @@ a:hover {
   }
   .contact-us, .services {
     padding: 1.6em 0;
+  }
+}
+@media (max-width: 415px) {
+  .footer {
+    padding: .5em !important;
   }
 }
 </style>

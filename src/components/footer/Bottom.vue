@@ -66,4 +66,10 @@ a:hover {
   margin: 0 auto !important;
   max-width: 1200px;
 }
+/* media queries */
+@media (max-width: 415px) {
+  .footer {
+    padding: 1em 0 !important;
+  }
+}
 </style>

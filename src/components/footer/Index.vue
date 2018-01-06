@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="all-footer">
     <top-footer :business="business"></top-footer>
     <bottom-footer :business="business"></bottom-footer>
   </div>

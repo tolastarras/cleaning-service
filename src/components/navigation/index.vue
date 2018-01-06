@@ -27,7 +27,7 @@
     </v-navigation-drawer>
     <v-toolbar flat v-bind:class="{standard: !scrolled, sticky: scrolled}" class="white--text">
       <v-layout row wrap style="max-width:1200px;margin: 0 auto">
-        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text" style="border: 1px solid white; border-radius: 4px;"></v-toolbar-side-icon>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text"></v-toolbar-side-icon>
         <v-toolbar-title><img :src="logo" :alt="business.name"/></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
@@ -61,7 +61,8 @@ export default {
   },
   computed: {
     parallaxData () {
-      let page = this.$route.path.replace(/\//g, '')
+      // let page = this.$route.path.replace(/\//g, '')
+      let page = this.getPage(this.$route.path)
       let parallaxData = this.$store.getters.parallax[`${page}`]
 
       return parallaxData === undefined ? false : {
@@ -72,7 +73,6 @@ export default {
   },
   methods: {
     goto (url) {
-      console.log('URL', url)
       this.$router.push({ path: url })
     },
     handleScroll () {
@@ -144,6 +144,11 @@ img {
 }
 .router-link-exact-active:hover {
   cursor: default;
+}
+.btn {
+  margin-top: .7em;
+  border: 1px solid white;
+  border-radius: 4px;
 }
 a:last-of-type {
   border-right: none;
