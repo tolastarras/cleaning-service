@@ -87,7 +87,7 @@ export default {
 .contact-info > div.hours > span {
   line-height: 1.3em;
 }
-@media (min-width: 960px) {
+@media (max-width: 730px) {
   .contact-info > div.address > span {
     line-height: 1.1em;
   }

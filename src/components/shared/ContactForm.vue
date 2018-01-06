@@ -250,4 +250,13 @@ form {
     padding-right: 0 !important;
   }
 }
+@media (max-width: 415px) {
+  form {
+    padding: 2em 0 0;
+  }
+  .container {
+    border: 0;
+    border-radius: 0;
+  }
+}
 </style>

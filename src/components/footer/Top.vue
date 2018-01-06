@@ -107,4 +107,9 @@ a:hover {
     padding: 1.6em 0;
   }
 }
+@media (max-width: 415px) {
+  .footer {
+    padding: .5em !important;
+  }
+}
 </style>

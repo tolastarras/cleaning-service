@@ -10,7 +10,7 @@
             <h2 class="text-xs-center text-md-left" v-html="title"></h2>
             {{ card.content }}
           </v-card-text>
-          <v-card-actions>
+          <v-card-actions justify-center>
             <v-btn dark outline color="blue" @click="readMore">Read More</v-btn>
           </v-card-actions>
         </v-card>
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { PROJECT_PATH } from '@/config/'
 export default {
   props: ['card', 'index', 'total'],
   computed: {
@@ -29,7 +30,7 @@ export default {
   },
   methods: {
     readMore () {
-      this.$router.push('/about/')
+      this.$router.push(`${PROJECT_PATH}/about/`)
     }
   }
 }
