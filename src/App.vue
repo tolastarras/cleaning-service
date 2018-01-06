@@ -107,7 +107,7 @@ h1, h2 {
 }
 @media (max-width: 600px) {
   .main-content {
-    padding: 1em;
+    padding: 0;
   }
 }
 </style>

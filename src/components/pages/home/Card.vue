@@ -10,7 +10,7 @@
             <h2 class="text-xs-center text-md-left" v-html="title"></h2>
             {{ card.content }}
           </v-card-text>
-          <v-card-actions justify-center>
+          <v-card-actions class="justify-center">
             <v-btn dark outline color="blue" @click="readMore">Read More</v-btn>
           </v-card-actions>
         </v-card>
