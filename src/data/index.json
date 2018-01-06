@@ -10,10 +10,10 @@
     "hours": "Monday-Friday: 8:30-5:00 EST<br>Saturday: 9:00-4:00 EST<br>Sunday: by appointment ONLY",
     "about": {
       "title": "About Evevides",
-      "html": "We are a professional team of women offering quality service to meet your needs at the best market price. <a href='/about/'>(read more)</a>"
+      "html": "We are a professional team of women offering quality service to meet your needs at the best market price. <a href='[PROJECT_PATH]/about/'>(read more)</a>"
     },
     "service": {
-      "html": "We offer a variety of services and we have flexible appointment availability. Our team is available to talk with customers seven days a week. <a href='/services/'>(read more)</a>"
+      "html": "We offer a variety of services and we have flexible appointment availability. Our team is available to talk with customers seven days a week. <a href='[PROJECT_PATH]/services/'>(read more)</a>"
     }
   },
   "parallaxItems": {
