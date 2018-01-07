@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs-12>
-        <v-card>
+        <v-card flat>
           <v-card-media :src="card.src">
             <v-layout class="media-content"></v-layout>
           </v-card-media>
@@ -71,6 +71,18 @@ b {
 }
 .btn {
   margin: 0 auto;
+}
+/* media queries */
+@media only screen and (max-width: 599px) {
+  .container {
+    /* padding: .8em .3em !important; */
+  }
+  .card {
+    /* margin-top: -1em; */
+  }
+  .card__text {
+    padding: 0 .4em !important;
+  }
 }
 @media (max-width: 959px) {
   .card__media {

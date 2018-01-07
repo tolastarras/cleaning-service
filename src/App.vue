@@ -105,9 +105,13 @@ h1, h2 {
 .card__text {
   padding: 0;
 }
-@media (max-width: 600px) {
-  .main-content {
-    padding: 0;
+/* media queries */
+@media only screen and (max-width: 599px) {
+  .container {
+    padding: .8em .3em !important;
+  }
+  .card__text, .main-content {
+    padding: 0 !important;
   }
 }
 </style>

@@ -98,6 +98,12 @@ export default {
 .cards {
    margin-top: 38em;
 }
+/* media queries */
+@media (max-width: 599px) {
+  .cards {
+    margin-top: 26em;
+  }
+}
 @media (max-width: 959px) {
   .container {
     padding: 0 0 1em 0 !important;
