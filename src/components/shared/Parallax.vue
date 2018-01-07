@@ -39,7 +39,7 @@ export default {
   computed: {
     parallaxHeight () {
       if (this.$store.getters.documentWidth > MEDIUM) {
-        return 'height: 700px !important'
+        // return 'height: 700px !important'
       }
       // default of 500 px
       return null
@@ -77,13 +77,24 @@ h2 {
   border-radius: 4px; */
   max-width: 1200px;
 }
-@media screen and (max-width: 900px) {
+/* media queries */
+@media only screen and (max-width: 599px) {
+  .parallax {
+    height: 26em !important;
+  }
+}
+@media only screen and (max-width: 900px) {
   h1 {
     font-size: 1.8em;
   }
   h2 {
     margin-top: 3.5em;
     font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  .parallax {
+    height: 700px !important;
   }
 }
 </style>

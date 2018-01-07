@@ -3,7 +3,7 @@
     <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" transition="fade" @mouseover="toggle" mouseout="toggle">
     <v-layout class="carousel-content" column align-center justify-center transition="fadeLeft">
       <h1 class="title white--text mb-0 pb-0">{{item.title}}</h1>
-      <h2 class="subtitle pl-5 pr-5">{{item.subtitle}}</h2>
+      <h2 class="subtitle">{{item.subtitle}}</h2>
     </v-layout>
     </v-carousel-item>
   </v-carousel>
@@ -45,5 +45,18 @@ h2.subtitle {
   text-align: center;
   color: gold;
   max-width: 1200px;
+}
+/* media queries */
+@media (max-width: 599px) {
+  .carousel {
+    height: 26em !important;
+  }
+  .carousel-content > h1 {
+    font-size: 1.8em !important;
+  }
+  .carousel-content > h2 {
+    /* margin-top: 3.5em; */
+    font-size: 1.5em;
+  }
 }
 </style>
