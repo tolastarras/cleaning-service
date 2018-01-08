@@ -5,8 +5,8 @@
         <v-layout row wrap>
           <v-flex xs12>
             <v-card flat light>
+              <h1 class="display-2 bottom-line">Contact Us</h1>
               <div class="contact-info">
-                <h1 class="display-2 bottom-line">Contact Us</h1>
                 <div class="address">
                   <v-icon>fa-map-marker</v-icon>
                   <span v-html="business.address"></span>

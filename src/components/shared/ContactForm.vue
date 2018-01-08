@@ -199,10 +199,8 @@ form {
 }
 .header {
   background: #444;
-  padding: .5em 0 !important;
+  padding: .3em 0 .5em 0 !important;
   color: white;
-  padding: 0;
-  margin: 0;
 }
 .custom-loader {
   animation: loader 1s infinite;
@@ -245,7 +243,10 @@ form {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 599px) {
+  .header {
+    padding: .2em !important;
+  }
   .input-group {
     padding-right: 0 !important;
   }

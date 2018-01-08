@@ -5,7 +5,7 @@
         <v-layout row wrap>
           <v-flex order-xs1>
             <v-card flat light>
-              <v-card-text>
+              <v-card-text class="pb-3">
                 <h1 class="display-2 bottom-line">Serving the {{ business.serving }} Area</h1>
                 <img :src="src" :alt="business.name" align="right"/>
 
