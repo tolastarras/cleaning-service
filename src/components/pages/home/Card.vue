@@ -7,7 +7,7 @@
             <v-layout class="media-content"></v-layout>
           </v-card-media>
           <v-card-text>
-            <h2 class="text-xs-center text-md-left" v-html="title"></h2>
+            <h2 class="text-xs-center" v-html="title"></h2>
             {{ card.content }}
           </v-card-text>
           <v-card-actions class="justify-center">
@@ -39,6 +39,7 @@ export default {
 <style scoped lang="css">
 h2 {
   text-transform: uppercase;
+  font-size: 2em;
   padding: 0;
   margin: 0;
 }

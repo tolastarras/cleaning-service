@@ -47,6 +47,7 @@
 h1, h2 {
   color: #333;
   padding-bottom: .5em;
+  text-transform: uppercase;
 }
 #app {
   margin: 0 auto;
@@ -58,7 +59,6 @@ h1, h2 {
   font-weight: bold;
 }
 .display-2 {
-  /* font-family: arial; */
   text-transform: uppercase;
   font-weight: bold;
   color: #333;
@@ -107,6 +107,12 @@ h1, h2 {
 }
 /* media queries */
 @media only screen and (max-width: 599px) {
+  h1.display-2 {
+    font-size: 2.2em !important;
+  }
+  h1.display-1 {
+    font-size: 2em !important;
+  }
   .container {
     padding: .8em .3em !important;
   }
