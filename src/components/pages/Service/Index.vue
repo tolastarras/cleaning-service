@@ -67,6 +67,12 @@ export default {
 .card-content {
   width: 100%;
 }
+.card-content > p {
+  color: #555;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
 .btn {
   margin: 0 auto !important;
   margin-bottom: 2em !important;

@@ -4,7 +4,7 @@
       <v-list class="pa-1">
         <v-list-tile avatar tag="div">
           <v-list-tile-content>
-            <v-list-tile-title>{{ business.name }}</v-list-tile-title>
+            <v-list-tile-title><img :src="logo" :alt="business.name"/></v-list-tile-title>
           </v-list-tile-content>
           <v-list-tile-action>
             <v-btn icon @click.stop="drawer = !drawer">
@@ -15,7 +15,7 @@
       </v-list>
       <v-list class="pt-0" dense>
         <v-divider light></v-divider>
-        <v-list-tile v-for="(item, i) in menuItems" :key="i" @click="goto(item.url)">
+        <v-list-tile :class="activeItem(item)" v-for="(item, i) in menuItems" :key="i" @click="goto(item.url)">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -72,6 +72,15 @@ export default {
     }
   },
   methods: {
+    activeItem (item) {
+      let page = this.getPage(this.$route.path)
+      let currentPage = this.getPage(item.url)
+
+      if (currentPage === page) {
+        return 'active'
+      }
+      return ''
+    },
     goto (url) {
       this.$router.push({ path: url })
     },
@@ -101,6 +110,13 @@ img {
   height: 64px;
   position: absolute;
   top: .8em;
+}
+li.active {
+  background: rgba(0,0,0,.14);
+}
+li.active:hover {
+  cursor: move !important;
+  /* background: green; */
 }
 .menuItem {
   color: #ccc !important;
@@ -149,6 +165,16 @@ img {
   margin-top: .7em;
   border: 1px solid white;
   border-radius: 4px;
+}
+.list__tile__title {
+  height: 2em;
+}
+.list__tile__title > img {
+  height: 2em;
+  margin-top: -.8em;
+}
+.list__tile__action > .btn {
+  margin: 0;
 }
 a:last-of-type {
   border-right: none;
