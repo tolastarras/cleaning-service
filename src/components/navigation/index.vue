@@ -26,7 +26,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar flat v-bind:class="{standard: !scrolled, sticky: scrolled}" class="white--text">
-      <v-layout row wrap style="max-width:1200px;margin: 0 auto">
+      <v-layout row wrap>
         <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text"></v-toolbar-side-icon>
         <v-toolbar-title><img :src="logo" :alt="business.name"/></v-toolbar-title>
         <v-spacer></v-spacer>
@@ -108,15 +108,12 @@ export default {
 <style scoped lang="css">
 img {
   height: 64px;
+  width: 225px;
   position: absolute;
   top: .8em;
 }
 li.active {
   background: rgba(0,0,0,.14);
-}
-li.active:hover {
-  cursor: move !important;
-  /* background: green; */
 }
 .menuItem {
   color: #ccc !important;
@@ -135,6 +132,9 @@ li.active:hover {
 .toolbar.standard {
   background-color: rgba(0, 0 , 0, 0.2);
   position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
   z-index: 2;
   height: 7em;
   padding-top: 1.2em;
