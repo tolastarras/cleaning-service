@@ -47,30 +47,30 @@ export default {
       items: [
         {
           src: require('@/assets/carousel/living.jpg'),
-          title: 'Home',
-          subtitle: 'Specialized Cleaning'
+          title: 'Home Cleaning',
+          subtitle: 'Specialized in General Cleaning'
         },
         {
           src: require('@/assets/carousel/kitchen.jpg'),
-          title: 'Kitchens',
-          subtitle: 'Consistency & Detail'
+          title: 'General & Deep Cleaning Available',
+          subtitle: 'Outstanding Cleaning Services With Flat Rate Pricing.'
         },
         {
           src: require('@/assets/carousel/bedroom.jpg'),
-          title: 'General & Deep Cleaning',
-          subtitle: 'Outstanding Cleaning Services With Flat Rate Pricing. No Hidden Fees and No Surprises'
+          title: 'General & Deep Cleaning Available',
+          subtitle: 'Outstanding Cleaning Services With Flat Rate Pricing.'
         },
         {
           src: require('@/assets/carousel/office_1280x960.jpg'),
-          title: 'Business Offices',
-          subtitle: 'Bathroom Cleaning, Installation and Restoration'
+          title: 'Business and Commercial Cleaning',
+          subtitle: 'No Hidden Fees and No Surprises'
         }
       ],
       cards: [
         {
           title: 'Quality Cleaning',
           src: require('@/assets/card/sink.jpg'),
-          content: 'Our professional team works hard to provide each and every customer with the very best cleaning service Miami has to offer.'
+          content: 'Our professional team works hard to provide each and every customer with the very best cleaning service available in the area.'
         },
         {
           title: 'Professional Staff',

@@ -148,6 +148,7 @@ li.active {
 .toolbar.sticky img {
   top: .6em;
   height: 40px;
+  width: 150px;
 }
 .toolbar.standard a.menuItem {
   font-size: 1.2em;
@@ -178,5 +179,10 @@ li.active {
 }
 a:last-of-type {
   border-right: none;
+}
+@media (max-width: 599px) {
+  .toolbar__content > div {
+    margin: 0 !important;
+  }
 }
 </style>

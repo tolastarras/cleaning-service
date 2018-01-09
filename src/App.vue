@@ -52,6 +52,9 @@ h1, h2 {
 #app {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
+  background: white;
+  width: 100%;
+  position: relative;
 }
 .display-1 {
   text-transform: uppercase;
@@ -82,7 +85,6 @@ h1, h2 {
 .main-content {
   max-width: 1200px !important;
   margin: 0 auto;
-  /* background: #eee; */
   background: white;
   padding: 2em;
 }
@@ -95,6 +97,9 @@ h1, h2 {
 }
 .btn--active {
   background: blue;
+}
+.parallax {
+  width: 100% !important;
 }
 .parallax__image {
   transform: translate(-50%, 50px) !important;
