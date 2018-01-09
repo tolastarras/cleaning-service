@@ -31,6 +31,7 @@ export default {
 }
 .carousel-content {
   background-color: rgba(0, 0, 0, 0.3);
+  padding: 2em;
   height: 100%;
 }
 h1.title {
@@ -51,11 +52,19 @@ h2.subtitle {
   .carousel {
     height: 26em !important;
   }
+  .carousel-content {
+    padding: 3em;
+  }
+  h1, h2 {
+    width: 70vmin !important;
+    margin: 0 auto;
+    text-align: center;
+  }
   .carousel-content > h1 {
     font-size: 1.8em !important;
+    padding: 2.6em 0;
   }
   .carousel-content > h2 {
-    /* margin-top: 3.5em; */
     font-size: 1.5em;
   }
 }

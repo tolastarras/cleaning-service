@@ -207,7 +207,7 @@ form {
   display: flex;
 }
 .container {
-  /* padding: 2em !important; */
+  padding: 0 !important;
   border: 12px solid #444;
   border-radius: 4px;
 }

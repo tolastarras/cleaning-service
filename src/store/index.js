@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+// import Es6Promise from 'es6-promise'
+//
+// Es6Promise.polyfill()
 
 Vue.use(Vuex)
 
