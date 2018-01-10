@@ -75,7 +75,7 @@ export default {
         {
           title: 'Professional Staff',
           src: require('@/assets/card/mirror.jpg'),
-          content: 'We deliver happiness through home cleaning and other home and commercial services. Our cleaning services come with a satisfaction guarantee.'
+          content: 'We deliver happiness through home, business and commercial cleaning. Our cleaning services come with a satisfaction guarantee.'
         },
         {
           title: 'Affordable Rates',

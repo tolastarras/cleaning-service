@@ -1,17 +1,19 @@
 <template>
-  <v-app>
-    <app-header :menuItems="menuItems"></app-header>
-    <v-container>
-      <v-layout>
-        <v-flex xs-12>
-          <v-content class="main-content">
-            <router-view></router-view>
-          </v-content>
-        </v-flex>
-      </v-layout>
-    </v-container>
-    <app-footer></app-footer>
-  </v-app>
+  <div class="wrapper">
+    <v-app>
+      <app-header :menuItems="menuItems"></app-header>
+      <v-container>
+        <v-layout>
+          <v-flex xs-12>
+            <v-content class="main-content">
+              <router-view></router-view>
+            </v-content>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      <app-footer></app-footer>
+    </v-app>
+  </div>
 </template>
 
 <script>
@@ -54,7 +56,11 @@ h1, h2 {
   font-family: 'Roboto', sans-serif;
   background: white;
   width: 100%;
+  min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .display-1 {
   text-transform: uppercase;
@@ -87,6 +93,7 @@ h1, h2 {
   margin: 0 auto;
   background: white;
   padding: 2em;
+  flex: 1 0 auto;
 }
 .theme--light .toolbar {
   background-color: transparent;
