@@ -8,7 +8,9 @@
           </v-card-media>
           <v-card-text>
             <h2 class="text-xs-center" v-html="title"></h2>
-            {{ card.content }}
+            <div class="card-content">
+              {{ card.content }}
+            </div>
           </v-card-text>
           <v-card-actions class="justify-center">
             <v-btn dark outline color="blue" @click="readMore">Read More</v-btn>
@@ -40,7 +42,7 @@ export default {
 h2 {
   text-transform: uppercase;
   font-size: 2em;
-  padding: 0;
+  padding: .4em 0 0 0;
   margin: 0;
 }
 b {
@@ -54,15 +56,16 @@ b {
 .card__media {
   height: 230px !important;
 }
-.card__text {
-  margin-top: 1.2em;
+.card-content {
+  margin: 1.2em 0;
   padding: 0 .4em;
-  height: 10em !important;
+  height: 5em !important;
   overflow: hidden;
   overflow-y: auto;
 }
 .card__text h2 {
   margin-bottom: .5em;
+  width: 100% !important;
 }
 .media-content {
   background-color: rgba(0, 0, 0, 0.1);
@@ -72,11 +75,18 @@ b {
 }
 .btn {
   margin: 0 auto;
+  width: 100%;
 }
 /* media queries */
 @media (max-width: 399px) {
-  .card__text {
-    height: 14em !important;
+  .container {
+    padding-bottom: 0 !important;
+  }
+  .card__actions {
+    padding: 0 !important;
+  }
+  .card-content {
+    height: 6em !important;
   }
 }
 @media only screen and (max-width: 599px) {

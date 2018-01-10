@@ -27,4 +27,7 @@ export default {
 </script>
 
 <style scoped lang="css">
+.all-footer {
+  flex-shrink: 0;
+}
 </style>
