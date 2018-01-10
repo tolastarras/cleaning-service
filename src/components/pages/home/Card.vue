@@ -74,6 +74,11 @@ b {
   margin: 0 auto;
 }
 /* media queries */
+@media (max-width: 399px) {
+  .card__text {
+    height: 14em !important;
+  }
+}
 @media only screen and (max-width: 599px) {
   .container {
     /* padding: .8em .3em !important; */
