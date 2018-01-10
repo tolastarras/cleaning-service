@@ -4,7 +4,7 @@
       <v-list class="pa-1">
         <v-list-tile avatar tag="div">
           <v-list-tile-content>
-            <v-list-tile-title><img :src="logo" :alt="business.name"/></v-list-tile-title>
+            <v-list-tile-title><img class="drawer" :src="logo" :alt="business.name"/></v-list-tile-title>
           </v-list-tile-content>
           <v-list-tile-action>
             <v-btn icon @click.stop="drawer = !drawer">
@@ -111,6 +111,10 @@ img {
   width: 225px;
   position: absolute;
   top: .8em;
+}
+img.drawer {
+  width: 100px;
+  height: 30px !important;
 }
 li.active {
   background: rgba(0,0,0,.14);

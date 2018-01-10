@@ -27,8 +27,4 @@ export default {
 </script>
 
 <style scoped lang="css">
-.all-footer {
-  z-index: 999;
-  flex: 3;
-}
 </style>

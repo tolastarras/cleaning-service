@@ -101,7 +101,17 @@ a:hover {
   margin-right: .2em;
 }
 /* media queries */
+@media (max-width: 415px) {
+  .footer {
+    padding: .5em !important;
+  }
+}
 @media (max-width: 959px) {
+  h2 {
+    text-align: left;
+    margin-left: 0;
+    width: 100% !important;
+  }
   .contact-info {
     margin: 0;
     padding: 0;
@@ -111,11 +121,6 @@ a:hover {
   }
   .contact-us, .services {
     padding: 1.6em 0;
-  }
-}
-@media (max-width: 415px) {
-  .footer {
-    padding: .5em !important;
   }
 }
 </style>
