@@ -1,6 +1,6 @@
 <template lang="html">
   <v-container>
-    <h1 class="display-2 bottom-line">Cleaning Services</h1>
+    <h1 class="text-xs-left display-2 bottom-line">Cleaning Services</h1>
     <v-layout row wrap>
       <v-flex xs12 sm6 md4 v-for="(card, i) in services" :key="i">
         <v-card class="my-3" :style="{'margin-right': marginRight(i)}" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
@@ -58,6 +58,10 @@ export default {
 </script>
 
 <style scoped lang="css">
+h1 {
+  margin: 0;
+  width: 100% !important;
+}
 .card__media, .card__text {
   height: 200px !important;
 }

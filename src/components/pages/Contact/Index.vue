@@ -5,7 +5,7 @@
         <v-layout row wrap>
           <v-flex xs12>
             <v-card flat light>
-              <h1 class="display-2 bottom-line">Contact Us</h1>
+              <h1 class="text-xs-left display-2 bottom-line">Contact Us</h1>
               <div class="contact-info">
                 <div class="address">
                   <v-icon>fa-map-marker</v-icon>
@@ -59,6 +59,10 @@ export default {
 </script>
 
 <style scoped lang="css">
+h1 {
+  margin: 0;
+  width: 100% !important;
+}
 .icon {
   vertical-align: top;
   border: 2px solid #daa520;

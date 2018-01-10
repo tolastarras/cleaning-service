@@ -6,7 +6,7 @@
           <v-flex order-xs1>
             <v-card flat light>
               <v-card-text class="pb-3">
-                <h1 class="display-2 bottom-line">Serving the {{ business.serving }} Area</h1>
+                <h1 class="text-xs-left display-2 bottom-line">Serving the {{ business.serving }} Area</h1>
                 <img :src="src" :alt="business.name" align="right"/>
 
                 <p>Since we started, we've attracted a loyal clientele based our exceptional customer service. Our customers range from stay-at-home mothers in need of a breather to office dwelling professionals with a little time to spare. With a full range of cleaning services, {{ business.city }} based {{ business.name }} offers clients a chance to sit back and relax with professional cleaners taking over their chores.</p>
@@ -71,6 +71,11 @@ img {
    margin: 0 auto;
 }
 @media (max-width: 960px) {
+  h1 {
+    padding-bottom: 0;
+    margin: 0;
+    /* width: 100%; */
+  }
   img {
     margin-left: 0;
     width: 100%;

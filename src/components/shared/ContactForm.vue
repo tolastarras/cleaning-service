@@ -197,6 +197,10 @@ export default {
 form {
   padding: 2em;
 }
+h1 {
+  margin: 0;
+  width: 100% !important;
+}
 .header {
   background: #444;
   padding: .3em 0 .5em 0 !important;

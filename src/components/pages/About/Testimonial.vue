@@ -57,6 +57,7 @@ export default {
 h1 {
   text-align: center;
   margin-bottom: .6em;
+  width: 100% !important;
 }
 .testimonial-quote {
     font-size: 1em;
