@@ -97,7 +97,7 @@ export default {
   left: 0;
 }
 .cards-content {
-   padding-top: 38em;
+   padding-top: 35em;
 }
 /* media queries */
 @media (max-width: 599px) {
