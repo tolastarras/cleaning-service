@@ -27,7 +27,7 @@ export default {
 
 <style lang="css">
 .carousel {
-  height: 700px !important;
+  height: 640px !important;
 }
 .carousel-content {
   background-color: rgba(0, 0, 0, 0.3);
@@ -66,6 +66,11 @@ h2.subtitle {
   }
   .carousel-content > h2 {
     font-size: 1.5em;
+  }
+}
+@media (max-width: 1400px) {
+  h1, h2 {
+    width: 94vmin !important;
   }
 }
 </style>
