@@ -10,8 +10,8 @@
             </v-content>
           </v-flex>
         </v-layout>
+        <app-footer></app-footer>
       </v-container>
-      <app-footer></app-footer>
     </v-app>
   </div>
 </template>

@@ -56,13 +56,14 @@ export default {
 
 <style scoped lang="css">
 h1 {
+  color: gold !important;
   font-size: 4em;
   text-transform: uppercase;
   width: 90vh;
   padding: 0 2em;
 }
 h2 {
-  color: gold;
+  color: white;
   font-size: 3em;
   text-transform: uppercase;
   width: 90vh;

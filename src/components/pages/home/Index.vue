@@ -5,15 +5,13 @@
         <app-carousel :items="items"></app-carousel>
       </v-flex>
     </v-layout>
-    <v-layout column class="cards">
+    <v-layout class="cards-content" :class="cardsLayout()">
       <v-flex xs12>
-        <v-container fluid grid-list-md pa-0>
-          <v-layout row wrap>
-            <v-flex xs12 md4 v-for="(card, index) in cards" :key="card.title">
-              <card :card="card" :class="lastCard(index)" :style="spacing(index)" :index="index" :total="cards.length"></card>
-            </v-flex>
-          </v-layout>
-        </v-container>
+        <v-layout row wrap>
+          <v-flex xs12 md4 v-for="(card, index) in cards" :key="card.title">
+            <card :card="card" :class="lastCard(index)" :style="spacing(index)" :index="index" :total="cards.length"></card>
+          </v-flex>
+        </v-layout>
       </v-flex>
     </v-layout>
   </v-container>
@@ -31,6 +29,10 @@ export default {
   methods: {
     lastCard (index) {
       return (index === this.cards.length - 1) ? 'last-card' : ''
+    },
+    cardsLayout () {
+      // console.log('HELLO', navigator.appName)
+      // console.log('HERE', navigator.userAgent)
     },
     spacing (index) {
       if (index === 0) {
@@ -87,7 +89,6 @@ export default {
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .carousel {
@@ -95,13 +96,13 @@ export default {
   top: 0;
   left: 0;
 }
-.cards {
-   margin-top: 38em;
+.cards-content {
+   padding-top: 38em;
 }
 /* media queries */
 @media (max-width: 599px) {
-  .cards {
-    margin-top: 26em;
+  .cards-content {
+    padding-top: 26em;
   }
 }
 @media (max-width: 959px) {

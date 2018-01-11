@@ -28,6 +28,8 @@ export default {
 
 <style scoped lang="css">
 .all-footer {
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 </style>

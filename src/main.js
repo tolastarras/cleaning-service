@@ -18,6 +18,12 @@ import 'vuetify/dist/vuetify.css'
 import 'font-awesome/css/font-awesome.min.css'
 // import 'animate.css/animate.min.css'
 
+// console.log('AGENT', navigator.userAgent)
+// console.log('>>>>>>>>>>>>>>>>', Object.defineProperty)
+// if (!Object.defineProperty) {
+//   console.log('ERROR')
+// }
+
 Vue.use(Vuetify)
 
 // register components
@@ -26,6 +32,12 @@ Vue.component('parallax', Parallax)
 
 Vue.mixin({
   methods: {
+    // isDesktop: () => {
+    //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //     return false
+    //   }
+    //   return true
+    // },
     formatTitle: str => {
       let index = str.indexOf(' ')
       let str1 = str.substring(0, index)
