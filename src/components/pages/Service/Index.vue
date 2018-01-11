@@ -6,6 +6,7 @@
         <v-card class="my-3" :style="{'margin-right': marginRight(i)}" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
           <transition name="slide">
             <div>
+              <!-- <div class="view-text" v-if="showIcon()"><v-icon large dark @click="toggle(card.show)">{{ showIcon(card) }}</v-icon></div> -->
               <v-card-media v-show="card.show" :src="getCardImage(card.src)"></v-card-media>
               <v-card-title>
                 <div class="card-content text-xs-left">
@@ -26,13 +27,25 @@
 </template>
 
 <script>
+// import device from 'device'
 export default {
   data () {
     return {
+      icon: null,
       services: this.$store.getters.services
     }
   },
   methods: {
+    // isDesktop () {
+    //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //     showIcon = true
+    //   }
+    //   return true
+    // },
+    // showIcon (show) {
+    //   this.icon.show = this.isDesktop() ? false : true
+    //   this.icon.name = show ? 'fa-plus' : 'fa-minus'
+    // },
     getTitle (title) {
       return this.formatTitle(title)
     },
@@ -61,6 +74,17 @@ export default {
 h1 {
   margin: 0;
   width: 100% !important;
+}
+.view-text {
+  position: absolute;
+  top: .4em;
+  right: .4em;
+  color: green;
+  z-index: 1;
+  padding: .3em .8em .4em .8em;
+  background: rgba(0, 0, 0, .2);
+  border: 2px solid white;
+  border-radius: 4px;
 }
 .card__media, .card__text {
   height: 200px !important;

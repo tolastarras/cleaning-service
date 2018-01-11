@@ -18,8 +18,8 @@
   },
   "parallaxItems": {
     "about": {
-      "title": "We are a professional team specialized in general maintenance.",
-      "subtitle": "",
+      "title": "",
+      "subtitle": "We are a professional team specialized in general maintenance.",
       "btnText": "Get a Free Quote",
       "src": "living"
     },

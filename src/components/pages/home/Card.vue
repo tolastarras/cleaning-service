@@ -90,19 +90,13 @@ b {
   }
 }
 @media only screen and (max-width: 599px) {
-  .container {
-    /* padding: .8em .3em !important; */
-  }
-  .card {
-    /* margin-top: -1em; */
-  }
   .card__text {
     padding: 0 .4em !important;
   }
 }
-@media (max-width: 959px) {
-  .card__media {
-    /* height: 25em !important; */
+@media (max-width: 1263px) {
+  .card-content {
+    height: 6em !important;
   }
 }
 </style>
