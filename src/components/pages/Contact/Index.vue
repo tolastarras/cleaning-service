@@ -62,6 +62,11 @@ export default {
 h1 {
   margin: 0;
   width: 100% !important;
+  font-weight: bold;
+}
+.address {
+  line-height: 2.2em;
+  width: 100%;
 }
 .icon {
   vertical-align: top;
@@ -91,9 +96,17 @@ h1 {
 .contact-info > div.hours > span {
   line-height: 1.3em;
 }
-@media only screen and (max-width: 730px) {
+.card__text {
+  padding: 1em 0;
+}
+@media only screen and (max-width: 499px) {
   .contact-info > div.address > span {
-    line-height: 1.1em;
+    line-height: 1.2em !important;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1150px) {
+  .contact-info > div.address > span {
+    line-height: 1.2em !important;
   }
 }
 </style>
