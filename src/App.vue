@@ -85,7 +85,7 @@ h1, h2 {
   color: inherit !important;
 }
 .container {
-  padding: 0;
+  padding: 0 !important;
   margin: 0 auto;
 }
 .main-content {
@@ -130,6 +130,11 @@ h1, h2 {
   }
   .card__text, .main-content {
     padding: 0 !important;
+  }
+}
+@media (max-width: 1019px) {
+  .container {
+    max-width: 100% !important;
   }
 }
 </style>

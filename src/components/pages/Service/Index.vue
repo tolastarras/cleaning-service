@@ -1,9 +1,9 @@
 <template lang="html">
-  <v-container>
+  <v-container fluid grid-list-xl pt-0 pb-0>
     <h1 class="text-xs-left display-2 bottom-line">Cleaning Services</h1>
     <v-layout row wrap>
-      <v-flex xs12 sm6 md4 v-for="(card, i) in services" :key="i">
-        <v-card class="my-3" :style="{'margin-right': marginRight(i)}" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
+      <v-flex class="cards-container" xs12 sm6 md4 v-for="(card, i) in services" :key="i">
+        <v-card class="my-3" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
           <transition name="slide">
             <div>
               <!-- <div class="view-text" v-if="showIcon()"><v-icon large dark @click="toggle(card.show)">{{ showIcon(card) }}</v-icon></div> -->
@@ -64,7 +64,7 @@ export default {
       } else if (width < 960) {
         cardsPerLine = 2
       }
-      return (index + 1) % cardsPerLine === 0 ? '0' : '2em'
+      return (index + 1) % cardsPerLine === 0 ? '0' : '2em !important'
     }
   }
 }
@@ -74,6 +74,15 @@ export default {
 h1 {
   margin: 0;
   width: 100% !important;
+  font-weight: bold;
+}
+.cards-container {
+  padding-top: 0 !important;
+}
+.card {
+  width: 100%;
+  margin-top: 0 !important;
+  /* padding-right: 2em; */
 }
 .view-text {
   position: absolute;
@@ -104,5 +113,8 @@ h1 {
 .btn {
   margin: 0 auto !important;
   margin-bottom: 2em !important;
+}
+@media (max-width: 1263px) {
+  padding: 0;
 }
 </style>
