@@ -8,7 +8,7 @@
     <v-layout class="cards-content">
       <v-flex xs12>
         <v-layout row wrap>
-          <v-flex xs12 md4 :class="spacing(index)" v-for="(card, index) in cards" :key="card.title">
+          <v-flex xs12 md4 class="" :class="spacing(index)" v-for="(card, index) in cards" :key="card.title">
             <card :card="card" :index="index" :total="cards.length"></card>
           </v-flex>
         </v-layout>
@@ -31,6 +31,11 @@ export default {
       return (index === this.cards.length - 1) ? 'last-card' : ''
     },
     spacing (index) {
+      // small devices padding
+      if (this.$store.getters.documentWidth < 600) {
+        return ''
+      }
+      // medium to large devices
       if (index === 0) {
         return 'pr-2'
       } else if (index === 1) {
