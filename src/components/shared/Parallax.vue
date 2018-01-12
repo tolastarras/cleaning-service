@@ -60,14 +60,12 @@ h1 {
   font-size: 4em;
   text-transform: uppercase;
   width: 90vh;
-  padding: 0 2em;
 }
 h2 {
   color: white;
   font-size: 3em;
   text-transform: uppercase;
   width: 90vh;
-  padding: 0 2em;
 }
 .btn {
   margin-top: 1em;
