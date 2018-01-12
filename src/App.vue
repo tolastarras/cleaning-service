@@ -132,11 +132,11 @@ h1, h2 {
     padding: 0 !important;
   }
 }
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   .card, .footer {
     font-size: 1.3em;
   }
-}
+} */
 @media (max-width: 1300px) {
   .container {
     max-width: 100% !important;
