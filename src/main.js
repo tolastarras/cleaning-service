@@ -16,6 +16,7 @@ import data from './data'
 
 import 'vuetify/dist/vuetify.css'
 import 'font-awesome/css/font-awesome.min.css'
+import '@/css/style.css'
 // import 'animate.css/animate.min.css'
 
 // console.log('AGENT', navigator.userAgent)
@@ -44,7 +45,7 @@ Vue.mixin({
       let str2 = str.substring(index + 1)
       // let [str1, str2] = str.split(/\s/)
 
-      return `<b style="letter-spacing: -1px; color: #2196f3">${str1}</b> <span style="color: #555">${str2}</span>`
+      return `<div class="title">${str1} <span>${str2}</span></div>`
     },
     getImage: (name, width) => {
       let size = '320x480'
