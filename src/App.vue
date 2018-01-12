@@ -132,7 +132,7 @@ h1, h2 {
     padding: 0 !important;
   }
 }
-@media (max-width: 1019px) {
+@media (max-width: 1300px) {
   .container {
     max-width: 100% !important;
   }
