@@ -5,11 +5,11 @@
         <app-carousel :items="items"></app-carousel>
       </v-flex>
     </v-layout>
-    <v-layout class="cards-content" :class="cardsLayout()">
+    <v-layout class="cards-content">
       <v-flex xs12>
         <v-layout row wrap>
-          <v-flex xs12 md4 v-for="(card, index) in cards" :key="card.title">
-            <card :card="card" :class="lastCard(index)" :style="spacing(index)" :index="index" :total="cards.length"></card>
+          <v-flex xs12 md4 :class="spacing(index)" v-for="(card, index) in cards" :key="card.title">
+            <card :card="card" :index="index" :total="cards.length"></card>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -30,17 +30,13 @@ export default {
     lastCard (index) {
       return (index === this.cards.length - 1) ? 'last-card' : ''
     },
-    cardsLayout () {
-      // console.log('HELLO', navigator.appName)
-      // console.log('HERE', navigator.userAgent)
-    },
     spacing (index) {
       if (index === 0) {
-        return 'padding-left: 0;padding-right: 1em;'
+        return 'pr-2'
       } else if (index === 1) {
-        return 'padding-left: .5em;padding-right: .5em;'
+        return 'pl-1 pr-1'
       } else if (index === 2) {
-        return 'padding-left: 1em; padding-right: 0;'
+        return 'pl-2'
       }
     }
   },

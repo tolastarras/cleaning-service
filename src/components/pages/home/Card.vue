@@ -77,6 +77,12 @@ b {
   margin: 0 auto;
   width: 100%;
 }
+h2 {
+  color: green;
+}
+h2 > span {
+  color: red;
+}
 /* media queries */
 @media (max-width: 399px) {
   .container {
@@ -92,6 +98,11 @@ b {
 @media only screen and (max-width: 599px) {
   .card__text {
     padding: 0 .4em !important;
+  }
+}
+@media (min-width: 960px) and (max-width: 1020px) {
+  .card__text > h2 {
+    letter-spacing: 8px !important;
   }
 }
 @media (max-width: 1263px) {
