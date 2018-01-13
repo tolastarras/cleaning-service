@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="">
+    <alert-message v-show="alert.show" :alert="alert"></alert-message>
     <v-container pa-0 ma-0>
       <h1 class="display-1 header" v-text="title"></h1>
       <v-form v-model="valid" ref="form">
@@ -75,8 +76,12 @@
 
 <script>
 import axios from 'axios'
+import AlertMessage from './Alert'
 export default {
   props: ['quote'],
+  components: {
+    AlertMessage
+  },
   data: () => ({
     title: '',
     loader: null,
@@ -180,7 +185,7 @@ export default {
         this.closeAlert()
       })
       .catch(error => {
-        // console.log('ERROR', error)
+        console.log('ERROR', error)
         this.loading = false
         this.alert = {
           show: true,

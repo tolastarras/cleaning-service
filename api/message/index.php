@@ -28,7 +28,7 @@ if (isset($_POST) ) {
 
   // email recipient
   $to = "rafael.sobrino@yahoo.com";
-  $from = "contact@evevides.com";
+  $from = "no-reply@evevides.com";
   $subject = "Comment";
   $headers = "From: " . strip_tags($from) . "\r\n";
   $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
