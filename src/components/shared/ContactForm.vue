@@ -154,11 +154,12 @@ export default {
       setTimeout(() => (this.alert.show = false), 5000)
     },
     onLoad () {
+      // params from services page to auto-fill free quote form
       let params = this.$route.params
+      // load services from json data
       let services = this.$store.getters.services.map(element => {
         return element.title
       })
-
       this.services = services
       this.service = params.service
       this.message = params.message
@@ -173,6 +174,8 @@ export default {
         email: this.email,
         phone: this.phone,
         message: this.message,
+        service: this.service,
+        frequency: this.frequency,
         type: this.quote ? 'Free Quote' : 'Comment'
       })
       .then(response => {

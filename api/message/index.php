@@ -27,14 +27,23 @@ if (isset($_POST) ) {
   if (empty($message)) return;
 
   // email recipient
-  $to = "rafael.sobrino@yahoo.com";
+  // $to = $inputData['recipient'];
   $from = "noreply@evevides.com";
+  $to = 'rafael.sobrino@yahoo.com';
   $subject = $inputData['type'];
   $headers = "From: " . strip_tags($from) . "\r\n";
   $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
   // $headers .= "CC: susan@example.com\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+  $freeQuote = '';
+  if ($inputData['type'] === 'Free Quote') {
+    $freeQuote .= "
+      <b>Service:</b> {$inputData['service']}<br>
+      <b>Frequency:</b> {$inputData['frequency']}<br>
+    ";
+  }
 
   $content = "
   <!DOCTYPE html>
@@ -44,6 +53,7 @@ if (isset($_POST) ) {
         <b>Name:</b> {$inputData['name']}<br>
         <b>Email:</b> {$inputData['email']}<br>
         <b>Phone:</b> {$inputData['phone']}<br>
+        {$freeQuote}
         <b>Message:</b><br>
         {$message}
       </div>
