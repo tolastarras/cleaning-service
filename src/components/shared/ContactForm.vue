@@ -172,7 +172,8 @@ export default {
         name: `${this.firstName} ${this.lastName}`,
         email: this.email,
         phone: this.phone,
-        message: this.message
+        message: this.message,
+        type: this.quote ? 'Free Quote' : 'Comment'
       })
       .then(response => {
         this.alert = {
