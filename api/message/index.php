@@ -28,8 +28,8 @@ if (isset($_POST) ) {
 
   // email recipient
   $to = "rafael.sobrino@yahoo.com";
-  $from = "no-reply@evevides.com";
-  $subject = "Comment";
+  $from = "noreply@evevides.com";
+  $subject = $inputData['type'];
   $headers = "From: " . strip_tags($from) . "\r\n";
   $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
   // $headers .= "CC: susan@example.com\r\n";
