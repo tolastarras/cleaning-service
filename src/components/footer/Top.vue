@@ -51,13 +51,6 @@ export default {
 
 <style scoped lang="css">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-h2 {
-  text-transform: uppercase;
-  padding: .4em 0;
-  border-bottom: 1px solid grey;
-  margin-bottom: 1em;
-  color: gold !important;
-}
 a:hover {
   color: gold;
 }
@@ -76,6 +69,12 @@ a:hover {
 }
 .contact-info > h2 {
   font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  padding: .4em 0;
+  margin-bottom: 1em;
+  color: gold !important;
+  border-bottom: 1px solid grey;
+  width: 100% !important;
 }
 .contact-info:last-child {
   padding-left: 2em;
