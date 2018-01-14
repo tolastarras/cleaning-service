@@ -2,15 +2,15 @@
   <v-footer :fixed="false" color="white--text">
     <v-container>
       <v-layout row wrap>
-        <v-flex class="contact-info" xs12 md4>
+        <v-flex v-show="showAbout" class="contact-info" xs12 md4>
           <h2 class="blue--text">About Us</h2>
           <div v-html="changeRoute(business.about.html)"></div>
         </v-flex>
-        <v-flex v-show="!showInfo" class="contact-info services" xs12 md4>
+        <v-flex v-show="!showContact || !showAbout" class="contact-info services" xs12 md4>
           <h2 class="blue--text">Services</h2>
           <div v-html="changeRoute(business.service.html)"></div>
         </v-flex>
-        <v-flex v-show="showInfo" class="contact-info contact-us" xs12 md4 d-block>
+        <v-flex v-show="showContact" class="contact-info contact-us" xs12 md4 d-block>
           <h2 class="blue--text">Contact Us</h2>
           <div>
             <v-icon class="icon-phone" dark small>fa-phone</v-icon> {{ business.phone }}
@@ -42,8 +42,11 @@ export default {
     }
   },
   computed: {
-    showInfo () {
+    showContact () {
       return this.getPage(this.$route.path) !== 'contact'
+    },
+    showAbout () {
+      return this.getPage(this.$route.path) !== 'about'
     }
   }
 }
