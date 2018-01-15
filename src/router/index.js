@@ -31,6 +31,10 @@ export default new Router({
       path: `${PROJECT_PATH}/contact/`,
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '*',
+      redirect: `${PROJECT_PATH}/`
     }
   ],
   mode: 'history',
