@@ -28,7 +28,11 @@
     <v-toolbar flat v-bind:class="{standard: !scrolled, sticky: scrolled}" class="white--text">
       <v-layout row wrap>
         <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text"></v-toolbar-side-icon>
-        <v-toolbar-title><img :src="logo" :alt="business.name"/></v-toolbar-title>
+        <v-toolbar-title>
+          <router-link :to="{ name: 'Home' }" tag="button">
+            <img :src="logo" :alt="business.name"/>
+          </router-link>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
