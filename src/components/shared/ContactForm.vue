@@ -187,7 +187,7 @@ export default {
         this.loading = false
         this.closeAlert()
       })
-      .catch(error => {
+      .catch(() => {
         this.loading = false
         this.alert = {
           show: true,
