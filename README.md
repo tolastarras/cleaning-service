@@ -1,21 +1,23 @@
-# cleaning-service
+## Name
+Cleaning Service 
 
-> A Vue.js project
+## Author
+[Tolastarras](https://github.com/tolastarras)
 
-## Build Setup
+## ToDo
+None
 
-``` bash
-# install dependencies
-npm install
+## Description
+VueJs application.
 
-# serve with hot reload at localhost:8080
-npm run dev
+## URL
+http://tolastarras.com/cleaning-service
 
-# build for production with minification
-npm run build
+## Technologies
+VueJs
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+## API
+PHP
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## License
+This project is licensed under the MIT License
