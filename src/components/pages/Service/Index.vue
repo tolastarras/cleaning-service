@@ -23,6 +23,7 @@
 
 <script>
 // import device from 'device'
+
 export default {
   data () {
     return {
@@ -32,13 +33,6 @@ export default {
     }
   },
   methods: {
-    something (show) {
-      if (show) {
-        console.log('in ...')
-      } else {
-        console.log('out ...')
-      }
-    },
     // isDesktop () {
     //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     //     showIcon = true

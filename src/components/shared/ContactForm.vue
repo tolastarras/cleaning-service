@@ -167,7 +167,6 @@ export default {
       this.title = this.quote || params.quote ? 'Get a Free Quote' : 'Send us a Message'
     },
     onSubmit () {
-      console.log('here...')
       this.loading = true
       axios.post('/api/message/', {
         name: `${this.firstName} ${this.lastName}`,
@@ -179,7 +178,6 @@ export default {
         type: this.quote ? 'Free Quote' : 'Comment'
       })
       .then(response => {
-        console.log('data:', response.data)
         this.alert = {
           show: true,
           type: 'success',
@@ -190,7 +188,6 @@ export default {
         this.closeAlert()
       })
       .catch(error => {
-        console.log('ERROR', error)
         this.loading = false
         this.alert = {
           show: true,

@@ -5,7 +5,7 @@
         <h2>{{ data.title }}</h2>
         <h1 class="white--text">{{ data.subtitle }}</h1>
       </div>
-      <v-btn v-show="data.btnText" @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" @click="bookNow" dark outline>
+      <v-btn large v-show="data.btnText" @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" @click="bookNow" dark outline>
         {{ data.btnText }} <v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
       </v-btn>
     </v-layout>
