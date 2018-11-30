@@ -2,7 +2,7 @@
   <v-container fluid grid-list-md>
     <v-layout row wrap>
       <v-flex xs12>
-        <v-card flat light>
+        <v-card flat light class="mb-3">
           <v-card-text class="pb-3">
             <h1 class="text-xs-left display-2 bottom-line">Serving the {{ business.serving }} Area</h1>
             <img :src="src" :alt="business.name" align="right"/>

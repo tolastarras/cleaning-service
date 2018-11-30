@@ -29,16 +29,16 @@ export const store = new Vuex.Store({
     }
   },
   actions: {
-    fetchData ({commit}, payload) {
+    fetchData ({ commit }, payload) {
       // console.log(payload.parallaxItems)
       commit('setBusinessInfo', payload)
       commit('setServices', payload.services)
       commit('setParallax', payload.parallaxItems)
     },
-    changeDocumentWidth ({commit}, payload) {
+    changeDocumentWidth ({ commit }, payload) {
       commit('setDocumentWidth', payload)
     },
-    loadServices ({commit}, payload) {
+    loadServices ({ commit }, payload) {
       commit('setServices', payload)
     }
   },

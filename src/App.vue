@@ -20,6 +20,7 @@
   import AppHeader from '@/components/navigation'
   import AppFooter from '@/components/footer'
   import { PROJECT_PATH } from '@/config/'
+  
   export default {
     components: {
       AppHeader,
@@ -92,7 +93,7 @@ h1, h2 {
   max-width: 1200px !important;
   margin: 0 auto;
   background: white;
-  padding: 2em;
+  padding: 6em 2em;
   flex: 1 0 auto;
 }
 .theme--light .toolbar {

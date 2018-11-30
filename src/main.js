@@ -10,7 +10,7 @@ import Alert from './components/shared/Alert'
 import Parallax from './components/shared/Parallax'
 
 import router from './router'
-import {store} from './store'
+import { store } from './store'
 
 import data from './data'
 
@@ -20,7 +20,7 @@ import '@/css/style.css'
 // import 'animate.css/animate.min.css'
 
 // console.log('AGENT', navigator.userAgent)
-// console.log('>>>>>>>>>>>>>>>>', Object.defineProperty)
+// console.log(Object.defineProperty)
 // if (!Object.defineProperty) {
 //   console.log('ERROR')
 // }

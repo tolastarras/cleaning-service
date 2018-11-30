@@ -77,6 +77,7 @@
 <script>
 import axios from 'axios'
 import AlertMessage from './Alert'
+
 export default {
   props: ['quote'],
   components: {
@@ -166,10 +167,9 @@ export default {
       this.title = this.quote || params.quote ? 'Get a Free Quote' : 'Send us a Message'
     },
     onSubmit () {
+      console.log('here...')
       this.loading = true
-      // axios.post('/api/message/', {
-      axios.post('http://nuriki.com/api/message/', {
-      // axios.post('http://localhost:3000/api/message/', {
+      axios.post('/api/message/', {
         name: `${this.firstName} ${this.lastName}`,
         email: this.email,
         phone: this.phone,
@@ -179,10 +179,11 @@ export default {
         type: this.quote ? 'Free Quote' : 'Comment'
       })
       .then(response => {
+        console.log('data:', response.data)
         this.alert = {
           show: true,
           type: 'success',
-          text: response.data
+          text: response.data.status
         }
         this.$refs.form.reset()
         this.loading = false
@@ -194,7 +195,7 @@ export default {
         this.alert = {
           show: true,
           type: 'error',
-          text: 'Unable to Send Message: ' + error.message
+          text: 'Unable to Send Message'
         }
       })
     }

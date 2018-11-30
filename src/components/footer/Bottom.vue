@@ -2,9 +2,9 @@
   <v-footer :fixed="false" color="white--text">
     <v-container>
       <v-layout row wrap>
-        <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-2>
+        <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-4>
           <div class="text-xs-center text-md-left caption">&copy; 2017 {{ business.name }}. <span>All Rights Reserved.</span></div>
-          <div class="built-by"><a href="http://www.nuriki.com">Built by Nuriki &reg;</a></div>
+          <div class="built-by"><a href="http://www.tolastarras.com">Built by Tolastarras &reg;</a></div>
           <v-spacer></v-spacer>
         </v-flex>
         <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>

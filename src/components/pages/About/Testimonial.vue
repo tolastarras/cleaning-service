@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container>
+  <v-container class="ml-5">
     <h1 class="display-1">{{ title }}</h1>
     <v-layout row wrap>
       <v-flex xs12 class="testimonial" v-for="(testimonial, i) in testimonials" :key="i">
@@ -30,14 +30,14 @@ export default {
       {
         quote: 'Overall, fantastic! I\'d recommend them to anyone looking for a creative, thoughtful, and professional team.”',
         client: {
-          name: 'Lisa',
+          name: 'Mona Lisa',
           city: 'West Kendall'
         }
       },
       {
         quote: 'Overall, fantastic! I\'d recommend them to anyone looking for a creative, thoughtful, and professional team.”',
         client: {
-          name: 'Jesenia Rivera',
+          name: 'Lady G',
           city: 'Miami'
         }
       },

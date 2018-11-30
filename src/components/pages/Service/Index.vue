@@ -3,8 +3,9 @@
     <h1 class="text-xs-left display-2 bottom-line">Cleaning Services</h1>
     <v-layout row wrap>
       <v-flex class="cards-container" xs12 sm6 md4 v-for="(card, i) in services" :key="i">
-        <v-card class="my-3" hover @mouseover="toggle(card)" @mouseout="toggle(card)">
-          <transition name="slide">
+        <v-card class="my-3" hover @mouseenter="toggle(card)" @mouseleave="toggle(card)">
+
+          <transition name="slide" :duration="1000">
             <div>
               <!-- <div class="view-text" v-if="showIcon()"><v-icon large dark @click="toggle(card.show)">{{ showIcon(card) }}</v-icon></div> -->
               <v-card-media v-show="card.show" :src="getCardImage(card.src)"></v-card-media>
@@ -17,6 +18,7 @@
               </v-card-title>
             </div>
           </transition>
+
           <v-card-actions>
             <v-btn dark outline color="blue" @click="bookNow(card.title)">Book Now</v-btn>
           </v-card-actions>
@@ -36,6 +38,12 @@ export default {
     }
   },
   methods: {
+    enter () {
+      console.log('enter')
+    },
+    leave () {
+      console.log('leave')
+    },
     // isDesktop () {
     //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     //     showIcon = true
@@ -75,6 +83,16 @@ h1 {
   margin: 0;
   width: 100% !important;
   font-weight: bold;
+}
+.slide-enter-active {
+  transition: all 2s ease;
+}
+.slide-leave-active {
+  transition: all 2s ease;
+}
+.slide-enter, .slide-leave {
+  transform: translateY(100px);
+  opacity: 0;
 }
 .cards-container {
   padding-top: 0 !important;
