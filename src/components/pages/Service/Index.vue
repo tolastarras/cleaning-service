@@ -1,24 +1,17 @@
 <template lang="html">
   <v-container fluid grid-list-xl pt-0 pb-0>
     <h1 class="text-xs-left display-2 bottom-line">Cleaning Services</h1>
-    <v-layout row wrap>
+    <v-layout row wrap class="mt-5">
       <v-flex class="cards-container" xs12 sm6 md4 v-for="(card, i) in services" :key="i">
-        <v-card class="my-3" hover @mouseenter="toggle(card)" @mouseleave="toggle(card)">
-
-          <transition name="slide" :duration="1000">
-            <div>
-              <!-- <div class="view-text" v-if="showIcon()"><v-icon large dark @click="toggle(card.show)">{{ showIcon(card) }}</v-icon></div> -->
-              <v-card-media v-show="card.show" :src="getCardImage(card.src)"></v-card-media>
-              <v-card-title>
-                <div class="card-content text-xs-left">
-                  <div class="headline pt-4 text-xs-center" v-html="getTitle(card.title)"></div>
-                  <p class="pt-4 text-xs-center">{{ card.price }}</p>
-                  <v-card-text v-show="!card.show" v-html="card.description"></v-card-text>
-                </div>
-              </v-card-title>
+        <v-card class="my-3" hover>
+          <v-card-media :src="getCardImage(card.src)"></v-card-media>
+          <v-card-title>
+            <div class="card-content text-xs-left">
+              <div class="headline text-xs-center" v-html="getTitle(card.title)"></div>
+              <p class="py-3 text-xs-center">{{ card.price }}</p>
+              <v-card-text v-html="card.description"></v-card-text>
             </div>
-          </transition>
-
+          </v-card-title>
           <v-card-actions>
             <v-btn dark outline color="blue" @click="bookNow(card.title)">Book Now</v-btn>
           </v-card-actions>
@@ -33,16 +26,18 @@
 export default {
   data () {
     return {
+      show: true,
       icon: null,
       services: this.$store.getters.services
     }
   },
   methods: {
-    enter () {
-      console.log('enter')
-    },
-    leave () {
-      console.log('leave')
+    something (show) {
+      if (show) {
+        console.log('in ...')
+      } else {
+        console.log('out ...')
+      }
     },
     // isDesktop () {
     //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -61,9 +56,6 @@ export default {
       // find out which button was clicked to prefill the message area with text
       this.$router.push({ name: 'Contact', params: { service: title, quote: true } })
     },
-    toggle (card) {
-      card.show = !card.show
-    },
     marginRight (index) {
       let cardsPerLine = 3
       let width = this.$store.getters.documentWidth
@@ -79,60 +71,53 @@ export default {
 </script>
 
 <style scoped lang="css">
-h1 {
-  margin: 0;
-  width: 100% !important;
-  font-weight: bold;
-}
-.slide-enter-active {
-  transition: all 2s ease;
-}
-.slide-leave-active {
-  transition: all 2s ease;
-}
-.slide-enter, .slide-leave {
-  transform: translateY(100px);
-  opacity: 0;
-}
-.cards-container {
-  padding-top: 0 !important;
-}
-.card {
-  width: 100%;
-  margin-top: 0 !important;
-  /* padding-right: 2em; */
-}
-.view-text {
-  position: absolute;
-  top: .4em;
-  right: .4em;
-  color: green;
-  z-index: 1;
-  padding: .3em .8em .4em .8em;
-  background: rgba(0, 0, 0, .2);
-  border: 2px solid white;
-  border-radius: 4px;
-}
-.card__media, .card__text {
-  height: 200px !important;
-}
-.headline {
-  text-transform: uppercase;
-}
-.card-content {
-  width: 100%;
-}
-.card-content > p {
-  color: #555;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.btn {
-  margin: 0 auto !important;
-  margin-bottom: 2em !important;
-}
-@media (max-width: 1263px) {
-  padding: 0;
-}
+  .cards-container {
+    padding-top: 0 !important;
+  }
+  .card {
+    width: 100%;
+    height: 30em !important;
+    margin-top: 0 !important;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover .card__title {
+    top: 0;
+    transition: top 1s;
+  }
+  .card__title {
+    top: 15em;
+    position: absolute;
+    width: 100%;
+    background: white;
+    transition: top 1s;
+  }
+  .card__media {
+    height: 200px !important;
+  }
+  .card__text {
+    height: 4em;
+  }
+  .card__actions {
+    background: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  .headline {
+    text-transform: uppercase;
+  }
+  .card-content > p {
+    color: #555;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .btn {
+    margin: 0 auto !important;
+    margin-bottom: 2em !important;
+  }
+  @media (max-width: 1263px) {
+    padding: 0;
+  }
 </style>
