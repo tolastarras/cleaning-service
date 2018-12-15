@@ -110,9 +110,18 @@ h1 {
     font-size: 1em;
     text-shadow: 0 1px white;
 }
-@media (max-width: 959px) {
-  .testimonial-quote.group {
-    padding-left: 1em;
+@media (max-width: 960px) {
+  .container {
+    padding-right: 1.8em !important;
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin-left: 0 !important;
+    padding: 0 !important;
   }
 }
 </style>
