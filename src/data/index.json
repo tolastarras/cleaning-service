@@ -16,7 +16,7 @@
       "html": "We offer a variety of services and we have flexible appointment availability. Our team is available to talk with customers seven days a week. <a href='[PROJECT_PATH]/services/'>(read more)</a>"
     }
   },
-  "parallaxItems": {
+  "parallax": {
     "about": {
       "title": "",
       "subtitle": "We are a professional team specialized in general maintenance.",
