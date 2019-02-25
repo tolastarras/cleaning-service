@@ -46,7 +46,9 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Parallax from '@/components/shared/Parallax'
+
 export default {
   props: ['menuItems', 'name'],
   components: {
@@ -57,15 +59,14 @@ export default {
       scrolled: false,
       logo: require('@/assets/logo.svg'),
       path: this.$route.path,
-      business: this.$store.getters.business,
       drawer: false,
       documentWidth: this.$store.getters.documentWidth,
       image: null
     }
   },
   computed: {
+    ...mapState(['business']),
     parallaxData () {
-      // let page = this.$route.path.replace(/\//g, '')
       let page = this.getPage(this.$route.path)
       let parallaxData = this.$store.getters.parallax[`${page}`]
 

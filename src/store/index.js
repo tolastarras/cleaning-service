@@ -8,36 +8,34 @@ export const store = new Vuex.Store({
     business: null,
     services: null,
     parallax: null,
-    // documentWidth: document.body.clientWidth
     documentWidth: window.innerWidth
   },
   mutations: {
-    setBusinessInfo (state, payload) {
+    SET_BUSINESS_INFO (state, payload) {
       state.business = payload.business
     },
-    setDocumentWidth (state, payload) {
-      state.documentWidth = payload
+    SET_DOCUMENT_WIDTH (state, width) {
+      state.documentWidth = width
     },
-    setServices (state, payload) {
-      state.services = payload
+    SET_SERVICES (state, services) {
+      state.services = services
     },
-    setParallax (state, payload) {
+    SET_PARALLAX (state, payload) {
       state.parallax = payload
     }
   },
   actions: {
-    fetchData ({ commit }, payload) {
-      // console.log(payload.parallaxItems)
-      commit('setBusinessInfo', payload)
-      commit('setServices', payload.services)
-      commit('setParallax', payload.parallaxItems)
+    init ({ commit }, payload) {
+      commit('SET_BUSINESS_INFO', payload)
+      commit('SET_SERVICES', payload.services)
+      commit('SET_PARALLAX', payload.parallaxItems)
     },
-    changeDocumentWidth ({ commit }, payload) {
-      commit('setDocumentWidth', payload)
-    },
-    loadServices ({ commit }, payload) {
-      commit('setServices', payload)
+    changeDocumentWidth ({ commit }, width) {
+      commit('SET_DOCUMENT_WIDTH', width)
     }
+    // loadServices ({ commit }, payload) {
+    //   commit('SET_SERVICES', payload)
+    // }
   },
   getters: {
     business (state) {

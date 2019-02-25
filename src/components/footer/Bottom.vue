@@ -19,13 +19,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data () {
-    return {
-      business: this.$store.getters.business
-    }
-  },
   computed: {
+    ...mapState(['business']),
     phoneLink () {
       return 'tel:' + this.business.phone
     }

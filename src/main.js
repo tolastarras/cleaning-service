@@ -19,12 +19,6 @@ import 'font-awesome/css/font-awesome.min.css'
 import '@/css/style.css'
 // import 'animate.css/animate.min.css'
 
-// console.log('AGENT', navigator.userAgent)
-// console.log(Object.defineProperty)
-// if (!Object.defineProperty) {
-//   console.log('ERROR')
-// }
-
 Vue.use(Vuetify)
 
 // register components
@@ -85,12 +79,11 @@ new Vue({
   components: { App },
   methods: {
     handleResize () {
-      // this.$store.dispatch('changeDocumentWidth', document.body.clientWidth)
       this.$store.dispatch('changeDocumentWidth', window.innerWidth)
     }
   },
   created () {
-    this.$store.dispatch('fetchData', data)
+    this.$store.dispatch('init', data)
     window.addEventListener('resize', this.handleResize)
   },
   destroyed () {

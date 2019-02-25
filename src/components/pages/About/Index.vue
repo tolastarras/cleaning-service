@@ -46,6 +46,7 @@
 <script>
 import ContactForm from '@/components/shared/ContactForm'
 import Testimonial from './Testimonial'
+
 export default {
   components: {
     ContactForm,

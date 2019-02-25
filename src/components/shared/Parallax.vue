@@ -13,13 +13,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import { MEDIUM } from '@/config'
+
 export default {
   props: ['data'],
   data () {
     return {
       showIcon: false,
-      windowSize: this.$store.getters.documentWidth
+      windowSize: this.documentWidth
     }
   },
   methods: {
@@ -30,15 +32,16 @@ export default {
       this.showIcon = false
     },
     handleResize () {
-      this.windowSize = this.$store.getters.documentWidth
+      this.windowSize = this.documentWidth
     },
     bookNow () {
-      this.$router.push({name: 'Contact', params: { quote: true }})
+      this.$router.push({ name: 'Contact', params: { quote: true } })
     }
   },
   computed: {
+    ...mapState(['documentWidth']),
     parallaxHeight () {
-      if (this.$store.getters.documentWidth > MEDIUM) {
+      if (this.documentWidth > MEDIUM) {
         // return 'height: 700px !important'
       }
       // default of 500 px
