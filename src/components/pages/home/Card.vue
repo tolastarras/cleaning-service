@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import { PROJECT_PATH } from '@/config/'
 export default {
   props: ['card', 'index', 'total'],
   computed: {
@@ -32,7 +31,7 @@ export default {
   },
   methods: {
     readMore () {
-      this.$router.push(`${PROJECT_PATH}/about/`)
+      this.$router.push('/about')
     }
   }
 }

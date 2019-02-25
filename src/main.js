@@ -27,17 +27,10 @@ Vue.component('parallax', Parallax)
 
 Vue.mixin({
   methods: {
-    // isDesktop: () => {
-    //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //     return false
-    //   }
-    //   return true
-    // },
     formatTitle: str => {
       let index = str.indexOf(' ')
       let str1 = str.substring(0, index)
       let str2 = str.substring(index + 1)
-      // let [str1, str2] = str.split(/\s/)
 
       return `<div class="title">${str1} <span>${str2}</span></div>`
     },
@@ -49,7 +42,6 @@ Vue.mixin({
         size = '800x600'
       }
 
-      // console.log('IMAGE SIZE', size)
       return require(`@/assets/header/${name}_${size}.jpg`)
     },
     getCardImage: imagePath => {

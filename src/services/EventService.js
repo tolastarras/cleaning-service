@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: '//tolastarras.com',
+  baseURL: '//sobrino.co',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -11,7 +11,6 @@ const apiClient = axios.create({
 
 export default {
   postFormData (data) {
-    console.log('ENV', process.env)
     return apiClient.post('/api/message', data)
   }
 }

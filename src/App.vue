@@ -19,7 +19,6 @@
 <script>
   import AppHeader from '@/components/navigation'
   import AppFooter from '@/components/footer'
-  import { PROJECT_PATH } from '@/config/'
   
   export default {
     components: {
@@ -35,9 +34,9 @@
     computed: {
       menuItems () {
         return [
-          { icon: 'people', title: 'About Us', url: `${PROJECT_PATH}/about/` },
-          { icon: 'fa-tasks', title: 'Services', url: `${PROJECT_PATH}/services/` },
-          { icon: 'phone_in_talk', title: 'Contact Us', url: `${PROJECT_PATH}/contact/` }
+          { icon: 'people', title: 'About Us', url: '/about' },
+          { icon: 'fa-tasks', title: 'Services', url: '/services' },
+          { icon: 'phone_in_talk', title: 'Contact Us', url: '/contact' }
         ]
       }
     }

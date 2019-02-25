@@ -46,6 +46,7 @@
 <script>
 import { mapState } from 'vuex'
 import ContactForm from '@/components/shared/ContactForm'
+
 export default {
   components: {
     ContactForm

@@ -4,11 +4,12 @@
       <v-layout row wrap>
         <v-flex v-show="showAbout" class="contact-info" xs12 md4>
           <h2 class="blue--text">About Us</h2>
-          <div v-html="changeRoute(business.about.html)"></div>
+          <div v-html="business.about.html"></div>
+          <router-link to="/about">(read more ...)</router-link>
         </v-flex>
         <v-flex v-show="!showContact || !showAbout" class="contact-info services" xs12 md4>
           <h2 class="blue--text">Services</h2>
-          <div v-html="changeRoute(business.service.html)"></div>
+          <div v-html="business.service.html"></div>
         </v-flex>
         <v-flex v-show="showContact" class="contact-info contact-us" xs12 md4 d-block>
           <h2 class="blue--text">Contact Us</h2>
@@ -33,18 +34,15 @@
 </template>
 
 <script>
-import { PROJECT_PATH } from '@/config/'
+
 export default {
   props: ['business'],
-  methods: {
-    changeRoute (html) {
-      return html.replace(/\[PROJECT_PATH\]/, PROJECT_PATH)
-    }
-  },
   computed: {
+    // hide contact footer info when in the contact page
     showContact () {
       return this.getPage(this.$route.path) !== 'contact'
     },
+    // hide about info when in about page
     showAbout () {
       return this.getPage(this.$route.path) !== 'about'
     }
@@ -54,6 +52,7 @@ export default {
 
 <style scoped lang="css">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 a:hover {
   color: gold;
 }
