@@ -6,19 +6,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import TopFooter from './Top'
 import BottomFooter from './Bottom'
+
 export default {
   components: {
     TopFooter,
     BottomFooter
   },
-  data () {
-    return {
-      business: this.$store.getters.business
-    }
-  },
   computed: {
+    ...mapState(['business']),
     phoneLink () {
       return 'tel:' + this.business.phone
     }

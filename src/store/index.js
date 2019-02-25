@@ -40,15 +40,6 @@ export const store = new Vuex.Store({
     }
   },
   getters: {
-    business (state) {
-      return state.business
-    },
-    documentWidth (state) {
-      return state.documentWidth
-    },
-    serviceTypes: state => state.services.map(service => service.title),
-    parallax (state) {
-      return state.parallax
-    }
+    serviceTypes: state => state.services.map(service => service.title)
   }
 })

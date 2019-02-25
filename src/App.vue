@@ -35,7 +35,6 @@
     computed: {
       menuItems () {
         return [
-          { icon: 'home', title: 'Home', url: `${PROJECT_PATH}/` },
           { icon: 'people', title: 'About Us', url: `${PROJECT_PATH}/about/` },
           { icon: 'fa-tasks', title: 'Services', url: `${PROJECT_PATH}/services/` },
           { icon: 'phone_in_talk', title: 'Contact Us', url: `${PROJECT_PATH}/contact/` }

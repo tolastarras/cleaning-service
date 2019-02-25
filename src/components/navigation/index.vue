@@ -60,19 +60,18 @@ export default {
       logo: require('@/assets/logo.svg'),
       path: this.$route.path,
       drawer: false,
-      documentWidth: this.$store.getters.documentWidth,
       image: null
     }
   },
   computed: {
-    ...mapState(['business']),
+    ...mapState(['business', 'documentWidth', 'parallax']),
     parallaxData () {
       let page = this.getPage(this.$route.path)
-      let parallaxData = this.$store.getters.parallax[`${page}`]
+      let parallaxData = this.parallax[`${page}`]
 
       return parallaxData === undefined ? false : {
         ...parallaxData,
-        src: this.getImage(parallaxData.src, this.$store.getters.documentWidth)
+        src: this.getImage(parallaxData.src, this.documentWidth)
       }
     }
   },
@@ -91,16 +90,13 @@ export default {
     },
     handleScroll () {
       this.scrolled = window.scrollY > 0
-    },
-    handleResize () {
-      this.documentWidth = this.$store.getters.documentWidth
     }
   },
-  watch: {
-    documentWidth () {
-      return this.$store.getters.documentWidth
-    }
-  },
+  // watch: {
+  //   documentWidth () {
+  //     return this.documentWidth
+  //   }
+  // },
   created () {
     window.addEventListener('scroll', this.handleScroll)
   },

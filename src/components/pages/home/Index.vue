@@ -18,8 +18,10 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import AppCarousel from './Carousel'
 import Card from './Card'
+
 export default {
   name: 'Home',
   components: {
@@ -32,7 +34,7 @@ export default {
     },
     spacing (index) {
       // small devices padding
-      if (this.$store.getters.documentWidth < 600) {
+      if (this.documentWidth < 600) {
         return ''
       }
       // medium to large devices
@@ -87,10 +89,10 @@ export default {
         }
       ]
     }
-  }
+  },
+  computed: mapState(['documentWidth'])
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .carousel {
   position: absolute;

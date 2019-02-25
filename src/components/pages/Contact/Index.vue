@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import ContactForm from '@/components/shared/ContactForm'
 export default {
   components: {
@@ -51,10 +52,10 @@ export default {
   },
   data () {
     return {
-      src: require('@/assets/contact.jpg'),
-      business: this.$store.getters.business
+      src: require('@/assets/contact.jpg')
     }
-  }
+  },
+  computed: mapState(['business'])
 }
 </script>
 

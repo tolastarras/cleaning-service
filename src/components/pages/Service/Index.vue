@@ -22,27 +22,16 @@
 </template>
 
 <script>
-// import device from 'device'
+import { mapState } from 'vuex'
 
 export default {
   data () {
     return {
       show: true,
-      icon: null,
-      services: this.$store.getters.services
+      icon: null
     }
   },
   methods: {
-    // isDesktop () {
-    //   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //     showIcon = true
-    //   }
-    //   return true
-    // },
-    // showIcon (show) {
-    //   this.icon.show = this.isDesktop() ? false : true
-    //   this.icon.name = show ? 'fa-plus' : 'fa-minus'
-    // },
     getTitle (title) {
       return this.formatTitle(title)
     },
@@ -52,7 +41,7 @@ export default {
     },
     marginRight (index) {
       let cardsPerLine = 3
-      let width = this.$store.getters.documentWidth
+      let width = this.documentWidth
       if (width < 600) {
         cardsPerLine = 1
       } else if (width < 960) {
@@ -60,7 +49,8 @@ export default {
       }
       return (index + 1) % cardsPerLine === 0 ? '0' : '2em !important'
     }
-  }
+  },
+  computed: mapState(['services', 'documentWidth'])
 }
 </script>
 
