@@ -66,10 +66,12 @@ h1 {
   width: 100% !important;
   font-weight: bold;
 }
+
 .address {
   line-height: 2.2em;
   width: 100%;
 }
+
 .icon {
   vertical-align: top;
   border: 2px solid #daa520;
@@ -80,13 +82,16 @@ h1 {
   width: 2.3em !important;
   margin-right: .3em;
 }
+
 .contact-info {
   font-size: 1.4em;
   color: #daa520;
 }
+
 .contact-info > div {
   margin-bottom: .7em;
 }
+
 .contact-info > div > span {
   display: inline-block;
   line-height: 2.2em;
@@ -95,17 +100,21 @@ h1 {
   hyphens: auto;
   width: 80%;
 }
+
 .contact-info > div.hours > span {
   line-height: 1.3em;
 }
+
 .card__text {
   padding: 1em 0;
 }
+
 @media only screen and (max-width: 499px) {
   .contact-info > div.address > span {
     line-height: 1.2em !important;
   }
 }
+
 @media only screen and (min-width: 960px) and (max-width: 1150px) {
   .contact-info > div.address > span {
     line-height: 1.2em !important;

@@ -92,11 +92,6 @@ export default {
       this.scrolled = window.scrollY > 0
     }
   },
-  // watch: {
-  //   documentWidth () {
-  //     return this.documentWidth
-  //   }
-  // },
   created () {
     window.addEventListener('scroll', this.handleScroll)
   },
@@ -113,13 +108,16 @@ img {
   position: absolute;
   top: .8em;
 }
+
 img.drawer {
   width: 100px;
   height: 30px !important;
 }
+
 li.active {
-  background: rgba(0,0,0,.14);
+  background: rgba(0, 0, 0, 0.14);
 }
+
 .menuItem {
   color: #ccc !important;
   text-align: center;
@@ -131,9 +129,11 @@ li.active {
   padding: 0 1.5em;
   border-right: 1px solid white;
 }
+
 .menuItem:hover {
   color: white !important;
 }
+
 .toolbar.standard {
   background-color: rgba(0, 0 , 0, 0.2);
   position: absolute;
@@ -144,47 +144,59 @@ li.active {
   height: 7em;
   padding-top: 1.2em;
 }
+
 .toolbar.sticky {
   position: fixed;
   background-color: #111;
   z-index: 2;
   height: 4.5em;
 }
+
 .toolbar.sticky img {
   top: .6em;
   height: 40px;
   width: 150px;
 }
+
 .toolbar.standard a.menuItem {
   font-size: 1.2em;
 }
+
 .toolbar.sticky a.menuItem {
   font-size: 1em;
 }
+
 .router-link-exact-active {
   color: white !important;
 }
+
 .router-link-exact-active:hover {
   cursor: default;
 }
+
 .btn {
   margin-top: .7em;
   border: 1px solid white;
   border-radius: 4px;
 }
+
 .list__tile__title {
   height: 2em;
 }
+
 .list__tile__title > img {
   height: 2em;
   margin-top: -.8em;
 }
+
 .list__tile__action > .btn {
   margin: 0;
 }
+
 a:last-of-type {
   border-right: none;
 }
+
 @media (max-width: 599px) {
   .toolbar__content > div {
     margin: 0 !important;

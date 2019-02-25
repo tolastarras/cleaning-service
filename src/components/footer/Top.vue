@@ -56,11 +56,13 @@ export default {
 a:hover {
   color: gold;
 }
+
 .footer {
   padding: 2em !important;
   background-color: #222 !important;
   box-sizing: border-box;
 }
+
 .contact-info {
   position: relative;
   line-height: 1.6em;
@@ -69,6 +71,7 @@ a:hover {
   font-weight: 200;
   padding-right: 2em;
 }
+
 .contact-info > h2 {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -78,48 +81,59 @@ a:hover {
   border-bottom: 1px solid grey;
   width: 100% !important;
 }
+
 .contact-info:last-child {
   padding-left: 2em;
   padding-right: 0;
 }
+
 .contact-us, .services {
   padding-right: 1em;
   padding-left: 1em;
 }
+
 .icon-clock {
   display: none;
 }
+
 .contact-info:last-child {
   margin-right: 0;
 }
+
 .container {
   margin: 0 auto !important;
   max-width: 1200px;
 }
+
 .icon {
   width: 1.2em;
   text-align: center;
   margin-right: .2em;
 }
+
 /* media queries */
 @media (max-width: 415px) {
   .footer {
     padding: .5em !important;
   }
 }
+
 @media (max-width: 959px) {
   h2 {
     text-align: left;
     margin-left: 0;
     width: 100% !important;
   }
+
   .contact-info {
     margin: 0;
     padding: 0;
   }
+
   .contact-info:last-child {
     padding-left: 0;
   }
+  
   .contact-us, .services {
     padding: 1.6em 0;
   }
