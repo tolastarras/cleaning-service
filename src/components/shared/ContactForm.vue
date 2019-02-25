@@ -42,7 +42,7 @@
             <v-select class="pr-4"
               label="Service"
               v-model="service"
-              :items="services"
+              :items="serviceTypes"
               :rules="serviceRules"
               required
             ></v-select>
@@ -75,7 +75,8 @@
 </template>
 
 <script>
-import EventService from '@/services/EventService.js'
+import { mapState, mapGetters } from 'vuex'
+import EventService from '@/services/EventService'
 import AlertMessage from './Alert'
 
 export default {
@@ -112,16 +113,8 @@ export default {
       v => /^\d{10}$/.test(v) || 'Phone must be 10 digits in length'
     ],
     service: '',
-    services: [],
     serviceRules: [v => !!v || 'Service is required'],
     frequency: '',
-    frequencies: [
-      'Daily',
-      'Weekly',
-      'Bi Monthly',
-      'Monthly',
-      'One Time Event'
-    ],
     frequencyRules: [v => !!v || 'Frequency is required'],
     message: '',
     messageRules: [
@@ -144,11 +137,7 @@ export default {
     onLoad () {
       // params from services page to auto-fill free quote form
       let params = this.$route.params
-      // load services from json data
-      let services = this.$store.getters.services.map(element => {
-        return element.title
-      })
-      this.services = services
+
       this.service = params.service
       this.message = params.message
       this.title = this.quote || params.quote ? 'Get a Free Quote' : 'Send us a Message'
@@ -183,6 +172,10 @@ export default {
         }
       })
     }
+  },
+  computed: {
+    ...mapState(['frequencies']),
+    ...mapGetters(['serviceTypes'])
   }
 }
 </script>

@@ -36,6 +36,13 @@
       "src": "office"
     }
   },
+  "frequencies": [
+    "Daily",
+    "Weekly",
+    "Bi Monthly",
+    "Monthly",
+    "One Time Event"
+  ],
   "services": [
     {
       "id": 1,

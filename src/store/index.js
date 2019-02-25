@@ -6,8 +6,9 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     business: null,
-    services: null,
     parallax: null,
+    services: [],
+    frequencies: [],
     documentWidth: window.innerWidth
   },
   mutations: {
@@ -20,6 +21,9 @@ export const store = new Vuex.Store({
     SET_SERVICES (state, services) {
       state.services = services
     },
+    SET_FREQUENCIES (state, frequencies) {
+      state.frequencies = frequencies
+    },
     SET_PARALLAX (state, payload) {
       state.parallax = payload
     }
@@ -29,13 +33,11 @@ export const store = new Vuex.Store({
       commit('SET_BUSINESS_INFO', payload)
       commit('SET_SERVICES', payload.services)
       commit('SET_PARALLAX', payload.parallaxItems)
+      commit('SET_FREQUENCIES', payload.frequencies)
     },
     changeDocumentWidth ({ commit }, width) {
       commit('SET_DOCUMENT_WIDTH', width)
     }
-    // loadServices ({ commit }, payload) {
-    //   commit('SET_SERVICES', payload)
-    // }
   },
   getters: {
     business (state) {
@@ -44,9 +46,7 @@ export const store = new Vuex.Store({
     documentWidth (state) {
       return state.documentWidth
     },
-    services (state) {
-      return state.services
-    },
+    serviceTypes: state => state.services.map(service => service.title),
     parallax (state) {
       return state.parallax
     }
