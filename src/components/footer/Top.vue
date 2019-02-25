@@ -40,11 +40,11 @@ export default {
   computed: {
     // hide contact footer info when in the contact page
     showContact () {
-      return this.getPage(this.$route.path) !== 'contact'
+      return this.$root.getPage(this.$route.path) !== 'contact'
     },
     // hide about info when in about page
     showAbout () {
-      return this.getPage(this.$route.path) !== 'about'
+      return this.$root.getPage(this.$route.path) !== 'about'
     }
   }
 }

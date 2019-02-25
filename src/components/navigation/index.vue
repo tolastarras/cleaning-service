@@ -66,19 +66,19 @@ export default {
   computed: {
     ...mapState(['business', 'documentWidth', 'parallax']),
     parallaxData () {
-      let page = this.getPage(this.$route.path)
+      let page = this.$root.getPage(this.$route.path)
       let parallaxData = this.parallax[`${page}`]
 
       return parallaxData === undefined ? false : {
         ...parallaxData,
-        src: this.getImage(parallaxData.src, this.documentWidth)
+        src: this.$root.getImage(parallaxData.src, this.documentWidth)
       }
     }
   },
   methods: {
     activeItem (item) {
-      let page = this.getPage(this.$route.path)
-      let currentPage = this.getPage(item.url)
+      let page = this.$root.getPage(this.$route.path)
+      let currentPage = this.$root.getPage(item.url)
 
       if (currentPage === page) {
         return 'active'

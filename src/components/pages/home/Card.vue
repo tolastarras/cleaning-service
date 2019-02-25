@@ -26,7 +26,7 @@ export default {
   props: ['card', 'index', 'total'],
   computed: {
     title () {
-      return this.formatTitle(this.card.title)
+      return this.$root.formatTitle(this.card.title)
     }
   },
   methods: {

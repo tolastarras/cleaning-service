@@ -33,7 +33,10 @@ export default {
   },
   methods: {
     getTitle (title) {
-      return this.formatTitle(title)
+      return this.$root.formatTitle(title)
+    },
+    getCardImage: imagePath => {
+      return require(`@/assets/content/${imagePath}`)
     },
     bookNow (title) {
       // find out which button was clicked to prefill the message area with text
