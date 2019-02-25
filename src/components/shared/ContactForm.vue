@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import EventService from '@/services/EventService.js'
 import AlertMessage from './Alert'
 
 export default {
@@ -138,19 +138,6 @@ export default {
     }
   },
   methods: {
-    // fetchData () {
-    //   this.error = this.post = null
-    //   this.loading = true
-    //   // replace `getPost` with your data fetching util / API wrapper
-    //   getPost(this.$route.params.id, (err, post) => {
-    //     this.loading = false
-    //     if (err) {
-    //       this.error = err.toString()
-    //     } else {
-    //       this.post = post
-    //     }
-    //   })
-    // },
     closeAlert () {
       setTimeout(() => (this.alert.show = false), 5000)
     },
@@ -168,7 +155,7 @@ export default {
     },
     onSubmit () {
       this.loading = true
-      axios.post('/api/message/', {
+      EventService.postFormData('/api/message/', {
         name: `${this.firstName} ${this.lastName}`,
         email: this.email,
         phone: this.phone,
