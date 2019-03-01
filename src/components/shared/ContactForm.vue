@@ -76,7 +76,7 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-import EventService from '@/services/EventService'
+import EmailService from '@/services/EmailService'
 import AlertMessage from './Alert'
 
 export default {
@@ -144,7 +144,7 @@ export default {
     },
     onSubmit () {
       this.loading = true
-      EventService.postFormData('/api/message/', {
+      EmailService.postFormData('message/', {
         name: `${this.firstName} ${this.lastName}`,
         email: this.email,
         phone: this.phone,

@@ -23,6 +23,7 @@ Vue.component('app-alert', Alert)
 Vue.component('parallax', Parallax)
 
 Vue.config.productionTip = false
+console.log('hello', process.env)
 
 /* eslint-disable no-new */
 new Vue({
