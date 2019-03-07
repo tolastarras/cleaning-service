@@ -1,0 +1,55 @@
+h1, h2 {
+  max-width: 70%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  color: gold;
+}
+
+/* media queries */
+@media (max-width: 599px) {
+  h1, h2 {
+    width: 70vmin !important;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    padding: 2em 0 .5em 0;
+  }
+
+  .v-parallax {
+    height: 26em !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 1.8em;
+    width: 60vh;
+    margin: 0 auto;
+  }
+
+  h2 {
+    margin-top: 3.5em;
+    font-size: 1.5em;
+    width: 60vh;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1020px) {
+  h2 {
+    margin-top: 2em;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .v-parallax {
+    height: 700px !important;
+  }
+}

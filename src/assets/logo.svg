@@ -1,0 +1,26 @@
+<svg width="182" height="52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <!-- letter e top -->
+  <!-- <polyline points="32 15 32 5.2 48 5.2" stroke="#2196f3" fill="transparent" stroke-width="5"/> -->
+  <!-- letter e middle -->
+  <!-- <line x1="34" y1="15.5" x2="46" y2="15.5" stroke="#2196f3" stroke-width="4"/> -->
+  <!-- house -->
+  <!-- <polyline points="48 26 32 26 32 15 15 4 4 15 4 40 34 40" stroke="white" fill="transparent" stroke-width="4.8"/> -->
+  <polyline points="32 15 15 4 4 15 4 40 34 40" stroke="#2196f3" fill="transparent" stroke-width="4.8"/>
+  <text x="26.6" y="28" fill="#2196f3" font-family="Arial" font-size="35" font-weight="bold">
+    Evevides
+  </text>
+  <!-- <text x="50" y="28" fill="#2196f3" font-family="Arial" font-size="35" font-weight="bold">
+    vevides
+  </text> -->
+  <text x="35" y="44" fill="gold" font-family="Arial" font-size="20">
+    Cleaning
+  </text>
+  <text x="116" y="45" fill="white" font-family="Arial" font-size="20">
+    Service
+  </text>
+  <!-- window -->
+  <line x1="11" y1="24" x2="18" y2="24" stroke="#2196f3" stroke-width="7"/>
+  <!-- chimeny -->
+  <line x1="7" y1="2" x2="7" y2="12" stroke="#2196f3" stroke-width="6"/>
+  Evevides Cleaning Service
+</svg>

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+.container {
+  max-width: 1200px;
+}
+
+.title {
+  padding: 12px 0 6px 0;
+  color: #2196f3;
+  font-weight: bold;
+  font-size: 24px !important;
+  letter-spacing: -1px !important;
+}
+
+.title > span {
+  color: #555;
+  letter-spacing: 1px !important;
+}
+
+.v-parallax__content {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.v-parallax__image {
+  transform: translate(-50%, 50px) !important;
+}
+
+.v-card__text {
+  padding: 0;
+}
