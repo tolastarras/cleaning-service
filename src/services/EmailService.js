@@ -5,9 +5,8 @@ const API_URL = process.env.NODE_ENV === 'development' ? process.env.VUE_APP_BAS
 const apiClient = axios.create({
   baseURL: `//${API_URL}`,
   withCredentials: false,
-  timeout: 1000,
+  // timeout: 1000,
   headers: {
-    'Accept': 'application/json',
     'Content-Type': 'application/json'
   }
 })
@@ -15,8 +14,8 @@ const apiClient = axios.create({
 export default {
   postFormData (method, data) {
     console.log('method', method)
-    console.log('data', data)
     console.log(btoa(JSON.stringify(data)))
-    return apiClient.post(`/api/v1/${method}/${btoa(JSON.stringify(data))}`)
+    // return apiClient.post(`/api/v1/${method}/${btoa(JSON.stringify(data))}`)
+    return apiClient.post(`/api/v1/${method}`, data)
   }
 }
