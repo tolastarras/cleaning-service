@@ -64,7 +64,7 @@
           :counter="maxMessageChars"
           required
         ></v-textarea>
-        <v-btn color="info" :loading="loading" @click="onSubmit" :disabled="loading || !valid">Send
+        <v-btn class="primary" :loading="loading" @click.prevent="onSubmit" :disabled="loading || !valid">Send
           <span slot="loader" class="custom-loader">
             <v-icon light>cached</v-icon>
           </span>
@@ -103,9 +103,9 @@ export default {
     ],
     email: '',
     emailRules: [
-      (v) => !!v || 'E-mail is required',
+      v => !!v || 'E-mail is required',
       // eslint-disable-next-line
-      (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+      v => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
     ],
     phone: '',
     phoneRules: [
@@ -119,7 +119,7 @@ export default {
     message: '',
     messageRules: [
       v => !!v || 'Message is required',
-      v => (v && v.length <= 300) || 'Message must be less than 300 characters'
+      v => (v && v.length >= 10 && v.length <= 300) || 'Message must be between 10 and 300 characters'
     ]
   }),
   created () {
@@ -127,7 +127,7 @@ export default {
   },
   watch: {
     valid () {
-      return this.$refs.form.validate()
+      // return this.$refs.form.validate()
     }
   },
   methods: {
@@ -144,31 +144,37 @@ export default {
     },
     onSubmit () {
       this.loading = true
-      EmailService.postFormData('message/', {
-        name: `${this.firstName} ${this.lastName}`,
+      let formData = {
+        firstName: this.firstName,
+        lastName: this.lastName,
         email: this.email,
         phone: this.phone,
         message: this.message,
         service: this.service,
         frequency: this.frequency,
         type: this.quote ? 'Free Quote' : 'Comment'
-      }).then(response => {
-        this.alert = {
-          show: true,
-          type: 'success',
-          text: response.data.status
-        }
-        this.$refs.form.reset()
-        this.loading = false
-        this.closeAlert()
-      }).catch(() => {
-        this.loading = false
-        this.alert = {
-          show: true,
-          type: 'error',
-          text: 'Unable to Send Message'
-        }
-      })
+      }
+
+      EmailService.postFormData('message', formData)
+        .then(({ data }) => {
+          this.alert = {
+            show: true,
+            type: data.type,
+            text: data.message
+          }
+          this.$refs.form.reset()
+          this.loading = false
+          this.closeAlert()
+          console.log('response', data)
+        })
+        .catch(() => {
+          this.loading = false
+          this.alert = {
+            show: true,
+            type: 'error',
+            text: 'Unable to Send Message'
+          }
+        })
     }
   },
   computed: {

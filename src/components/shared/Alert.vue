@@ -1,5 +1,14 @@
 <template lang="html">
-  <v-alert class="mb-4" :icon="icon" :color="alert.type" dismissible outline @click="onClose" v-model="show">
+  <v-alert
+    class="mb-4"
+    :icon="icon"
+    :color="alert.type"
+    dismissible
+    outline
+    v-model="show"
+    transition="fade-transition"
+    @click="onClose"
+  >
     {{ alert.text }}
   </v-alert>
 </template>
@@ -25,8 +34,8 @@ export default {
 }
 </script>
 
-<style scoped lang="css">
-.alert.alert--dismissible.alert--outline {
+<style lang="scss" scoped>
+.v-alert {
   font-size: 1.5em !important;
 }
 </style>

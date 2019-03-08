@@ -16,8 +16,6 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_DATA (state, { business, frequencies, services, parallax, items, cards, testimonials }) {
-      console.log(cards)
-
       state.business = business
       state.parallax = parallax
       state.items = items

@@ -25,7 +25,6 @@ export default {
       return require(`@/assets/header/${name}_${size}.jpg`)
     },
     getPage: path => {
-      console.log('path:', path)
       // remove double forward slashes from path and split url into array of words > 0
       let values = path
         // .replace(/\/\//g, '/')
