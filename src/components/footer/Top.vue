@@ -25,7 +25,7 @@
           <router-link to="services">(read more ...)</router-link>
         </v-flex>
         <v-flex v-show="!isServicesPage && !isHomePage" class="contact-info" xs12 lg4>
-          <h2 class="blue--text">Service Types</h2>
+          <h2 class="blue--text">Our Services</h2>
           <v-layout row wrap>
             <v-flex text-uppercase class="service-types" xs-6 v-for="service in services" :key="service.id">
               <router-link to="services">{{ service.title }}</router-link>
@@ -74,9 +74,9 @@ a {
   }
 }
 
-.footer {
+footer {
   padding: 2em !important;
-  background-color: #222 !important;
+  background-color: darken($color3, 3) !important;
   box-sizing: border-box;
 }
 
@@ -93,37 +93,16 @@ a {
     text-transform: uppercase;
     padding: 0.5em 0;
     margin-bottom: 1em;
-    color: gold !important;
+    color: $color5 !important;
     border-bottom: 1px solid grey;
     width: 100% !important;
   }
-
-  // &:nth-child(2) {
-  //   padding-left: 1em;
-  //   padding-right: 1em;
-  // }
-
-  // &:nth-child(3) {
-  //   padding-left: 2em;
-  //   padding-right: 0;
-  // }
 }
 
 .service-types {
   width: 50%;
   padding-bottom: 7px;
 }
-
-// .container {
-//   margin: 0 auto !important;
-//   max-width: 1200px;
-// }
-
-// .icon {
-//   width: 1.2em;
-//   text-align: center;
-//   margin-right: .2em;
-// }
 
 /* media queries */
 @media (max-width: 959px) {

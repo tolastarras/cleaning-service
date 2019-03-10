@@ -31,9 +31,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-/* @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed'); */
-
+<style lang="scss" scoped>
 .caption, .built-by {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
@@ -54,7 +52,7 @@ a:hover {
 }
 
 footer {
-  background-color: #111 !important;
+  background: darken($color3, 8) !important;
 }
 
 .layout {
