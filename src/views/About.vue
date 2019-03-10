@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container>
+  <v-container class="my-4">
     <v-layout row wrap>
       <v-flex xs12>
         <v-card flat light class="mb-3">

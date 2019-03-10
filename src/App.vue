@@ -53,7 +53,7 @@ h1, h2 {
 
 .main-title {
   color: $color3;
-  margin: 3rem 0;
+  margin-bottom: 3rem;
   width: 100%;
 
   &:after {
