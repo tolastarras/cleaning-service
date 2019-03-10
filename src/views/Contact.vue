@@ -1,11 +1,11 @@
 <template lang="html">
   <v-container>
     <v-layout row wrap>
+      <h1 class="text-xs-left display-2 main-title">Contact Us</h1>
       <v-flex xs12 md5>
         <v-layout row wrap>
           <v-flex xs12>
             <v-card flat light>
-              <h1 class="text-xs-left display-2 bottom-line">Contact Us</h1>
               <div class="contact-info">
                 <div class="address">
                   <v-icon>place</v-icon>
@@ -28,9 +28,9 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs12 md7 id="quote">
+      <v-flex xs12 md7 class="message-form">
         <v-layout row wrap>
-          <v-flex text-xs-center pt-4>
+          <v-flex text-xs-center>
             <v-card flat light>
               <v-card-text>
                 <contact-form></contact-form>

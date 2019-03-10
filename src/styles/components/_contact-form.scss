@@ -8,7 +8,7 @@ h1 {
 }
 
 .header {
-  background: #444;
+  background: $color3;
   padding: .3em 0 .5em 0 !important;
   color: white;
 }
@@ -20,7 +20,7 @@ h1 {
 
 .container {
   padding: 0 !important;
-  border: 12px solid #444;
+  border: 12px solid $color3;
   border-radius: 4px;
 }
 

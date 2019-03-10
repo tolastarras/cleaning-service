@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="contact-form">
     <alert-message v-show="alert.show" :alert="alert"></alert-message>
     <v-container pa-0 ma-0>
       <h1 class="display-1 header" v-text="formTitle"></h1>

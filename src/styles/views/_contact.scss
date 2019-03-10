@@ -1,18 +1,33 @@
-h1 {
-  margin: 0;
-  width: 100% !important;
-  font-weight: bold;
+.contact-info {
+  font-size: 1.4em;
+  color: $color4;
+
+  > div {
+    margin-bottom: .7em;
+
+    &.hours > span {
+      line-height: 1.5em;
+    }
+
+    > span {
+      display: inline-block;
+      line-height: 2.2em;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: auto;
+      width: 80%;
+    }
+  }
 }
 
-.address {
-  line-height: 2.2em;
-  width: 100%;
+.message-form {
+  margin-top: -9rem;
 }
 
 .v-icon {
   vertical-align: top;
-  border: 2px solid #daa520;
-  color: #daa520 !important;
+  border: 2px solid $color4;
+  color: $color4;
   border-radius: 5px;
   padding: 8px;
   text-align: center;
@@ -20,39 +35,13 @@ h1 {
   margin-right: .7em;
 }
 
-.contact-info {
-  font-size: 1.4em;
-  color: #daa520;
-}
-
-.contact-info > div {
-  margin-bottom: .7em;
-}
-
-.contact-info > div > span {
-  display: inline-block;
-  line-height: 2.2em;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  width: 80%;
-}
-
-.contact-info > div.hours > span {
-  line-height: 1.3em;
-}
-
-.card__text {
-  padding: 1em 0;
-}
-
-@media only screen and (max-width: 499px) {
+@media only screen and (min-width: 960px) and (max-width: 1150px) {
   .contact-info > div.address > span {
     line-height: 1.2em !important;
   }
 }
 
-@media only screen and (min-width: 960px) and (max-width: 1150px) {
+@media only screen and (max-width: 499px) {
   .contact-info > div.address > span {
     line-height: 1.2em !important;
   }
