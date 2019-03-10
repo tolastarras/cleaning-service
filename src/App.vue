@@ -21,22 +21,16 @@ export default {
 }
 </script>
 <style lang="scss">
-h1, h2 {
-  color: #333;
-  padding-bottom: .5em;
-  text-transform: uppercase;
-}
-
 #app {
-  margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
-  background: white;
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  // margin: 0 auto;
+  // font-family: 'Roboto', sans-serif;
+  // background: white;
+  // width: 100%;
+  // min-height: 100vh;
+  // position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // flex: 1;
 }
 
 .display-1 {
@@ -48,7 +42,7 @@ h1, h2 {
 .display-2 {
   text-transform: uppercase;
   font-weight: bold;
-  color: #333;
+  color: red;
 }
 
 .application a {

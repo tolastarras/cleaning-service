@@ -21,6 +21,7 @@ export default {
       } else if (width >= 800) {
         size = '800x600'
       }
+      console.log(`${name}_${size}`)
 
       return require(`@/assets/header/${name}_${size}.jpg`)
     },

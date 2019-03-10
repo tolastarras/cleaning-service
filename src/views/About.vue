@@ -69,38 +69,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* h1 {
-  margin: 0;
-  width: 100% !important;
-  font-weight: bold;
-}
-
-img {
-   margin-left: 5em !important;
-   margin-bottom: 1em;
-   margin: 0 auto;
-}
-
-.card__text {
-  padding: 0;
-} */
-
-@media (max-width: 960px) {
-  h1 {
-    padding-bottom: 0;
-    margin: 0;
-    /* width: 100%; */
-  }
-
-  img {
-    margin-left: 0;
-    width: 100%;
-    margin-bottom: 2em;
-  }
-
-  .testimonials {
-    padding-top: 2em;
-    padding-bottom: 1em;
-  }
-}
+@import '@/styles/views/_about.scss';
 </style>

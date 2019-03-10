@@ -51,31 +51,6 @@ export default {
   computed: mapState(['items', 'cards', 'documentWidth'])
 }
 </script>
-<style scoped>
-/* .carousel {
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
-.cards-content {
-  margin-top: -5rem;
-  padding: 0 8em;
-}
-
-/* media queries */
-@media (max-width: 599px) {
-  .cards-content {
-    padding-top: 26em;
-  }
-}
-
-@media (max-width: 959px) {
-  .container {
-    padding: 0 0 1em 0 !important;
-  }
-  .last-card {
-    padding-bottom: 0 !important;
-  }
-}
+<style lang="scss" scoped>
+@import '@/styles/views/_home.scss';
 </style>

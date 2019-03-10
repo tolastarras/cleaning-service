@@ -7,7 +7,7 @@
           <v-img :src="getCardImage(card.src)"></v-img>
           <v-card-title>
             <div class="card-content text-xs-left">
-              <div class="text-xs-center text-uppercase" v-html="getTitle(card.title)"></div>
+              <div class="text-xs-center" v-html="getTitle(card.title)"></div>
               <p class="py-3 text-xs-center">{{ card.price }}</p>
               <v-card-text v-html="card.description"></v-card-text>
             </div>

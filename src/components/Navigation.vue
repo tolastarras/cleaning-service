@@ -1,6 +1,6 @@
 <template lang="html">
   <v-content>
-    <v-toolbar flat v-bind:class="{ standard: !scrolled, sticky: scrolled }" class="white--text">
+    <v-toolbar flat :class="{ standard: !scrolled, sticky: scrolled }" class="white--text">
       <v-layout row wrap>
         <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text"></v-toolbar-side-icon>
         <v-toolbar-title>
@@ -13,7 +13,7 @@
 
         <v-toolbar-items class="hidden-sm-and-down">
           <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
-            {{item.title}}
+            {{ item.title }}
           </router-link>
         </v-toolbar-items>
       </v-layout>
@@ -78,6 +78,7 @@ export default {
     parallaxData () {
       let page = this.$root.getPage(this.$route.path)
       let parallaxData = this.parallax[`${page}`]
+      console.log(parallaxData)
 
       return parallaxData === undefined ? false : {
         ...parallaxData,
@@ -96,6 +97,7 @@ export default {
       return ''
     },
     handleScroll () {
+      console.log('created ....')
       this.scrolled = window.scrollY > 0
       console.log('scrolling ...', this.scrolled)
     }
