@@ -1,7 +1,7 @@
 <template lang="html">
   <v-container class="my-4">
     <v-layout row wrap>
-      <h1 class="text-xs-left display-2 main-title">Contact Us</h1>
+      <h1 class="text-xs-left display-2 primary-title">Contact Us</h1>
       <v-flex xs12 md5>
         <v-layout row wrap>
           <v-flex xs12>

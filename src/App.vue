@@ -51,21 +51,6 @@ h1, h2 {
   color: #333;
 }
 
-.main-title {
-  color: $color3;
-  margin-bottom: 3rem;
-  width: 100%;
-
-  &:after {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 4px;
-    background-color: $color3;
-    margin-top: .4em;
-  }
-}
-
 .application a {
   color: inherit !important;
 }

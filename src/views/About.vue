@@ -4,8 +4,8 @@
       <v-flex xs12>
         <v-card flat light class="mb-3">
           <v-card-text class="pb-3">
-            <h1 class="text-xs-left display-2 main-title">Serving your area</h1>
-            <img :src="src" :alt="business.name" align="right"/>
+            <h1 class="text-xs-left display-2 primary-title">Serving your area</h1>
+            <img :src="src" :alt="business.name" align="right" class="pl-5"/>
             <div v-html="content"></div>
           </v-card-text>
         </v-card>

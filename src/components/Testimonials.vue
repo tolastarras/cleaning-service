@@ -1,6 +1,6 @@
 <template lang="html">
   <v-container class="ml-4">
-    <h1 class="display-1">{{ title }}</h1>
+    <h1 class="display-1 secondary-title">{{ title }}</h1>
     <v-layout row wrap>
       <v-flex xs12 class="testimonial" v-for="(testimonial, i) in testimonials" :key="i">
         <div class="testimonial-quote group" :class="lastChild(i)">
@@ -31,12 +31,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  text-align: center;
-  margin-bottom: .6em;
-  width: 100% !important;
-}
-
 .testimonial-quote {
     font-size: 1em;
     position: relative;

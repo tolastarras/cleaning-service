@@ -12,7 +12,7 @@ export default {
       let str1 = str.substring(0, index)
       let str2 = str.substring(index + 1)
 
-      return `<div class="title">${str1} <span>${str2}</span></div>`
+      return `<div class="card-title">${str1} <span>${str2}</span></div>`
     },
     getImage: (name, width) => {
       let size = '320x480'
