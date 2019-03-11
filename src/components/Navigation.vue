@@ -97,9 +97,7 @@ export default {
       return ''
     },
     handleScroll () {
-      console.log('created ....')
       this.scrolled = window.scrollY > 0
-      console.log('scrolling ...', this.scrolled)
     }
   },
   created () {
