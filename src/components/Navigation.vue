@@ -19,8 +19,8 @@
       </v-layout>
     </v-toolbar>
 
-    <v-navigation-drawer app temporary v-model="drawer">
-      <v-list class="pa-1">
+    <v-navigation-drawer dark app temporary v-model="drawer">
+      <v-list class="pt-3">
         <v-list-tile avatar tag="div">
           <v-list-tile-content>
             <v-list-tile-title>
@@ -34,9 +34,9 @@
           </v-list-tile-action>
         </v-list-tile>
       </v-list>
-      <v-list class="pt-0" dense>
+      <v-list dense>
         <v-divider light></v-divider>
-        <v-list-tile :class="activeItem(item)" v-for="(item, i) in menuItems" :key="i" router :to="item.url">
+        <v-list-tile class="menu-items" :class="activeItem(item)" v-for="(item, i) in menuItems" :key="i" router :to="item.url">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -68,8 +68,8 @@ export default {
       image: null,
       menuItems: [
         { icon: 'people', title: 'About Us', url: '/about' },
-        { icon: 'fa-tasks', title: 'Services', url: '/services' },
-        { icon: 'phone_in_talk', title: 'Contact Us', url: '/contact' }
+        { icon: 'view_list', title: 'Services', url: '/services' },
+        { icon: 'perm_phone_msg', title: 'Contact Us', url: '/contact' }
       ]
     }
   },
@@ -97,15 +97,12 @@ export default {
     },
     handleScroll () {
       this.scrolled = window.scrollY > 0
-      console.log('scrollY', window.scrollY)
     }
   },
   created () {
-    console.log('created ...')
     window.addEventListener('scroll', this.handleScroll)
   },
   destroyed () {
-    console.log('destroyed ...')
     window.removeEventListener('scroll', this.handleScroll)
   }
 }

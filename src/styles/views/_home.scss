@@ -8,17 +8,17 @@
 }
 
 /* media queries */
-@media (max-width: 599px) {
-  .cards-content {
-    padding-top: 26em;
-  }
-}
-
 @media (max-width: 959px) {
   .container {
     padding: 0 0 1em 0 !important;
   }
   .last-card {
     padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .cards-content {
+    padding-top: 26em;
   }
 }

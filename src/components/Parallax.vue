@@ -34,7 +34,7 @@ export default {
       this.windowSize = this.documentWidth
     },
     bookNow () {
-      this.$router.push({ name: 'Contact', params: { quote: true } })
+      this.$router.push({ name: 'contact', params: { quote: true } })
     }
   },
   computed: {

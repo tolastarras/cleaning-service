@@ -85,10 +85,6 @@ export default {
     font-size: 2em !important;
   }
 
-  .container {
-    // padding: .8em .3em !important;
-  }
-
   .card__text, .main-content {
     padding: 0 !important;
   }

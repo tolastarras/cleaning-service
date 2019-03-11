@@ -13,9 +13,30 @@ img {
   top: .8em;
 }
 
-img.drawer {
-  width: 100px;
-  height: 30px !important;
+// img.drawer {
+//   width: 100px;
+//   height: 20px !important;
+//   border: 2px solid red;
+// }
+
+.v-navigation-drawer {
+  .menu-items {
+    padding-top: 2rem;
+
+    &:first-of-type {
+      margin-top: 1rem;
+    }
+  }
+
+  .v-list__tile__action {
+    .v-icon {
+      font-size: 2.5rem;
+    }
+  }
+
+  .v-list__tile__content {
+    font-size: 1.8rem;
+  }
 }
 
 .menuItem {
