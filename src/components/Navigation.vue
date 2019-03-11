@@ -78,7 +78,6 @@ export default {
     parallaxData () {
       let page = this.$root.getPage(this.$route.path)
       let parallaxData = this.parallax[`${page}`]
-      console.log(parallaxData)
 
       return parallaxData === undefined ? false : {
         ...parallaxData,
@@ -98,12 +97,15 @@ export default {
     },
     handleScroll () {
       this.scrolled = window.scrollY > 0
+      console.log('scrollY', window.scrollY)
     }
   },
   created () {
+    console.log('created ...')
     window.addEventListener('scroll', this.handleScroll)
   },
   destroyed () {
+    console.log('destroyed ...')
     window.removeEventListener('scroll', this.handleScroll)
   }
 }

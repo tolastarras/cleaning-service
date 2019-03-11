@@ -1,7 +1,7 @@
 .v-toolbar__items {
   color: darken($color2, 20);
 
-  .router-link-active {
+  .active {
     color: $color2 !important;
   }
 }
