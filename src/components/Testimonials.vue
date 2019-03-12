@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container class="ml-4">
+  <v-container>
     <h1 class="display-1 secondary-title">{{ title }}</h1>
     <v-layout row wrap>
       <v-flex xs12 class="testimonial" v-for="(testimonial, i) in testimonials" :key="i">

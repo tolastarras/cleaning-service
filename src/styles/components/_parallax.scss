@@ -9,46 +9,68 @@ h1 {
 }
 
 /* media queries */
-@media (max-width: 599px) {
-  h1, h2 {
-    width: 70vmin !important;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  h2 {
-    padding: 2em 0 .5em 0;
-  }
-
-  .v-parallax {
-    height: 26em !important;
+@media (max-width: 960px) {
+  .parallax-content > h1 {
+    max-width: 600px;
+    margin-top: 6rem;
+    font-size: 3rem !important;
+    line-height: 3.5rem !important;
   }
 }
 
-@media only screen and (max-width: 900px) {
-  h1 {
-    font-size: 1.8em;
-    width: 60vh;
-    margin: 0 auto;
-  }
+// .carousel-content {
+//   margin-top: -2.8em;
 
-  h2 {
-    margin-top: 3.5em;
-    font-size: 1.5em;
-    width: 60vh;
-    margin: 0 auto;
-  }
-}
+//   h1.title, h2 {
+//     max-width: 600px;
+//     line-height: 3rem;
+//   }
 
-@media (max-width: 1020px) {
-  h2 {
-    margin-top: 2em;
-  }
-}
+//   h1.title {
+//     font-size: 3.5rem !important;
+//   }
+// }
 
-@media only screen and (min-width: 1020px) {
-  .v-parallax {
-    height: 700px !important;
-  }
-}
+// @media (max-width: 599px) {
+//   h1, h2 {
+//     width: 70vmin !important;
+//     padding: 0;
+//     margin: 0 auto;
+//     text-align: center;
+//   }
+
+//   h2 {
+//     padding: 2em 0 .5em 0;
+//   }
+
+//   .v-parallax {
+//     height: 26em !important;
+//   }
+// }
+
+// @media only screen and (max-width: 900px) {
+//   h1 {
+//     font-size: 1.8em;
+//     width: 60vh;
+//     margin: 0 auto;
+//   }
+
+//   h2 {
+//     margin-top: 3.5em;
+//     font-size: 1.5em;
+//     width: 60vh;
+//     margin: 0 auto;
+//   }
+// }
+
+// @media (max-width: 1020px) {
+//   h2 {
+//     margin-top: 2em;
+//   }
+// }
+
+// @media only screen and (min-width: 1020px) {
+//   .v-parallax {
+//     height: 700px !important;
+//   }
+// }

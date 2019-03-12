@@ -2,7 +2,7 @@
   <v-container class="my-4">
     <v-layout row wrap>
       <v-flex xs12>
-        <v-card flat light class="mb-3">
+        <v-card flat class="mb-3">
           <v-card-text class="pb-3">
             <h1 class="text-xs-left display-2 primary-title">Serving your area</h1>
             <img :src="src" :alt="business.name" align="right" class="pl-5"/>
@@ -20,8 +20,8 @@
         </v-layout>
       </v-flex>
       <v-flex xs12 md6>
-        <v-layout row wrap>
-          <v-flex order-xs4>
+        <v-layout class="testimonials-layout" row wrap>
+          <v-flex order-xs4 xs12 offset-xs1>
             <v-card class="testimonials" flat light>
               <testimonials title="Clients comments!"></testimonials>
             </v-card>

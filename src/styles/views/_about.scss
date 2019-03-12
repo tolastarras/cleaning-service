@@ -1,4 +1,26 @@
+.v-card {
+  background: none;
+
+  .v-card__text {
+    text-align: justify;
+  }
+}
+
+img {
+  width: 30rem !important;
+}
+
 @media (max-width: 960px) {
+  .container {
+    padding: 0 0.5rem !important;
+    margin-top: 0 !important;
+
+    .testimonials-layout > div {
+      margin-left: 0;
+      padding: 2.5rem 0;
+    }
+  }
+
   h1 {
     padding-bottom: 0;
     margin: 0;
@@ -8,10 +30,5 @@
     margin-left: 0;
     width: 100%;
     margin-bottom: 2em;
-  }
-
-  .testimonials {
-    padding-top: 2em;
-    padding-bottom: 1em;
   }
 }

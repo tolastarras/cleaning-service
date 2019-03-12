@@ -42,33 +42,33 @@
   }
 }
 
-@media (max-width: 599px) {
-  .carousel {
-    height: 26em !important;
-  }
+// @media (max-width: 599px) {
+//   .carousel {
+//     height: 26em !important;
+//   }
 
-  .carousel-content {
-    padding: 3em;
-  }
+//   .carousel-content {
+//     padding: 3em;
+//   }
 
-  h1, h2 {
-    width: 70vmin !important;
-    margin: 0 auto;
-    text-align: center;
-  }
+//   h1, h2 {
+//     width: 70vmin !important;
+//     margin: 0 auto;
+//     text-align: center;
+//   }
 
-  .carousel-content > h1 {
-    font-size: 1.8em !important;
-    padding: 2.6em 0;
-  }
+//   .carousel-content > h1 {
+//     font-size: 1.8em !important;
+//     padding: 2.6em 0;
+//   }
 
-  .carousel-content > h2 {
-    font-size: 1.5em;
-  }
-}
+//   .carousel-content > h2 {
+//     font-size: 1.5em;
+//   }
+// }
 
-@media (max-width: 1400px) {
-  h1, h2 {
-    width: 94vmin !important;
-  }
-}
+// @media (max-width: 1400px) {
+//   h1, h2 {
+//     width: 94vmin !important;
+//   }
+// }
