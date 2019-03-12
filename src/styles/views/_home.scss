@@ -7,23 +7,16 @@
   padding: 0 8em;
 }
 
-/* media queries */
-@media (max-width: 959px) {
+@media (max-width: 960px) {
   .cards-content {
     padding: 0 2rem;
 
-    .pr-2, .pl-2 {
-      padding: 0 !important;
+    .layout > div {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-bottom: 0.7rem;
     }
   }
-
-  // .container {
-  //   padding: 0 0 1em 0 !important;
-  // }
-
-  // .last-card {
-  //   padding-bottom: 0 !important;
-  // }
 }
 
 // @media (max-width: 599px) {

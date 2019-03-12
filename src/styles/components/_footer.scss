@@ -30,7 +30,7 @@ footer {
     }
   }
 
-  &.bottom {
+  &.bottom-footer {
     font-size: 12px;
     background: darken($color3, 8) !important;
 
@@ -51,9 +51,10 @@ footer {
 }
 
 /* media queries */
-@media (max-width: 959px) {
+@media (max-width: 960px) {
   .v-footer {
     margin-top: 0 !important;
+    padding: 2.5rem 1rem 0 !important;
   }
 
   h2 {
@@ -69,6 +70,10 @@ footer {
       max-width: 100% !important;
       margin-bottom: 1.5rem;
     }
+  }
+
+  .bottom-footer > div {
+    margin-bottom: 2rem;
   }
 }
 

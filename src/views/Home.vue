@@ -8,7 +8,7 @@
     <v-layout row justify-center class="cards-content mb-4">
       <v-flex xs12 xl8>
         <v-layout align-center row wrap>
-          <v-flex xs12 md4 class="" :class="spacing(index)" v-for="(card, index) in cards" :key="card.title">
+          <v-flex xs12 lg4 class="" :class="spacing(index)" v-for="(card, index) in cards" :key="card.title">
             <card :card="card" :index="index" :total="cards.length"></card>
           </v-flex>
         </v-layout>

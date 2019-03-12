@@ -42,7 +42,6 @@ export default {
 .display-2 {
   text-transform: uppercase;
   font-weight: bold;
-  color: red;
 }
 
 .application a {

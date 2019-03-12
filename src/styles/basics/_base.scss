@@ -100,13 +100,8 @@ h1, h2 {
   position: relative;
 }
 
-.v-carousel {
-  // border: 4px solid red;
-  // position: absolute;
-}
-
 .v-parallax__content {
-  background: rgba($color3, 0.3);
+  background: rgba($color3, 0.4);
 }
 
 .v-parallax__image {
@@ -118,5 +113,27 @@ h1, h2 {
 }
 
 .v-responsive__content {
-  background: rgba($color3, 0.3);
+  background: rgba($color3, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .about, .services, .contact {
+    margin-top: 0 !important;
+    padding: 0 1rem !important;
+
+    // .parallax-content > h2 {
+    //   display: none;
+    // }    
+  }
+
+  h1 {
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  body {
+    font-size: 1.2rem;
+  }
 }

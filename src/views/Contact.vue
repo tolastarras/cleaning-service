@@ -1,8 +1,8 @@
 <template lang="html">
-  <v-container class="my-4">
+  <v-container class="contact my-4">
     <v-layout row wrap>
       <h1 class="text-xs-left display-2 primary-title">Contact Us</h1>
-      <v-flex xs12 md5>
+      <v-flex xs12 lg5>
         <v-layout row wrap>
           <v-flex xs12>
             <v-card flat light>
@@ -28,7 +28,7 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs12 md7 class="message-form">
+      <v-flex xs12 lg7 class="message-form">
         <v-layout row wrap>
           <v-flex text-xs-center>
             <v-card flat light>

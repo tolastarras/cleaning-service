@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container class="my-4">
+  <v-container class="about my-4">
     <v-layout row wrap>
       <v-flex xs12>
         <v-card flat class="mb-3">
@@ -10,7 +10,7 @@
           </v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs12 md6>
+      <v-flex xs12 lg6>
         <v-layout row wrap>
           <v-flex order-xs3 text-xs-center>
             <v-card flat light>
@@ -19,10 +19,10 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs12 md6>
+      <v-flex xs12 lg6>
         <v-layout class="testimonials-layout" row wrap>
           <v-flex order-xs4 xs12 offset-xs1>
-            <v-card class="testimonials" flat light>
+            <v-card class="testimonials" flat>
               <testimonials title="Clients comments!"></testimonials>
             </v-card>
           </v-flex>

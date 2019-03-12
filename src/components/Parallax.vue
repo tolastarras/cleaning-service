@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-parallax :style="parallaxHeight" :src="data.src" v-if="data.src" class="mb-5">
+  <v-parallax :src="data.src" v-if="data.src" class="mb-5">
     <v-layout column align-center justify-center text-xs-center>
       <div class="parallax-content">
         <h2 class="display-2 white--text">{{ data.title }}</h2>
@@ -38,14 +38,14 @@ export default {
     }
   },
   computed: {
-    ...mapState(['documentWidth']),
-    parallaxHeight () {
-      if (this.documentWidth > 900) {
-        return 'height: 700px !important'
-      }
-      // default of 500 px
-      return null
-    }
+    ...mapState(['documentWidth'])
+    // parallaxHeight () {
+    //   if (this.documentWidth > 900) {
+    //     return 'height: 700px !important'
+    //   }
+    //   // default of 500 px
+    //   return null
+    // }
   },
   created () {
     window.addEventListener('resize', this.handleResize)

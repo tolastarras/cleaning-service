@@ -38,25 +38,27 @@
         font-weight: 700;
         opacity: 0.5;
         position: absolute;
-        top: -0.4em;
-        left: -0.2em;
+        top: -4.5rem;
+        left: -2.5rem;
       }
     }
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .container {
     padding-right: 1.8em !important;
-    margin: 0 auto;
-    width: 95%;
+
+    .testimonial-quote {
+      padding-left: 1.5rem;
+    }
   }
 }
 
-@media (max-width: 600px) {
-  .container {
-    width: 100%;
-    margin-left: 0 !important;
-    padding: 0 !important;
-  }
-}
+// @media (max-width: 600px) {
+//   .container {
+//     width: 100%;
+//     margin-left: 0 !important;
+//     padding: 0 !important;
+//   }
+// }

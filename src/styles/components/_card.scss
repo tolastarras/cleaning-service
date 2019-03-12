@@ -29,9 +29,10 @@
 }
 
 /* media queries */
-@media (max-width: 959px) {
+@media (max-width: 960px) {
   .v-card {
     margin-bottom: 1.2rem;
+    outline: 1px solid $color8;
 
     .v-image {
       height: 25rem !important;

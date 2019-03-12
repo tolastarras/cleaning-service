@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-footer class="white--text py-4 bottom" :fixed="false" height="auto">
+  <v-footer class="white--text py-4 bottom-footer" :fixed="false" height="auto">
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-4>
