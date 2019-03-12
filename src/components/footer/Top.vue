@@ -1,8 +1,8 @@
 <template lang="html">
   <v-footer class="py-4 mt-5" dark height="auto" :fixed="false" color="white--text">
-    <v-container>
+    <v-container class="top-footer">
       <v-layout justify-space-between row>
-        <v-flex v-show="!isAboutPage" class="contact-info" xs12 lg4>
+        <v-flex v-show="!isAboutPage" class="contact-info" xs12>
           <h2 class="blue--text">About Us</h2>
           <div v-text="business.about.text"></div>
           <router-link to="about">(read more ...)</router-link>

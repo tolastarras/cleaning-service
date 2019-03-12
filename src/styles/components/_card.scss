@@ -19,10 +19,6 @@
   width: 100% !important;
 }
 
-// .media-content {
-//   background-color: rgba(0, 0, 0, 0.1);
-// }
-
 .v-card__actions {
   padding: 0 0 1em 0 !important;
 }
@@ -32,7 +28,16 @@
   width: 100%;
 }
 
-// /* media queries */
+/* media queries */
+@media (max-width: 959px) {
+  .v-card {
+    margin-bottom: 1.2rem;
+
+    .v-image {
+      height: 25rem !important;
+    }
+  }
+}
 // @media (max-width: 399px) {
 //   .container {
 //     padding-bottom: 0 !important;
@@ -59,8 +64,3 @@
 //   }
 // }
 
-// @media (max-width: 1263px) {
-//   .card-content {
-//     height: 6em !important;
-//   }
-// }

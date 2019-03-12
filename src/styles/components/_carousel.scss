@@ -23,6 +23,25 @@
 }
 
 /* media queries */
+@media (max-width: 959px) {
+  .v-carousel {
+    height: 40rem !important;
+  }
+
+  .carousel-content {
+    margin-top: -2.8em;
+
+    h1.title, h2 {
+      max-width: 600px;
+      line-height: 3rem;
+    }
+
+    h1.title {
+      font-size: 3.5rem !important;
+    }
+  }
+}
+
 @media (max-width: 599px) {
   .carousel {
     height: 26em !important;

@@ -9,7 +9,7 @@ footer {
     &:hover {
       text-decoration: underline;
     }
-  }  
+  }
 
   .contact-info {
     position: relative;
@@ -52,14 +52,23 @@ footer {
 
 /* media queries */
 @media (max-width: 959px) {
+  .v-footer {
+    margin-top: 0 !important;
+  }
+
   h2 {
     text-align: left;
     margin-left: 0;
     width: 100% !important;
   }
 
-  .contact-info {
-    max-width: 100%;
+  .top-footer > .layout {
+    flex-direction: column;
+
+    .contact-info {
+      max-width: 100% !important;
+      margin-bottom: 1.5rem;
+    }
   }
 }
 

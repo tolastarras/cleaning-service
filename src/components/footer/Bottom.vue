@@ -5,7 +5,9 @@
         <v-flex xs12 md6 text-xs-center text-md-left order-xs2 order-md1 pt-4>
           <div class="text-xs-center text-md-left caption">
             &copy; 2017 {{ business.name }}. <span>All Rights Reserved.</span>
-            <p><a target="_blank" href="http://www.tolastarras.com">Built by Tolastarras &reg;</a></p>
+            <div>
+              <a target="_blank" href="http://www.tolastarras.com">Built by Tolastarras &reg;</a>
+            </div>
           </div>
         </v-flex>
         <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>
