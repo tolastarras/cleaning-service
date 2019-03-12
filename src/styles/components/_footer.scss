@@ -51,7 +51,7 @@ footer {
 }
 
 /* media queries */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .v-footer {
     margin-top: 0 !important;
     padding: 2.5rem 1rem 0 !important;
@@ -77,8 +77,8 @@ footer {
   }
 }
 
-@media (max-width: 415px) {
-  .footer {
-    padding: .5em !important;
-  }
-}
+// @media (max-width: 415px) {
+//   .footer {
+//     padding: .5em !important;
+//   }
+// }
