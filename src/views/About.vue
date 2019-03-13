@@ -43,6 +43,19 @@ export default {
       src: require('@/assets/about.png')
     }
   },
+  mounted () {
+    const SMALL_DEVICE_WIDTH = 425
+    if (this.documentWidth < SMALL_DEVICE_WIDTH) {
+      const element = document.querySelector('.insert-image')
+      const image = document.querySelector('.girl-js')
+
+      element.style.display = 'block'
+      element.setAttribute('src', this.src)
+      element.setAttribute('alt', this.business.name)
+
+      image.style.display = 'none'
+    }
+  },
   components: {
     ContactForm,
     Testimonials
@@ -55,9 +68,9 @@ export default {
 
         <p>We need to be aware how our actions impact others and the Earth. Even little things can mean a lot. When it comes to cleaning services, ${this.business.city} families can avoid the negative effects of harsh chemicals by choosing green cleaning methods. We assure our clients that the housekeepers referred by our agency provide quality cleaning services while using non-toxic products.</p>
 
-        <p>The house cleaners we refer opt for environment-friendly ways of cleaning so you never have to worry about dangerous chemicals that may risk your family's health.</p>
+        <img class="insert-image" style="display: none; width: 100%; padding: 0 3.2rem; margin-bottom: 2rem; margin-top: -0.5rem;">
 
-        <p class="insert-image" style="display:none">[INSERT IMAGE]</p>
+        <p>The house cleaners we refer opt for environment-friendly ways of cleaning so you never have to worry about dangerous chemicals that may risk your family's health.</p>
 
         <p>Most cleaning products on the market contain chemical substances that are harmful for you and your family. Doesn't it make sense to clean your home only with the safest products?</p>
 

@@ -10,13 +10,8 @@ img {
   height: 64px;
   width: 225px;
   position: absolute;
-  top: .8em;
+  top: 1rem;
 }
-
-// img.drawer {
-//   width: 100px;
-//   height: 20px !important;
-// }
 
 .v-navigation-drawer {
   .menu-items {
@@ -110,20 +105,75 @@ a:last-of-type {
   border-right: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
+  .standard {
+    height: 6em;
+  }
+
+  .sticky {
+    img {
+      margin-top: 0.4rem;
+    }
+
+    .v-toolbar__side-icon {
+      margin-top: 1.5rem;
+    }
+  }
+
   // navigation drawer
   .v-list__tile--avatar .v-list__tile__title {
-    height: 6rem;
+    height: 8rem;
+  }
 
-    > img {
+  .v-navigation-drawer {
+    img {
       width: 180px;
       height: 50px;
     }
-  }
+  }  
 }
 
-// @media (max-width: 599px) {
-//   .toolbar__content > div {
-//     margin: 0 !important;
-//   }
-// }
+@media (max-width: 425px) {
+  .standard {
+    img {
+      width: 140px;
+      height: 45px;
+      margin-top: -0.1rem;
+    }
+
+    .v-toolbar__side-icon {
+      margin-top: -0.5rem;
+    }    
+  }
+
+  .sticky {
+    img {
+      width: 110px;
+      height: 30px;      
+      margin-top: 0.2rem;
+    }
+
+    .v-toolbar__side-icon {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .v-navigation-drawer {
+    img {
+      width: 120px;
+      height: 40px;
+    }
+
+    .menu-items {
+      padding-top: 0.5rem;
+    }
+  
+    .v-list__tile__action .v-icon {
+      font-size: 2rem;
+    }
+  
+    .v-list__tile__content {
+      font-size: 1.3rem;
+    }
+  }
+}

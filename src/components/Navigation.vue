@@ -24,7 +24,9 @@
         <v-list-tile avatar tag="div">
           <v-list-tile-content>
             <v-list-tile-title>
-              <img class="drawer" :src="logo" :alt="business.name"/>
+              <router-link to="/">
+                <img class="drawer" :src="logo" :alt="business.name"/>
+              </router-link>
             </v-list-tile-title>
           </v-list-tile-content>
           <v-list-tile-action>

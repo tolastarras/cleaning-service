@@ -48,47 +48,16 @@
   }
 
   .carousel-content {
-    margin-top: -8em;
+    margin-top: -10rem;
+
+    h1.title {
+      max-width: 200px;
+      font-size: 1.8rem !important;
+      line-height: 2.2rem;
+    }
 
     h2 {
       display: none;
     }
-
-    h1.title {
-      max-width: 290px;
-      font-size: 2rem !important;
-      line-height: 2.2rem;
-    }
   }
 }
-
-// @media (max-width: 599px) {
-//   .carousel {
-//     height: 26em !important;
-//   }
-
-//   .carousel-content {
-//     padding: 3em;
-//   }
-
-//   h1, h2 {
-//     width: 70vmin !important;
-//     margin: 0 auto;
-//     text-align: center;
-//   }
-
-//   .carousel-content > h1 {
-//     font-size: 1.8em !important;
-//     padding: 2.6em 0;
-//   }
-
-//   .carousel-content > h2 {
-//     font-size: 1.5em;
-//   }
-// }
-
-// @media (max-width: 1400px) {
-//   h1, h2 {
-//     width: 94vmin !important;
-//   }
-// }
