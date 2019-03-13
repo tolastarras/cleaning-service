@@ -13,7 +13,6 @@ const apiClient = axios.create({
 
 export default {
   postFormData (method, data) {
-    console.log(btoa(JSON.stringify(data)))
     // return apiClient.post(`/api/v1/${method}/${btoa(JSON.stringify(data))}`)
     return apiClient.post(`/api/v1/${method}`, data)
   }

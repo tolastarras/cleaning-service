@@ -7,20 +7,8 @@
           <div v-text="business.about.text"></div>
           <router-link to="about">(read more ...)</router-link>
         </v-flex>
-        <v-flex v-show="!isContactPage" class="contact-info" xs12 lg4>
-          <h2 class="blue--text">Contact Us</h2>
-          <div>
-            <v-icon class="icon-phone" dark small>fa-phone</v-icon> {{ business.phone }}
-          </div>
-          <div>
-            <v-icon class="icon-email" dark small>fa-envelope-o</v-icon> {{ business.email }}
-          </div>
-          <div>
-            <v-icon class="icon-address" dark small>fa-map-marker</v-icon> {{ business.address }}
-          </div>
-        </v-flex>
         <v-flex v-show="!isServicesPage" class="contact-info" xs12 sm4>
-          <h2 class="blue--text">Services</h2>
+          <h2 class="blue--text">What we do</h2>
           <div v-text="business.service.text"></div>
           <router-link to="services">(read more ...)</router-link>
         </v-flex>
@@ -31,6 +19,18 @@
               <router-link to="services">{{ service.title }}</router-link>
             </v-flex>
           </v-layout>
+        </v-flex>
+        <v-flex v-show="!isContactPage" class="contact-info" xs12 lg4>
+          <h2 class="blue--text">Contact Us</h2>
+          <div>
+            <v-icon dark small>phone</v-icon> {{ business.phone }}
+          </div>
+          <div>
+            <v-icon dark small>mail_outline</v-icon> {{ business.email }}
+          </div>
+          <div>
+            <v-icon dark small>place</v-icon> {{ business.address }}
+          </div>
         </v-flex>
         <v-flex v-show="!isContactPage && !isAboutPage && !isHomePage" class="contact-info" xs12 lg4>
           <h2 class="blue--text">Hours</h2>
