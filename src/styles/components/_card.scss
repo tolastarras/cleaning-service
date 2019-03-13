@@ -39,6 +39,13 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  .v-card .v-image {
+    height: 15rem !important;
+  }
+}
+
 // @media (max-width: 399px) {
 //   .container {
 //     padding-bottom: 0 !important;

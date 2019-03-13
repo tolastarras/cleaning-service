@@ -39,9 +39,25 @@
     h1.title {
       font-size: 3.5rem !important;
     }
+  }
+}
+
+@media (max-width: 425px) {
+  .v-carousel {
+    height: 30rem !important;
+  }
+
+  .carousel-content {
+    margin-top: -8em;
 
     h2 {
-      // font-size: 3rem !important;
+      display: none;
+    }
+
+    h1.title {
+      max-width: 290px;
+      font-size: 2rem !important;
+      line-height: 2.2rem;
     }
   }
 }

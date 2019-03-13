@@ -77,8 +77,16 @@ footer {
   }
 }
 
-// @media (max-width: 415px) {
-//   .footer {
-//     padding: .5em !important;
-//   }
-// }
+@media (max-width: 425px) {
+  .v-footer {
+    padding: 1rem 0.5rem 0 !important;
+  }
+
+  // .top-footer > .layout {
+
+  //   .contact-info {
+  //     max-width: 100% !important;
+  //     margin-bottom: 0;
+  //   }
+  // }
+}

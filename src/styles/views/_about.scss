@@ -6,6 +6,10 @@
   }
 }
 
+.insert-image {
+  display: none;
+}
+
 img {
   width: 30rem !important;
 }
@@ -20,5 +24,17 @@ img {
     margin-left: 0;
     width: 100%;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  img {
+    max-width: 100%;
+    padding-right: 4rem;
+
+    .girl-css {
+      width: 100%;
+      border: 4px solid blue;
+    }
   }
 }

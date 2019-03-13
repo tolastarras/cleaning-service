@@ -19,6 +19,12 @@
   }
 }
 
+@media (max-width: 425px) {
+  .cards-content {
+    padding: 0 1rem;
+  }
+}
+
 // @media (max-width: 599px) {
 //   .cards-content {
 //     padding-top: 26em;

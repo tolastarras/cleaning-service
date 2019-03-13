@@ -32,6 +32,19 @@ h1 {
   }
 }
 
+@media (max-width: 425px) {
+  .v-parallax {
+    height: 350px !important;
+
+  .parallax-content > h1 {
+      max-width: 340px;
+      margin-top: 8.5rem;
+      font-size: 2rem !important;
+      line-height: 2.2rem !important;
+    }
+  }
+}
+
 // .carousel-content {
 //   margin-top: -2.8em;
 

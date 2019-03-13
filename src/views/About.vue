@@ -5,7 +5,7 @@
         <v-card flat class="mb-3">
           <v-card-text class="pb-3">
             <h1 class="text-xs-left display-2 primary-title">Serving your area</h1>
-            <img :src="src" :alt="business.name" align="right" class="pl-5"/>
+            <img :src="src" :alt="business.name" align="right" class="pl-5 girl-js"/>
             <div v-html="content"></div>
           </v-card-text>
         </v-card>
@@ -48,7 +48,7 @@ export default {
     Testimonials
   },
   computed: {
-    ...mapState(['business']),
+    ...mapState(['business', 'documentWidth']),
     content () {
       return `
         <p>Since we started, we've attracted a loyal clientele based our exceptional customer service. Our customers range from stay-at-home mothers in need of a breather to office dwelling professionals with a little time to spare. With a full range of cleaning services, ${this.business.city} based ${this.business.name} offers clients a chance to sit back and relax with professional cleaners taking over their chores.</p>
@@ -56,6 +56,8 @@ export default {
         <p>We need to be aware how our actions impact others and the Earth. Even little things can mean a lot. When it comes to cleaning services, ${this.business.city} families can avoid the negative effects of harsh chemicals by choosing green cleaning methods. We assure our clients that the housekeepers referred by our agency provide quality cleaning services while using non-toxic products.</p>
 
         <p>The house cleaners we refer opt for environment-friendly ways of cleaning so you never have to worry about dangerous chemicals that may risk your family's health.</p>
+
+        <p class="insert-image" style="display:none">[INSERT IMAGE]</p>
 
         <p>Most cleaning products on the market contain chemical substances that are harmful for you and your family. Doesn't it make sense to clean your home only with the safest products?</p>
 
