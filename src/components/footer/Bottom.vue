@@ -13,7 +13,7 @@
         <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>
           <span class="headline">
             <b>Call for a free estimate</b>
-            <a :href="phoneLink" class="xs-only d-block">{{ business.phone }}</a>
+            <a :href="phoneLink" class="xs-only d-block">{{ business.phone.text }}</a>
           </span>
         </v-flex>
       </v-layout>

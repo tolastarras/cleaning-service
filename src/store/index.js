@@ -37,6 +37,7 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    serviceTypes: state => state.services.map(service => service.title)
+    serviceTypes: state => state.services.map(service => service.title),
+    contactMethods: state => Object.values(state.business).filter(business => business.icon)
   }
 })

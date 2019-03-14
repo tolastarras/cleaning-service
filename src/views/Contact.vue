@@ -5,26 +5,17 @@
       <v-flex xs12 lg5>
         <v-layout row wrap>
           <v-flex xs12>
-            <v-card flat light>
-              <div class="contact-info">
-                <div class="address">
-                  <v-icon>place</v-icon>
-                  <span v-html="business.address"></span>
-                </div>
-                <div>
-                  <v-icon>phone</v-icon>
-                  <span>{{ business.phone }}</span>
-                </div>
-                <div>
-                  <v-icon>mail_outline</v-icon>
-                  <span>{{ business.email }}</span>
-                </div>
-                <div class="hours">
-                  <v-icon>access_time</v-icon>
-                  <span v-html="business.hours"></span>
-                </div>
-              </div>
-            </v-card>
+            <v-list class="contact-info-list">
+              <v-list-tile v-for="(contact, i) in contactMethods" :key="i" router :to="contact.link">
+                <v-list-tile-avatar>
+                  <v-icon>{{ contact.icon }}</v-icon>
+                </v-list-tile-avatar>
+
+                <v-list-tile-content>
+                  <v-list-tile-title :class="contact.icon" v-html="contact.title"></v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </v-list>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -44,7 +35,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 import ContactForm from '@/components/shared/ContactForm'
 
 export default {
@@ -56,7 +47,7 @@ export default {
       src: require('@/assets/contact.jpg')
     }
   },
-  computed: mapState(['business'])
+  computed: mapGetters(['contactMethods'])
 }
 </script>
 

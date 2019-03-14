@@ -1,6 +1,6 @@
 <template lang="html">
   <v-container class="services my-4" grid-list-xl>
-    <h1 class="text-xs-left display-2 kk primary-title">Cleaning Services</h1>
+    <h1 class="text-xs-left display-2 primary-title">Cleaning Services</h1>
     <v-layout row wrap class="mt-5">
       <v-flex class="cards-container" xs12 sm6 md4 v-for="(card, i) in services" :key="i">
         <v-card class="my-3" hover>

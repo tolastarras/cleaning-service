@@ -1,32 +1,33 @@
-.contact-info {
+.contact-info-list {
   font-size: 1.4em;
   color: $color4;
+  padding-top: 0;
+  // margin-bottom: 3rem;
 
-  > div {
-    margin-bottom: .7em;
+  .v-icon {
+    vertical-align: top;
+    border: 2px solid $color4;
+    color: $color4;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    width: 3.3rem !important;
+  }
 
-    &.hours > span {
-      line-height: 1.5em;
-    }
+  .v-list__tile__content {
+    overflow: visible;
 
-    > span {
-      display: inline-block;
-      line-height: 2.2em;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      hyphens: auto;
-      width: 80%;
-    }
+    .v-list__tile__title {
+      height: auto;
+      white-space: normal;
+      line-height: 1.5rem;
+      font-size: 1.5rem;
+      overflow: visible;
 
-    .v-icon {
-      vertical-align: top;
-      border: 2px solid $color4;
-      color: $color4;
-      border-radius: 5px;
-      padding: 8px;
-      text-align: center;
-      width: 3.3rem !important;
-      margin-right: 1rem;
+      &.access_time {
+        line-height: 2.2rem;
+        margin-top: 4rem;
+      }
     }
   }
 }
@@ -41,12 +42,12 @@
   }
 
   .message-form {
-    margin: 0 0 2rem 0;
+    margin: 6rem 0 2rem 0;
   }
 }
 
 @media only screen and (max-width: 425px) {
-  .contact-info > div.address > span {
-    line-height: 1.2em !important;
+  .v-list__tile__title  {
+    font-size: 1.3rem !important;
   }
 }
