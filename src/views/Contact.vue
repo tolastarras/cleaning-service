@@ -10,7 +10,6 @@
                 <v-list-tile-avatar>
                   <v-icon>{{ contact.icon }}</v-icon>
                 </v-list-tile-avatar>
-
                 <v-list-tile-content>
                   <v-list-tile-title :class="contact.icon" v-html="contact.title"></v-list-tile-title>
                 </v-list-tile-content>

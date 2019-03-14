@@ -148,13 +148,7 @@ h1, h2 {
     font-size: 1rem;
   }
 
-  .about, .services, .contact {
-    margin-top: 0 !important;
-    padding: 0 0.5rem !important;
-  }
-
-  h1 {
-    padding-bottom: 0;
-    margin: 0;
+  .primary-title {
+    font-size: 2rem !important;
   }
 }

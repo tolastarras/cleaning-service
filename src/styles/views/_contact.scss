@@ -3,6 +3,11 @@
   color: $color4;
   padding-top: 0;
   // margin-bottom: 3rem;
+  background: none;
+
+  > div:hover {
+    background: lightyellow;
+  }
 
   .v-icon {
     vertical-align: top;
@@ -48,6 +53,6 @@
 
 @media only screen and (max-width: 425px) {
   .v-list__tile__title  {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
   }
 }
