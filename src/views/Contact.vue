@@ -6,7 +6,7 @@
         <v-layout row wrap>
           <v-flex xs12>
             <v-list class="contact-info-list">
-              <v-list-tile v-for="(contact, i) in contactMethods" :key="i" router :to="contact.link">
+              <v-list-tile v-for="(contact, i) in contactMethods" :key="i" target="_blank" :href="contact.link">
                 <v-list-tile-avatar>
                   <v-icon>{{ contact.icon }}</v-icon>
                 </v-list-tile-avatar>

@@ -101,7 +101,7 @@ h1, h2 {
 }
 
 .v-parallax__content {
-  background: rgba($color3, 0.4);
+  background-color: $parallax-filter;
 }
 
 .v-parallax__image {

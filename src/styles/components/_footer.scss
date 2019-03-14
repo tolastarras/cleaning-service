@@ -1,5 +1,6 @@
 .v-footer {
   background-color: darken($color3, 3) !important;
+  background-color: $color10 !important;
   box-sizing: border-box;
 
   a {
@@ -65,7 +66,7 @@
 
   &.bottom-footer {
     font-size: 12px;
-    background: darken($color3, 8) !important;
+    background: darken($color10, 4) !important;
 
     .headline b {
       text-transform: uppercase;

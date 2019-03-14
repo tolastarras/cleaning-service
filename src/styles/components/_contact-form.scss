@@ -9,7 +9,7 @@ h1 {
 }
 
 .header {
-  background-color: lighten($color3, 6);
+  background-color: lighten($color10, 3);
   padding: .3em 0 .5em 0 !important;
   color: white;
 }
@@ -21,7 +21,7 @@ h1 {
 
 .container {
   padding: 0 !important;
-  border: 12px solid lighten($color3, 6);
+  border: 12px solid lighten($color10, 3);
   border-radius: 4px;
 }
 

@@ -23,7 +23,7 @@
         <v-flex v-show="!isContactPage && !isAboutPage" class="footer-block" xs12 lg4>
           <h2>Contact Us</h2>
           <v-list class="contact-info-list">
-            <v-list-tile :class="contact.icon" v-for="(contact, i) in contactMethods" :key="i" router :to="contact.link">
+            <v-list-tile :class="contact.icon" v-for="(contact, i) in contactMethods" :key="i" target="_blank" :href="contact.link">
               <!-- <div v-if="contact.icon !== 'access_time'"> -->
                 <v-list-tile-avatar>
                   <v-icon>{{ contact.icon }}</v-icon>

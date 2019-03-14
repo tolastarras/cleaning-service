@@ -65,7 +65,7 @@ img {
 
 .sticky {
   position: fixed;
-  background-color: rgba(0,0, 0,0.9) !important;
+  background-color: rgba($color10, 4) !important;
   z-index: 2;
   
   a.menuItem {
