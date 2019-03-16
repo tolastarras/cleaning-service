@@ -1,6 +1,5 @@
 .v-footer {
-  background-color: darken($color3, 3) !important;
-  background-color: $color10 !important;
+  background-image: linear-gradient($color13, $color10) !important;
   box-sizing: border-box;
 
   a {
