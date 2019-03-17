@@ -37,16 +37,7 @@ export default {
       this.$router.push({ name: 'contact', params: { quote: true } })
     }
   },
-  computed: {
-    ...mapState(['documentWidth'])
-    // parallaxHeight () {
-    //   if (this.documentWidth > 900) {
-    //     return 'height: 700px !important'
-    //   }
-    //   // default of 500 px
-    //   return null
-    // }
-  },
+  computed: mapState(['documentWidth']),
   created () {
     window.addEventListener('resize', this.handleResize)
   },
