@@ -29,7 +29,7 @@
 }
 
 .v-card__actions {
-  background: white;
+  background: $color2;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -40,7 +40,7 @@
 
   > p {
     color: $color7;
-    font-size: 1.2em;
+    font-size: $font-size18;
     text-transform: uppercase;
     font-weight: 500;
   }
@@ -50,8 +50,4 @@
   margin: 0 auto;
   margin-bottom: 1.8em;
   margin-top: 1em;
-}
-
-@media (max-width: 960px) {
-
 }

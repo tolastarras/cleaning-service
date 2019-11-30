@@ -40,7 +40,7 @@
         height: 2.5rem;
 
         .v-list__tile {
-          font-size: 15px;
+          font-size: $font-size16;
           font-weight: 200;
           height: auto;
           text-decoration: none;
@@ -64,7 +64,7 @@
   }
 
   &.bottom-footer {
-    font-size: 12px;
+    font-size: $font-size12;
     background: darken($color10, 4) !important;
 
     .headline b {

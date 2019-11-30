@@ -1,20 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100');
-
 h1, h2 {
   padding-bottom: .5em;
   text-transform: uppercase;
-}
-
-#app {
-  // margin: 0 auto;
-  // font-family: 'Roboto', sans-serif;
-  // background: white;
-  // width: 100%;
-  // min-height: 100vh;
-  // position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // flex: 1;
 }
 
 .display-1 {
@@ -85,7 +71,7 @@ h1, h2 {
   padding: 12px 0 6px 0;
   color: $color6;
   font-weight: bold;
-  font-size: 24px !important;
+  font-size: $font-size24 !important;
   letter-spacing: -1px !important;
   text-transform: uppercase;
 
@@ -157,23 +143,7 @@ h1, h2 {
   }
 }
 
-/// hello
-
 /* media queries */
-@media only screen and (max-width: 599px) {
-  // h1.display-2 {
-  //   font-size: 2.2em !important;
-  // }
-
-  // h1.display-1 {
-  //   font-size: 2em !important;
-  // }
-
-  // .card__text, .main-content {
-  //   padding: 0 !important;
-  // }
-}
-
 @media (max-width: 1300px) {
   .container {
     max-width: 100% !important;

@@ -36,6 +36,6 @@ export default {
 
 <style lang="scss" scoped>
 .v-alert {
-  font-size: 1.5em !important;
+  font-size: $font-size21 !important;
 }
 </style>
