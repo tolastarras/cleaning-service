@@ -2,7 +2,7 @@
   <div class="contact-form">
     <alert-message v-show="alert.show" :alert="alert"></alert-message>
     <v-container pa-0 ma-0>
-      <h1 class="display-1 header" v-text="formTitle"></h1>
+      <h1 class="display-1 header white--text font-weight-bold" v-text="formTitle"></h1>
       <v-form v-model="isValidData" ref="form">
         <v-layout row wrap>
           <v-flex xs12 sm6>

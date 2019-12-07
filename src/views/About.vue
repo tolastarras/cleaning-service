@@ -4,7 +4,7 @@
       <v-flex xs12>
         <v-card flat class="mb-3">
           <v-card-text class="pb-3">
-            <h1 class="text-xs-left display-2 primary-title">Serving your area</h1>
+            <h1 class="text-xs-left display-2 primary-title font-weight-bold">Serving your area</h1>
             <img :src="src" :alt="business.name" align="right" class="pl-5 girl-js"/>
             <div v-html="content"></div>
           </v-card-text>

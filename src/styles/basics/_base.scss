@@ -4,15 +4,7 @@ h1, h2 {
 }
 
 .display-1 {
-  text-transform: uppercase;
   letter-spacing: -2px;
-  font-weight: bold;
-}
-
-.display-2 {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #333;
 }
 
 .application a {
@@ -25,7 +17,6 @@ h1, h2 {
 }
 
 .main-content {
-  // max-width: 1200px !important;
   margin: 0 auto;
   background: white;
   padding: 6em 2em;
