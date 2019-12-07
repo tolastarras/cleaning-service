@@ -24,7 +24,7 @@
       height: auto;
       white-space: normal;
       line-height: 1.5rem;
-      font-size: 1.5rem;
+      font-size: $font-24;
       overflow: visible;
 
       &.access_time {
@@ -51,6 +51,6 @@
 
 @media only screen and (max-width: 425px) {
   .v-list__tile__title  {
-    font-size: 1.2rem !important;
+    font-size: $font-20 !important;
   }
 }

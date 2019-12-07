@@ -1,9 +1,8 @@
 .testimonial-quote {
-  font-size: 1rem;
+  font-size: $font-16;
   width: 100%;
 
   &.group {
-    // padding-left: 2em;
     padding-bottom: 3em;
 
     &.last {
@@ -12,9 +11,9 @@
   }
 
   cite {
-    color: $color-07;
     display: block;
-    font-size: 1em;
+    color: $color-07;
+    font-size: $font-16;
 
     span {
       font-weight: 700;
@@ -23,7 +22,7 @@
 
   blockquote {
     font-family: Georgia, serif;
-    font-size: 1.5em;
+    font-size: $font-24;
     font-style: italic;
     line-height: 1.4 !important;
     position: relative;

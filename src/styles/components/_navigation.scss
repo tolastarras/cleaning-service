@@ -29,7 +29,7 @@ img {
   }
 
   .v-list__tile__content {
-    font-size: 1.8rem;
+    font-size: $font-28;
   }
 }
 
@@ -55,7 +55,7 @@ img {
   padding-top: 1.2em;
 
   a.menuItem {
-    font-size: 1.2em;
+    font-size: $font-20 ;
   }  
 }
 
@@ -65,7 +65,7 @@ img {
   z-index: 2;
   
   a.menuItem {
-    font-size: 1em;
+    font-size: $font-16;
     margin-top: 8px;
   }
 
@@ -155,11 +155,11 @@ a:last-of-type {
     }
   
     .v-list__tile__action .v-icon {
-      font-size: 2rem;
+      font-size: $font-32;
     }
   
     .v-list__tile__content {
-      font-size: 1.3rem;
+      font-size: $font-20;
     }
   }
 }

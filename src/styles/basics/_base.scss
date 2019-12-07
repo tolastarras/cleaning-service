@@ -109,7 +109,7 @@ h1, h2 {
 
 @media (max-width: 960px) {
   body {
-    font-size: 1.2rem;
+    font-size: $font-20;
   }
 
   // navigation drawer
@@ -120,15 +120,15 @@ h1, h2 {
 
 @media (max-width: 415px) {
   body {
-    font-size: 1rem;
+    font-size: $font-16;
   }
 
   h1.display-1 {
-    font-size: 2em !important;
+    font-size: $font-32 !important;
   }
 
   .primary-title {
-    font-size: 2rem !important;
+    font-size: $font-32 !important;
   }
 }
 
