@@ -1,5 +1,5 @@
 .v-card {
-  border: 1em solid white;
+  border: 1em solid $color-02;
 }
 
 .v-image {
@@ -32,7 +32,7 @@
 @media (max-width: 1024px) {
   .v-card {
     margin-bottom: 1.2rem;
-    outline: 1px solid $color8;
+    outline: 1px solid $color-08;
 
     .v-image {
       height: 25rem !important;

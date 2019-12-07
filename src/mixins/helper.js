@@ -1,18 +1,14 @@
 export default {
-  // data () {
-  //   return {
-  //     get medium () {
-  //       return 900
-  //     }
-  //   }
-  // },
   methods: {
     formatTitle: str => {
       let index = str.indexOf(' ')
       let str1 = str.substring(0, index)
       let str2 = str.substring(index + 1)
 
-      return `<div class="card-title">${str1} <span>${str2}</span></div>`
+      return `
+      <div class="card-title text-uppercase font-weight-bold">
+        ${str1} <span>${str2}</span>
+      </div>`
     },
     getImage: (name, width) => {
       let size = '320x480'

@@ -1,5 +1,5 @@
 .v-footer {
-  background: $color10 !important;
+  background: $color-10 !important;
   box-sizing: border-box;
 
   a {
@@ -14,8 +14,7 @@
     position: relative;
     line-height: 1.7rem;
     font-size: 1.1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-family: $font-family;
     max-width: 30% !important;
     justify-content: center;
   
@@ -23,8 +22,8 @@
       text-transform: uppercase;
       padding: 0.5em 0;
       margin-bottom: 1em;
-      color: $color5 !important;
-      border-bottom: 1px solid $color7;
+      color: $color-05 !important;
+      border-bottom: 1px solid $color-07;
       width: 100% !important;
     }
 
@@ -40,7 +39,7 @@
         height: 2.5rem;
 
         .v-list__tile {
-          font-size: $font-size16;
+          font-size: $font-16;
           font-weight: 200;
           height: auto;
           text-decoration: none;
@@ -64,16 +63,11 @@
   }
 
   &.bottom-footer {
-    font-size: $font-size12;
-    background: darken($color10, 4) !important;
+    font-size: $font-12;
+    background: darken($color-10, 4) !important;
 
     .headline b {
       text-transform: uppercase;
-    }
-
-    .caption {
-      color: $color2;
-      font-weight: 200;
     }
   }
 }

@@ -1,16 +1,16 @@
 .contact-info-list {
-  color: $color4;
+  color: $color-04;
   padding-top: 0;
   background: none;
 
   > div:hover {
-    background: $color2;
+    background: $color-02;
   }
 
   .v-icon {
     vertical-align: top;
-    border: 2px solid $color4;
-    color: $color4;
+    border: 2px solid $color-04;
+    color: $color-04;
     border-radius: 5px;
     padding: 8px;
     text-align: center;

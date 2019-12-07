@@ -18,7 +18,7 @@ h1, h2 {
 
 .main-content {
   margin: 0 auto;
-  background: white;
+  background: red !important;
   padding: 6em 2em;
   flex: 1 0 auto;
 }
@@ -37,7 +37,7 @@ h1, h2 {
 }
 
 .primary-title {
-  color: $color3;
+  color: $color-03;
   margin-bottom: 3rem;
   width: 100%;
 
@@ -46,7 +46,7 @@ h1, h2 {
     display: block;
     width: 45px;
     height: 4px;
-    background-color: $color3;
+    background-color: $color-03;
     margin-top: .4em;
   }
 }
@@ -54,20 +54,18 @@ h1, h2 {
 .secondary-title {
   text-align: center;
   margin-bottom: .6em;
-  color: $color3;
+  color: $color-03;
   width: 100%;
 }
 
 .card-title {
   padding: 12px 0 6px 0;
-  color: $color6;
-  font-weight: bold;
-  font-size: $font-size24 !important;
+  color: $color-06;
+  font-size: $font-24 !important;
   letter-spacing: -1px !important;
-  text-transform: uppercase;
 
   > span {
-    color: lighten($color1, 40);
+    color: lighten($color-01, 40);
     letter-spacing: 1px !important;
   }
 }
@@ -90,7 +88,7 @@ h1, h2 {
 }
 
 .v-responsive__content {
-  background: rgba($color3, 0.4);
+  background: rgba($color-03, 0.4);
 }
 
 .v-list__tile {

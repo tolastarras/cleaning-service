@@ -13,7 +13,7 @@
 .v-card:hover .v-card__title {
   top: 0;
   transition: top 1s;
-  background: $color2;
+  background: $color-02;
 }
 
 .v-card__title {
@@ -21,7 +21,7 @@
   position: absolute;
   width: 100%;
   transition: top 1s;
-  background: $color2;
+  background: $color-02;
 }
 
 .card__media {
@@ -29,7 +29,7 @@
 }
 
 .v-card__actions {
-  background: $color2;
+  background: $color-02;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -39,8 +39,8 @@
   height: 22rem;
 
   > p {
-    color: $color7;
-    font-size: $font-size18;
+    color: $color-07;
+    font-size: $font-18;
     text-transform: uppercase;
     font-weight: 500;
   }

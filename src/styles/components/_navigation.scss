@@ -1,8 +1,8 @@
 .v-toolbar__items {
-  color: darken($color2, 20);
+  color: darken($color-02, 20);
 
   .active {
-    color: $color2 !important;
+    color: $color-02 !important;
   }
 }
 
@@ -34,18 +34,14 @@ img {
 }
 
 .menuItem {
-  color: #ccc !important;
-  text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
   vertical-align: middle;
   display: inline-block;
-  font-weight: bold;
   padding: 0 1.5em;
-  border-right: 1px solid $color8;
+  border-right: 1px solid $color-08;
 
   &:hover {
-    color: $color2 !important;
+    color: $color-02 !important;
   }
 }
 
@@ -65,7 +61,7 @@ img {
 
 .sticky {
   position: fixed;
-  background-color: rgba($color10, 0.95) !important;
+  background-color: rgba($color-10, 0.95) !important;
   z-index: 2;
   
   a.menuItem {
@@ -78,12 +74,6 @@ img {
     height: 40px;
     width: 150px;
   }  
-}
-
-.btn {
-  margin-top: .7em;
-  border: 1px solid white;
-  border-radius: 4px;
 }
 
 .list__tile__title {

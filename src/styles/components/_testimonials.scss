@@ -12,7 +12,7 @@
   }
 
   cite {
-    color: $color7;
+    color: $color-07;
     display: block;
     font-size: 1em;
 
@@ -29,11 +29,11 @@
     position: relative;
 
     p {
-      color: $color7;
+      color: $color-07;
 
       &:first-child:before {
         content: '\201C';
-        color: $color11;
+        color: $color-11;
         font-size: 7.5em;
         font-weight: 700;
         opacity: 0.2;

@@ -12,7 +12,7 @@
         <v-spacer></v-spacer>
 
         <v-toolbar-items class="hidden-sm-and-down">
-          <router-link class="menuItem" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
+          <router-link class="menuItem text-uppercase font-weight-bold" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
             {{ item.title }}
           </router-link>
         </v-toolbar-items>
