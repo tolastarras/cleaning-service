@@ -24,14 +24,12 @@
           <h2>Contact Us</h2>
           <v-list class="contact-info-list">
             <v-list-tile :class="contact.icon" v-for="(contact, i) in contactMethods" :key="i" target="_blank" :href="contact.link">
-              <!-- <div v-if="contact.icon !== 'access_time'"> -->
-                <v-list-tile-avatar>
-                  <v-icon>{{ contact.icon }}</v-icon>
-                </v-list-tile-avatar>
-                <v-list-tile-content>
-                  <v-list-tile-title v-html="contact.title"></v-list-tile-title>
-                </v-list-tile-content>
-              <!-- </div> -->
+              <v-list-tile-avatar>
+                <v-icon>{{ contact.icon }}</v-icon>
+              </v-list-tile-avatar>
+              <v-list-tile-content>
+                <v-list-tile-title v-html="contact.title"></v-list-tile-title>
+              </v-list-tile-content>
             </v-list-tile>
           </v-list>
         </v-flex>

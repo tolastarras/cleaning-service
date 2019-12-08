@@ -8,17 +8,14 @@
   }
 
   .title {
-    font-size: 4.5em !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    text-align: center;
+    font-size: $font-48 !important;
     margin-bottom: .3em !important;
   }
 
   .subtitle {
-    font-size: 2.8em;
-    text-align: center;
-    color: gold;
+    font-size: $font-36;
+    color: $color-05;
+    line-height: 110%;
   }
 }
 
