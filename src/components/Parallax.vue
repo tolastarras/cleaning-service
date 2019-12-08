@@ -3,7 +3,7 @@
     <v-layout column align-center justify-center text-xs-center>
       <div class="parallax-content">
         <h2 class="display-2 white--text font-weight-bold">{{ data.title }}</h2>
-        <h1 class="display-3 mb-3">{{ data.subtitle }}</h1>
+        <h1 class="display-3 font-weight-medium mb-3">{{ data.subtitle }}</h1>
         <v-btn class="headline" large v-show="data.btnText" @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" @click="bookNow" dark outline>
           {{ data.btnText }} <v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
         </v-btn>
