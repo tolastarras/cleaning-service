@@ -32,8 +32,8 @@
 
       &:first-child:before {
         content: '\201C';
-        color: $color-11;
-        font-size: 7.5em;
+        color: $color-06;
+        font-size: $font-170;
         font-weight: 700;
         opacity: 0.2;
         position: absolute;
