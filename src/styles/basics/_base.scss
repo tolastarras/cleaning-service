@@ -16,13 +16,6 @@ h1, h2 {
   margin: 0 auto;
 }
 
-.main-content {
-  margin: 0 auto;
-  background: red !important;
-  padding: 6em 2em;
-  flex: 1 0 auto;
-}
-
 .theme--light .toolbar {
   background-color: transparent;
 }
@@ -94,6 +87,13 @@ h1, h2 {
   padding-left: 10px;
 }
 
+/* media queries */
+@media (max-width: 1300px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+
 @media (max-width: 1280px) {
   .about, .services, .contact {
     margin-top: 0 !important;
@@ -111,7 +111,6 @@ h1, h2 {
     font-size: $font-20;
   }
 
-  // navigation drawer
   .v-list__tile--avatar {
     height: 5rem;
   }
@@ -124,12 +123,5 @@ h1, h2 {
 
   h1.display-1, .primary-title {
     font-size: $font-32 !important;
-  }
-}
-
-/* media queries */
-@media (max-width: 1300px) {
-  .container {
-    max-width: 100% !important;
   }
 }

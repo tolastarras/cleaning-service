@@ -16,10 +16,8 @@
     font-size: $font-18;
     font-family: $font-family;
     max-width: 30% !important;
-    justify-content: center;
   
     > h2 {
-      text-transform: uppercase;
       padding: 0.5em 0;
       margin-bottom: 1em;
       border-bottom: 1px solid $color-07;
@@ -39,7 +37,6 @@
 
         .v-list__tile {
           font-size: $font-16;
-          font-weight: 200;
           height: auto;
           text-decoration: none;
 
@@ -64,10 +61,6 @@
   &.bottom-footer {
     font-size: $font-12;
     background: darken($color-10, 4) !important;
-
-    .headline b {
-      text-transform: uppercase;
-    }
   }
 }
 

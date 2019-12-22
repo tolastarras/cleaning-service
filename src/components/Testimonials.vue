@@ -8,7 +8,7 @@
             <p>{{ testimonial.quote }}</p>
           </blockquote>
           <cite>
-            <span>{{ testimonial.client.name }}</span>, {{ testimonial.client.city }}
+            <span class="font-weight-bold">{{ testimonial.client.name }}</span>, {{ testimonial.client.city }}
           </cite>
         </div>
       </v-flex>

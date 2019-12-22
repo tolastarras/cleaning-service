@@ -8,7 +8,7 @@
           <v-card-title>
             <div class="card-content text-xs-left">
               <div class="text-xs-center" v-html="getTitle(card.title)"></div>
-              <p class="py-3 text-xs-center">{{ card.price }}</p>
+              <p class="py-3 text-xs-center text-uppercase">{{ card.price }}</p>
               <v-card-text v-html="card.description"></v-card-text>
             </div>
           </v-card-title>

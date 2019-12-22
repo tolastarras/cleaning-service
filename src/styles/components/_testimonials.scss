@@ -14,10 +14,6 @@
     display: block;
     color: $color-07;
     font-size: $font-16;
-
-    span {
-      font-weight: 700;
-    }
   }
 
   blockquote {
@@ -57,11 +53,3 @@
     }
   }
 }
-
-// @media (max-width: 600px) {
-//   .container {
-//     width: 100%;
-//     margin-left: 0 !important;
-//     padding: 0 !important;
-//   }
-// }

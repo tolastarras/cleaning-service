@@ -12,7 +12,7 @@
         </v-flex>
         <v-flex xs12 md6 text-xs-center text-md-right order-xs1 order-md2>
           <span class="headline">
-            <b>Call for a free estimate</b>
+            <b class="text-uppercase">Call for a free estimate</b>
             <a :href="business.phone.link" class="xs-only d-block">{{ business.phone.title }}</a>
           </span>
         </v-flex>
