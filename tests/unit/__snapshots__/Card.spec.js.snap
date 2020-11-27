@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders without breaking 1`] = `
+<v-container-stub tag="div">
+  <v-layout-stub tag="div" row="" wrap="">
+    <v-flex-stub tag="div" xs-12="">
+      <v-card-stub tag="div" flat="true">
+        <v-img-stub src="" position="center center" transition="fade-transition">
+          <v-layout-stub tag="div" class="media-content"></v-layout-stub>
+        </v-img-stub>
+        <v-card-text-stub>
+          <h2 class="text-xs-center">
+            <div class="card-title text-uppercase font-weight-bold">
+              <span>Test</span>
+            </div>
+          </h2>
+          <div class="card-content">
+
+          </div>
+        </v-card-text-stub>
+        <v-card-actions-stub class="justify-center">
+          <v-btn-stub color="blue" activeclass="v-btn--active" tag="button" dark="true" outline="true" type="button">Read More</v-btn-stub>
+        </v-card-actions-stub>
+      </v-card-stub>
+    </v-flex-stub>
+  </v-layout-stub>
+</v-container-stub>
+`;

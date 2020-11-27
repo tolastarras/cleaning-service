@@ -1,0 +1,36 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Validate
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Setup Node
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
+        run: yarn
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Unit Test
+        run: yarn test:unit
+
+      - name: Build
+        run: yarn build --if-present
