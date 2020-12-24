@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import settings from '@/store/settings'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  modules: {
+    settings
+  },
   state: {
     business: null,
     parallax: null,
