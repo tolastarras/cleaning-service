@@ -1,22 +1,35 @@
 <template>
   <v-app>
-    <app-header />
+    <app-header
+      :business="business"
+      :parallax="parallax"
+      :document-width="documentWidth"
+    />
     <v-content>
-      <router-view></router-view>
+      <router-view />
     </v-content>
-    <app-footer></app-footer>
+    <app-footer
+      :business="business"
+      :services="services"
+      :contact-methods="contactMethods"
+    />
   </v-app>
 </template>
 
 <script>
-import AppHeader from '@/components/Navigation'
-import AppFooter from '@/components/footer/Index'
+import { mapState, mapGetters } from 'vuex'
+import AppHeader from '@/components/header'
+import AppFooter from '@/components/footer'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
     AppFooter
+  },
+  computed: {
+    ...mapState(['business', 'documentWidth', 'parallax', 'services']),
+    ...mapGetters(['contactMethods'])
   }
 }
 </script>

@@ -1,31 +1,41 @@
 <template lang="html">
   <v-content>
-    <v-toolbar flat :class="{ standard: !scrolled, sticky: scrolled }" class="white--text">
+    <v-toolbar
+      flat
+      :class="{ standard: !scrolled, sticky: scrolled }"
+      class="white--text"
+    >
       <v-layout row wrap>
-        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up white--text"></v-toolbar-side-icon>
+        <v-toolbar-side-icon
+          @click.stop="drawer = !drawer"
+          class="hidden-md-and-up white--text"
+        />
         <v-toolbar-title>
           <router-link :to="{ name: 'home' }" tag="button">
             <img :src="logo" :alt="business.name"/>
           </router-link>
         </v-toolbar-title>
-
-        <v-spacer></v-spacer>
-
+        <v-spacer />
         <v-toolbar-items class="hidden-sm-and-down">
-          <router-link class="menuItem text-uppercase font-weight-bold" v-for="item in menuItems" :key="item.title" :to="item.url" exact>
+          <router-link
+            v-for="item in menuItems"
+            :key="item.title"
+            :to="item.url"
+            class="menuItem text-uppercase font-weight-bold"
+            exact
+          >
             {{ item.title }}
           </router-link>
         </v-toolbar-items>
       </v-layout>
     </v-toolbar>
-
     <v-navigation-drawer dark app temporary v-model="drawer">
       <v-list class="pt-3">
         <v-list-tile avatar tag="div">
           <v-list-tile-content>
             <v-list-tile-title>
               <router-link to="/">
-                <img class="drawer" :src="logo" :alt="business.name"/>
+                <img class="drawer" :src="logo" :alt="business.name" />
               </router-link>
             </v-list-tile-title>
           </v-list-tile-content>
@@ -37,8 +47,13 @@
         </v-list-tile>
       </v-list>
       <v-list dense>
-        <v-divider light></v-divider>
-        <v-list-tile class="menu-items" :class="activeItem(item)" v-for="(item, i) in menuItems" :key="i" router :to="item.url">
+        <v-divider light />
+        <v-list-tile
+          v-for="(item, i) in menuItems"
+          :key="i" router :to="item.url"
+          class="menu-items"
+          :class="activeItem(item)"
+        >
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -48,18 +63,28 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-
-    <parallax v-if="parallaxData" :data="parallaxData"></parallax>
+    <parallax v-if="parallaxData" :data="parallaxData" />
   </v-content>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import Parallax from './Parallax'
+import helper from '@/mixins/helper'
+import Parallax from '@/components/Parallax'
 
 export default {
+  name: 'AppHeader',
   components: {
     Parallax
+  },
+  props: {
+    business: {
+      type: Object,
+      required: true
+    },
+    parallax: {
+      type: Object,
+      required: true
+    }
   },
   data () {
     return {
@@ -75,27 +100,24 @@ export default {
       ]
     }
   },
+  mixins: [helper],
   computed: {
-    ...mapState(['business', 'documentWidth', 'parallax']),
     parallaxData () {
-      let page = this.$root.getPage(this.$route.path)
+      let page = this.getPage(this.$route.path)
       let parallaxData = this.parallax[`${page}`]
 
       return parallaxData === undefined ? false : {
         ...parallaxData,
-        src: this.$root.getImage(parallaxData.src, this.documentWidth)
+        src: this.getImage(parallaxData.src, this.documentWidth)
       }
     }
   },
   methods: {
     activeItem (item) {
-      let page = this.$root.getPage(this.$route.path)
-      let currentPage = this.$root.getPage(item.url)
+      const page = this.getPage(this.$route.path)
+      const currentPage = this.getPage(item.url)
 
-      if (currentPage === page) {
-        return 'active'
-      }
-      return ''
+      return currentPage === page ? 'active' : ''
     },
     handleScroll () {
       this.scrolled = window.scrollY > 0
