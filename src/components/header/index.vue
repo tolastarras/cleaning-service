@@ -61,13 +61,20 @@ export default {
 
       return parallaxData === undefined ? false : {
         ...parallaxData,
-        src: this.$root.getImage(parallaxData.src, this.documentWidth)
+        src: this.getCurrentDeviceImage(parallaxData.src)
       }
     }
   },
   methods: {
     handleScroll () {
       this.scrolled = window.scrollY > 0
+    },
+    getCurrentDeviceImage (name) {
+      const bp = this.$vuetify.breakpoint
+      const size = bp.smAndDown ? '320x480' : (bp.mdAndDown ? '800x600' : '1280x960')
+      const ext = bp.lgAndUp ? 'webp' : 'jpg'
+
+      return require(`@/assets/header/${name}_${size}.${ext}`)
     }
   },
   created () {

@@ -1,9 +1,17 @@
 <template lang="html">
   <v-carousel :height="700" hide-delimiters :cycle="cycle" :interval="10000">
-    <v-carousel-item v-for="(item, i) in items" :key="i" :src="require(`@/assets/carousel/${item.image}`)" @mouseover="handleMouseOver()" @mouseout="handleMouseOut()">
+    <v-carousel-item
+      v-for="(item, i) in items"
+      :key="i"
+      :src="require(`@/assets/carousel/${item.name}.webp`)"
+      @mouseover="handleMouseOver()"
+      @mouseout="handleMouseOut()"
+    >
     <v-layout class="carousel-content" justify-center align-center column>
       <h1 class="title white--text text-xs-center font-weight-bold mb-0 pb-0">{{item.title}}</h1>
-      <h2 class="subtitle text-xs-center font-weight-medium hidden-sm-and-down amber--text text--accent-2">{{item.subtitle}}</h2>
+      <h2 class="subtitle text-xs-center font-weight-medium hidden-sm-and-down amber--text text--accent-2">
+        {{item.subtitle}}
+      </h2>
     </v-layout>
     </v-carousel-item>
   </v-carousel>

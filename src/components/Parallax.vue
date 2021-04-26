@@ -4,8 +4,18 @@
       <div class="parallax-content">
         <h2 class="display-2 white--text font-weight-bold">{{ data.title }}</h2>
         <h1 class="display-3 font-weight-medium mb-3 amber--text text--accent-2">{{ data.subtitle }}</h1>
-        <v-btn class="headline" large v-show="data.btnText" @mouseover="handleMouseEnter" @mouseleave="handleMouseLeave" @click="bookNow" dark outline>
-          {{ data.btnText }} <v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
+        <v-btn
+          v-show="data.btnText"
+          class="headline"
+          large
+          dark
+          outline
+          @mouseover="handleMouseEnter"
+          @mouseleave="handleMouseLeave"
+          @click="bookNow"
+        >
+          {{ data.btnText }}
+          <v-icon v-show="showIcon">keyboard_arrow_right</v-icon>
         </v-btn>
       </div>
     </v-layout>
