@@ -22,8 +22,8 @@
       <v-flex xs12 lg6>
         <v-layout class="testimonials-layout" row wrap>
           <v-flex order-xs4 xs12 offset-xs1>
-            <v-card class="testimonials" flat>
-              <testimonials title="Clients comments!"></testimonials>
+            <v-card flat>
+              <testimonials title="Clients comments!" />
             </v-card>
           </v-flex>
         </v-layout>
@@ -78,5 +78,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/views/_about.scss';
+.v-card {
+  background: none;
+
+  .v-card__text {
+    text-align: justify;
+  }
+}
+
+img {
+  width: 30rem !important;
+}
+
+@media (max-width: 1024px) {
+  .testimonials-layout > div {
+    margin-left: 0;
+    padding: 2.5rem 0;
+  }
+
+  img {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  img {
+    max-width: 100%;
+    padding-right: 4rem;
+
+    .girl-css {
+      width: 100%;
+      border: 4px solid blue;
+    }
+  }
+}
 </style>

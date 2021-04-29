@@ -11,7 +11,7 @@
       />
       <v-toolbar-title>
         <router-link :to="{ name: 'home' }" tag="button">
-          <img :src="logo" :alt="businessName"/>
+          <img width="180" height="50" :src="logo" :alt="businessName"/>
         </router-link>
       </v-toolbar-title>
       <v-spacer />

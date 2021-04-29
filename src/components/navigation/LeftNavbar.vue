@@ -5,7 +5,7 @@
         <v-list-tile-content>
           <v-list-tile-title>
             <router-link to="/">
-              <img class="drawer" :src="logo" :alt="businessName" />
+              <img class="drawer" width="180" height="50" :src="logo" :alt="businessName" />
             </router-link>
           </v-list-tile-title>
         </v-list-tile-content>
@@ -91,23 +91,24 @@ export default {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 960px) {
   .v-list__tile--avatar .v-list__tile__title {
     height: 8rem;
   }
 
   .v-navigation-drawer {
-    padding-left: 0.5rem;
-
-    img {
-      width: 180px;
-      height: 50px;
-    }
+    padding: 1rem 0.5rem;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 350px) {
+  .v-list__tile--avatar .v-list__tile__title {
+    height: 3rem;
+  }
+
   .v-navigation-drawer {
+    padding: 0;
+
     img {
       width: 120px;
       height: 40px;

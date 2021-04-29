@@ -3,32 +3,27 @@
     {
       "title": "Home Cleaning Services",
       "subtitle": "Specialized in General Cleaning",
-      "name": "living",
-      "image": "living.jpg"
+      "name": "living"
     },
     {
       "title": "Home and Commercial Kitchens Cleaning",
       "subtitle": "Outstanding Cleaning Services With Flat Rate Pricing.",
-      "name": "kitchen",
-      "image": "kitchen.jpg"
+      "name": "kitchen"
     },
     {
       "title": "General and Deep Cleaning Available",
       "subtitle": "Outstanding Cleaning Services With Flat Rate Pricing.",
-      "name": "bedroom",
-      "image": "bedroom.jpg"
+      "name": "bedroom"
     },
     {
       "title": "Business and Commercial",
       "subtitle": "No Hidden Fees and No Surprises",
-      "name": "office",
-      "image": "office_1280x960.jpg"
+      "name": "office"
     },
     {
       "title": "Professional Bathroom Cleaning Services",
       "subtitle": "Keeping Bathrooms Spotless Clean",
-      "name": "bathroom",
-      "image": "bathroom.jpg"
+      "name": "bathroom"
     }    
   ],
   "cards": [

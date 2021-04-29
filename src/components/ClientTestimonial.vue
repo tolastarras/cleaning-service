@@ -1,3 +1,34 @@
+<template lang="html">
+  <div class="testimonial-quote group">
+    <blockquote>
+      <p>{{ testimonial.quote }}</p>
+    </blockquote>
+    <cite>
+      <span class="font-weight-bold">
+        {{ testimonial.client.name }}
+      </span>, {{ testimonial.client.city }}
+    </cite>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ClientTestimonial',
+  props: {
+    testimonial: {
+      type: Object,
+      required: true
+    }
+  },
+  methods: {
+    lastChild (i) {
+      return (i + 1) === this.testimonials.length ? 'last' : ''
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
 .testimonial-quote {
   font-size: $font-16;
   width: 100%;
@@ -53,3 +84,4 @@
     }
   }
 }
+</style>

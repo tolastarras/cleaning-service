@@ -1,8 +1,17 @@
 <template lang="html">
   <v-container class="services my-4" grid-list-xl>
-    <h1 class="text-xs-left display-2 primary-title font-weight-bold">Cleaning Services</h1>
+    <h1 class="text-xs-left display-2 primary-title font-weight-bold">
+      Cleaning Services
+    </h1>
     <v-layout row wrap class="mt-5">
-      <v-flex class="cards-container" xs12 sm6 md4 v-for="(card, i) in services" :key="i">
+      <v-flex
+        v-for="(card, i) in services"
+        :key="i"
+        class="cards-container"
+        xs12
+        sm6
+        md4
+      >
         <v-card class="my-3" hover>
           <v-img :src="getCardImage(card.src)"></v-img>
           <v-card-title>
@@ -58,5 +67,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/views/_services.scss';
+.cards-container {
+  padding-top: 0 !important;
+}
+
+.v-card {
+  width: 100%;
+  height: 30em !important;
+  margin-top: 0 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.v-card:hover .v-card__title {
+  top: 0;
+  transition: top 1s;
+  background: $color-02;
+}
+
+.v-card__title {
+  top: 15rem;
+  position: absolute;
+  width: 100%;
+  transition: top 1s;
+  background: $color-02;
+}
+
+.card__media {
+  height: 200px !important;
+}
+
+.v-card__actions {
+  background: $color-02;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.card-content {
+  height: 22rem;
+
+  > p {
+    color: $color-07;
+    font-size: $font-18;
+  }
+}
+
+.v-btn {
+  margin: 0 auto;
+  margin-bottom: 1.8em;
+  margin-top: 1em;
+}
 </style>

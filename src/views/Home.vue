@@ -2,14 +2,20 @@
   <v-container fluid>
     <v-layout column>
       <v-flex xs12>
-        <app-carousel :items="items"></app-carousel>
+        <app-carousel :items="items" />
       </v-flex>
     </v-layout>
     <v-layout row justify-center class="cards-content mb-4">
       <v-flex xs12 xl8>
         <v-layout align-center row wrap>
-          <v-flex xs12 lg4 :class="spacing(index)" v-for="(card, index) in cards" :key="card.title">
-            <card :card="card" :index="index" :total="cards.length"></card>
+          <v-flex
+            v-for="(card, index) in cards"
+            :key="card.title"
+            :class="spacing(index)"
+            xs12
+            lg4
+          >
+            <card :card="card" :index="index" :total="cards.length" />
           </v-flex>
         </v-layout>
       </v-flex>
@@ -52,5 +58,30 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '@/styles/views/_home.scss';
+.container {
+  max-width: 100%;
+}
+
+.cards-content {
+  margin-top: -5rem;
+  padding: 0 8em;
+}
+
+@media (max-width: 1024px) {
+  .cards-content {
+    padding: 0 2rem;
+
+    .layout > div {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-bottom: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .cards-content {
+    padding: 0 1rem;
+  }
+}
 </style>
