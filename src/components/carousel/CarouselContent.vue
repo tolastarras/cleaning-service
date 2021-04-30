@@ -1,3 +1,32 @@
+<template lang="html">
+  <v-layout
+    class="carousel-content"
+    justify-center
+    align-center
+    column
+  >
+    <h1 class="title white--text text-xs-center font-weight-bold mb-0 pb-0">
+      {{item.title}}
+    </h1>
+    <h2 class="subtitle text-xs-center font-weight-medium hidden-sm-and-down amber--text text--accent-2">
+      {{item.subtitle}}
+    </h2>
+  </v-layout>
+</template>
+
+<script>
+export default {
+  name: 'CarouselContent',
+  props: {
+    item: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
 .carousel-content {
   background-color: $parallax-filter;
   padding: 2em;
@@ -20,10 +49,6 @@
 
 /* media queries */
 @media (max-width: 1024px) {
-  .v-carousel {
-    height: 40rem !important;
-  }
-
   .carousel-content {
     margin-top: -2.8em;
 
@@ -39,10 +64,6 @@
 }
 
 @media (max-width: 425px) {
-  .v-carousel {
-    height: 30rem !important;
-  }
-
   .carousel-content {
     margin-top: -10rem;
 
@@ -57,3 +78,4 @@
     }
   }
 }
+</style>

@@ -4,9 +4,11 @@
       <v-flex xs12>
         <v-card flat class="mb-3">
           <v-card-text class="pb-3">
-            <h1 class="text-xs-left display-2 primary-title font-weight-bold">Serving your area</h1>
+            <h1 class="text-xs-left display-2 primary-title font-weight-bold">
+              Serving your area
+            </h1>
             <img :src="src" :alt="business.name" align="right" class="pl-5 girl-js"/>
-            <div v-html="content"></div>
+            <div v-html="content" />
           </v-card-text>
         </v-card>
       </v-flex>
@@ -14,7 +16,7 @@
         <v-layout row wrap>
           <v-flex order-xs3 text-xs-center>
             <v-card flat light>
-              <contact-form :quote="true"></contact-form>
+              <contact-form :quote="true" />
             </v-card>
           </v-flex>
         </v-layout>

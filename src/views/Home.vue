@@ -26,7 +26,7 @@
 <script>
 import { mapState } from 'vuex'
 
-import AppCarousel from '@/components/Carousel'
+import AppCarousel from '@/components/carousel/Carousel'
 import Card from '@/components/Card'
 
 export default {
