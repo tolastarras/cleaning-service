@@ -1,13 +1,11 @@
 export default {
   methods: {
     formatTitle: str => {
-      let index = str.indexOf(' ')
-      let str1 = str.substring(0, index)
-      let str2 = str.substring(index + 1)
+      const [ left, right ] = str.split(' ')
 
       return `
       <div class="card-title text-uppercase font-weight-bold">
-        ${str1} <span>${str2}</span>
+        ${left} <span>${right}</span>
       </div>`
     },
     getPage: path => {

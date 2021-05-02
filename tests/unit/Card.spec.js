@@ -16,16 +16,13 @@ describe('Card', () => {
   let wrapper
 
   beforeEach(() => {
-    const store = new Vuex.Store()
-
     wrapper = shallowMount(Card, {
       localVue,
-      store,
       mixins: [helper],
       propsData: {
         card: {
           title: 'Test',
-          image: 'sink.jpg'
+          name: 'sink'
         }
       }
     })

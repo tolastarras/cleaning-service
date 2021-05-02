@@ -30,16 +30,19 @@
     {
       "title": "Quality Cleaning",
       "image": "sink.jpg",
+      "name": "sink",
       "content": "Our professional team works hard to provide each and every customer with the very best cleaning service available in the area."
     },
     {
       "title": "Professional Staff",
       "image": "mirror.jpg",
+      "name": "mirror",
       "content": "We deliver happiness through home, business and commercial cleaning. Our cleaning services come with a satisfaction guarantee."
     },
     {
       "title": "Affordable Rates",
       "image": "save.jpg",
+      "name": "save",
       "content": "We offer simple flat rate pricing for home cleaning services based on the size of the home given the number of rooms."
     }
   ],

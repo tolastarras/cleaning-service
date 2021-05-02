@@ -11,7 +11,7 @@ exports[`Card renders without breaking 1`] = `
         <v-card-text-stub>
           <h2 class="text-xs-center">
             <div class="card-title text-uppercase font-weight-bold">
-              <span>Test</span>
+              Test <span>undefined</span>
             </div>
           </h2>
           <div class="card-content">
@@ -19,7 +19,9 @@ exports[`Card renders without breaking 1`] = `
           </div>
         </v-card-text-stub>
         <v-card-actions-stub class="justify-center">
-          <v-btn-stub color="blue" activeclass="v-btn--active" tag="button" dark="true" outline="true" type="button">Read More</v-btn-stub>
+          <v-btn-stub color="blue" activeclass="v-btn--active" tag="button" dark="true" outline="true" type="button">
+            Read More
+          </v-btn-stub>
         </v-card-actions-stub>
       </v-card-stub>
     </v-flex-stub>
