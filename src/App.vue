@@ -18,14 +18,13 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-import AppHeader from '@/components/header'
-import AppFooter from '@/components/footer'
+import AppHeader from '@/components/navigation/header'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    AppFooter
+    AppFooter: () => import('@/components/navigation/footer')
   },
   computed: {
     ...mapState(['business', 'documentWidth', 'parallax', 'services']),

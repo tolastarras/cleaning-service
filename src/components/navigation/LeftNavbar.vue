@@ -4,7 +4,7 @@
       <v-list-tile avatar tag="div">
         <v-list-tile-content>
           <v-list-tile-title>
-            <router-link to="/">
+            <router-link :to="{ path: '/' }">
               <img class="drawer" width="180" height="50" :src="logo" :alt="businessName" />
             </router-link>
           </v-list-tile-title>

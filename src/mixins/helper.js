@@ -9,9 +9,8 @@ export default {
       </div>`
     },
     getPage: path => {
-      // remove double forward slashes from path and split url into array of words > 0
-      let values = path
-        // .replace(/\/\//g, '/')
+      // split url into array of words > 0
+      const values = path
         .split('/')
         .filter(param => param.length > 0)
 

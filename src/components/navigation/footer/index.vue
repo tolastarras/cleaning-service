@@ -1,3 +1,42 @@
+<template lang="html">
+  <v-container fluid>
+    <top-footer
+      :business="business"
+      :services="services"
+      :contact-methods="contactMethods"
+    />
+    <bottom-footer :business="business" />
+  </v-container>
+</template>
+
+<script>
+import TopFooter from './Top'
+import BottomFooter from './Bottom'
+
+export default {
+  name: 'AppFooter',
+  props: {
+    business: {
+      type: Object,
+      required: true
+    },
+    services: {
+      type: Array,
+      required: true
+    },
+    contactMethods: {
+      type: Array,
+      required: true
+    }
+  },
+  components: {
+    TopFooter,
+    BottomFooter
+  }
+}
+</script>
+
+<style lang="scss">
 .v-footer {
   background: $color-10 !important;
   box-sizing: border-box;
@@ -15,7 +54,7 @@
     line-height: 1.7rem;
     font-size: $font-18;
     max-width: 30% !important;
-  
+
     > h2 {
       padding: 0.5em 0;
       margin-bottom: 1em;
@@ -43,12 +82,11 @@
             width: 20px !important;
             margin-left: 2px;
           }
-  
+
           .v-list__tile__avatar {
             min-width: 35px;
-  
+
             .v-icon {
-              // justify-content: left;
               width: 20px !important;
             }
           }
@@ -99,3 +137,4 @@
     padding-top: 1rem !important;
   }
 }
+</style>

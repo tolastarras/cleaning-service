@@ -173,5 +173,94 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/components/_contact-form.scss';
+form {
+  padding: 2em;
+  background: $color-02;
+}
+
+h1 {
+  margin: 0;
+  width: 100% !important;
+}
+
+.header {
+  background-color: lighten($color-10, 3);
+  padding: .3em 0 .5em 0 !important;
+}
+
+.custom-loader {
+  animation: loader 1s infinite;
+  display: flex;
+}
+
+.container {
+  padding: 0 !important;
+  border: 12px solid lighten($color-10, 3);
+  border-radius: 4px;
+}
+
+@-moz-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 960px) {
+  .contact-form .container {
+    border-width: 2px;
+
+  }
+  .v-input {
+    font-size: $font-32;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    border: 0;
+    border-radius: 0;
+
+    form {
+      padding: 2em 0 0;
+
+      .v-input {
+        padding-right: 0 !important;
+      }
+    }
+  }
+}
 </style>

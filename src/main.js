@@ -7,7 +7,7 @@ import router from './router/index'
 import store from './store/index'
 import helper from './mixins/helper'
 
-import data from './api/data.json'
+import data from '@/api/data.json'
 
 Vue.config.productionTip = false
 
