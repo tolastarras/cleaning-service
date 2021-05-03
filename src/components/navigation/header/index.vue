@@ -71,7 +71,7 @@ export default {
     },
     getCurrentDeviceImage (name) {
       const bp = this.$vuetify.breakpoint
-      const size = bp.smAndDown ? '320x480' : (bp.mdAndDown ? '800x600' : '1280x960')
+      const size = bp.smAndDown ? 'mobile' : (bp.mdAndDown ? 'tablet' : 'new')
       const ext = bp.lgAndUp ? 'webp' : 'jpg'
 
       return require(`@/assets/header/${name}_${size}.${ext}`)

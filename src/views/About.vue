@@ -7,7 +7,13 @@
             <h1 class="text-xs-left display-2 primary-title font-weight-bold">
               Serving your area
             </h1>
-            <img :src="src" :alt="business.name" align="right" class="pl-5 girl-js"/>
+            <v-img
+              :lazy-src="srcLazy"
+              :src="srcImage"
+              width="460"
+              :alt="business.name"
+              class="pl-5 girl"
+            />
             <div v-html="content" />
           </v-card-text>
         </v-card>
@@ -36,20 +42,14 @@
 
 <script>
 import { mapState } from 'vuex'
-import ContactForm from '@/components/shared/ContactForm'
-import Testimonials from '@/components/Testimonials'
 
 export default {
-  data () {
-    return {
-      src: require('@/assets/about.png')
-    }
-  },
+  name: 'About',
   mounted () {
     const SMALL_DEVICE_WIDTH = 425
     if (this.documentWidth < SMALL_DEVICE_WIDTH) {
       const element = document.querySelector('.insert-image')
-      const image = document.querySelector('.girl-js')
+      const image = document.querySelector('.girl')
 
       element.style.display = 'block'
       element.setAttribute('src', this.src)
@@ -59,11 +59,17 @@ export default {
     }
   },
   components: {
-    ContactForm,
-    Testimonials
+    ContactForm: () => import('@/components/shared/ContactForm'),
+    Testimonials: () => import('@/components/Testimonials')
   },
   computed: {
     ...mapState(['business', 'documentWidth']),
+    srcLazy () {
+      return require('@/assets/about_thumb.jpg')
+    },
+    srcImage () {
+      return require('@/assets/about.webp')
+    },
     content () {
       return `
         <p>Since we started, we've attracted a loyal clientele based our exceptional customer service. Our customers range from stay-at-home mothers in need of a breather to office dwelling professionals with a little time to spare. With a full range of cleaning services, ${this.business.city} based ${this.business.name} offers clients a chance to sit back and relax with professional cleaners taking over their chores.</p>
@@ -86,10 +92,14 @@ export default {
   .v-card__text {
     text-align: justify;
   }
-}
 
-img {
-  width: 30rem !important;
+  .girl {
+    float: right;
+
+    /deep/ .v-responsive__content {
+      background: none !important;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -98,22 +108,10 @@ img {
     padding: 2.5rem 0;
   }
 
-  img {
-    margin-left: 0;
-    width: 100%;
+  .girl {
+    width: 100% !important;
     margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 425px) {
-  img {
-    max-width: 100%;
-    padding-right: 4rem;
-
-    .girl-css {
-      width: 100%;
-      border: 4px solid blue;
-    }
+    padding-top: 10px;
   }
 }
 </style>

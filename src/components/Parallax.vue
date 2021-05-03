@@ -1,9 +1,14 @@
 <template lang="html">
-  <v-parallax :src="data.src" v-if="data.src" class="mb-5">
+  <v-parallax v-if="data.src" :src="data.src" class="mb-5">
+    {{ data.src }}
     <v-layout column align-center justify-center text-xs-center>
       <div class="parallax-content">
-        <h2 class="display-2 white--text font-weight-bold">{{ data.title }}</h2>
-        <h1 class="display-3 font-weight-medium mb-3 amber--text text--accent-2">{{ data.subtitle }}</h1>
+        <h2 class="display-2 white--text font-weight-bold">
+          {{ data.title }}
+        </h2>
+        <h1 class="display-3 font-weight-medium mb-3 amber--text text--accent-2">
+          {{ data.subtitle }}
+        </h1>
         <v-btn
           v-show="data.btnText"
           class="headline"

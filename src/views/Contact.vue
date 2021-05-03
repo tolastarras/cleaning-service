@@ -45,11 +45,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import ContactForm from '@/components/shared/ContactForm'
 
 export default {
   components: {
-    ContactForm
+    ContactForm: () => import('@/components/shared/ContactForm')
   },
   data () {
     return {
