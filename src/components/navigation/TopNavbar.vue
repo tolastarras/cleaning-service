@@ -6,6 +6,7 @@
   >
     <v-layout row wrap>
       <v-toolbar-side-icon
+        name="btn-menu"
         class="hidden-md-and-up white--text"
         @click.stop="closeDrawer"
       />

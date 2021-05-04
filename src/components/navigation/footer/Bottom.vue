@@ -1,6 +1,6 @@
 <template lang="html">
   <v-footer
-    class="white--text py-4 bottom-footer"
+    class="white--text py-4"
     :fixed="false"
     height="auto"
   >
@@ -60,3 +60,19 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.v-footer {
+  box-sizing: border-box;
+  font-size: $font-12;
+  background: darken($color-10, 4);
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+</style>

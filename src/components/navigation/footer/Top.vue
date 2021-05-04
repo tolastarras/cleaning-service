@@ -39,7 +39,7 @@
               v-for="service in services"
               :key="service.id"
               text-uppercase
-              class="service-types"
+              class="service-types pb-2"
               xs-6
             >
               <router-link to="services">{{ service.title }}</router-link>
@@ -62,7 +62,7 @@
               :href="contact.link"
             >
               <v-list-tile-avatar>
-                <v-icon>{{ contact.icon }}</v-icon>
+                <v-icon left>{{ contact.icon }}</v-icon>
               </v-list-tile-avatar>
               <v-list-tile-content>
                 <v-list-tile-title v-html="contact.title" />
@@ -118,3 +118,58 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.v-footer {
+  background: $color-10;
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .footer-block {
+    font-size: $font-18;
+    max-width: 30%;
+
+    > h2 {
+      padding: 0.5em 0;
+      margin-bottom: 1em;
+      border-bottom: 1px solid $color-07;
+    }
+
+    .contact-info-list {
+      background: transparent;
+      padding: 0;
+
+      > div {
+        height: 2.5rem;
+
+        .v-list__tile__avatar {
+          min-width: 32px;
+          width: 38px;
+        }
+      }
+    }
+
+    .service-types {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .top-footer > .layout {
+    flex-direction: column;
+
+    .footer-block {
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+</style>
