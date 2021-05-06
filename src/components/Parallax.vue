@@ -1,6 +1,5 @@
 <template lang="html">
   <v-parallax v-if="data.src" :src="data.src" class="mb-5">
-    {{ data.src }}
     <v-layout column align-center justify-center text-xs-center>
       <div class="parallax-content">
         <h2 class="display-2 white--text font-weight-bold">
