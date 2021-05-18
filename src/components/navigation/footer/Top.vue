@@ -1,6 +1,6 @@
 <template lang="html">
   <v-footer
-    class="py-4 mt-5"
+    :class="`py-4 mt-${$vuetify.breakpoint.smAndDown ? 0 : 5}`"
     dark
     height="auto"
     :fixed="false"

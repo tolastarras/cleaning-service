@@ -4,30 +4,32 @@
     :class="{ standard: !scrolled, sticky: scrolled }"
     class="white--text"
   >
-    <v-layout row wrap>
-      <v-toolbar-side-icon
-        name="btn-menu"
-        class="hidden-md-and-up white--text"
-        @click.stop="closeDrawer"
-      />
-      <v-toolbar-title>
-        <router-link :to="{ name: 'home' }" tag="button">
-          <img width="180" height="50" :src="logo" :alt="businessName"/>
-        </router-link>
-      </v-toolbar-title>
-      <v-spacer />
-      <v-toolbar-items class="hidden-sm-and-down">
-        <router-link
-          v-for="item in menuItems"
-          :key="item.title"
-          :to="item.url"
-          class="menuItem text-uppercase font-weight-bold"
-          exact
-        >
-          {{ item.title }}
-        </router-link>
-      </v-toolbar-items>
-    </v-layout>
+    <v-container>
+      <v-layout row wrap>
+        <v-toolbar-side-icon
+          name="btn-menu"
+          class="hidden-md-and-up white--text"
+          @click.stop="closeDrawer"
+        />
+        <v-toolbar-title>
+          <router-link :to="{ name: 'home' }" tag="button">
+            <img width="180" height="50" :src="logo" :alt="businessName"/>
+          </router-link>
+        </v-toolbar-title>
+        <v-spacer />
+        <v-toolbar-items class="hidden-sm-and-down">
+          <router-link
+            v-for="item in menuItems"
+            :key="item.title"
+            :to="item.url"
+            class="menu-item text-uppercase font-weight-bold mt-1"
+            exact
+          >
+            {{ item.title }}
+          </router-link>
+        </v-toolbar-items>
+      </v-layout>
+    </v-container>
   </v-toolbar>
 </template>
 
@@ -70,7 +72,7 @@ export default {
   z-index: 2;
   padding-top: 1.2em;
 
-  a.menuItem {
+  a.menu-item {
     font-size: $font-20 ;
   }
 }
@@ -80,7 +82,7 @@ export default {
   background-color: rgba($color-10, 0.95) !important;
   z-index: 2;
 
-  a.menuItem {
+  a.menu-item {
     font-size: $font-16;
     margin-top: 8px;
     height: 25px;
@@ -101,7 +103,7 @@ export default {
     color: $color-02 !important;
   }
 
-  .menuItem {
+  .menu-item {
     text-decoration: none;
     vertical-align: middle;
     display: inline-block;

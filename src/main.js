@@ -3,8 +3,8 @@ import './plugins/vuetify'
 import './registerServiceWorker'
 
 import App from './App.vue'
-import router from './router/index'
-import store from './store/index'
+import router from './router'
+import store from './store'
 import helper from './mixins/helper'
 
 import data from '@/api/data.json'
