@@ -9,7 +9,7 @@ exports[`Card renders without breaking 1`] = `
           <v-layout-stub tag="div" class="media-content"></v-layout-stub>
         </v-img-stub>
         <v-card-text-stub>
-          <h2 class="text-xs-center">
+          <h2 class="text-xs-center no-wrap">
             <div class="card-title text-uppercase font-weight-bold">
               Test <span>undefined</span>
             </div>
