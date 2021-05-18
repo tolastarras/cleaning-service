@@ -17,18 +17,25 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 import AppHeader from '@/components/navigation/header'
+import data from '@/api/data.json'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    AppFooter: () => import('@/components/navigation/footer')
+    AppFooter: () => import(/* webpackChunkName: "footer" */ '@/components/navigation/footer')
+  },
+  created () {
+    this.init(data)
   },
   computed: {
     ...mapState(['business', 'documentWidth', 'parallax', 'services']),
     ...mapGetters(['contactMethods'])
+  },
+  methods: {
+    ...mapActions(['init'])
   }
 }
 </script>

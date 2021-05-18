@@ -7,7 +7,7 @@
             <v-layout class="media-content" />
           </v-img>
           <v-card-text>
-            <h2 class="text-xs-center" v-html="title" />
+            <h2 class="text-xs-center no-wrap" v-html="title" />
             <div class="card-content">
               {{ card.content }}
             </div>
@@ -60,7 +60,8 @@ export default {
 .card-content {
   margin: 1.2em 0;
   padding: 0 .4em;
-  height: 5em !important;
+  // height: 5rem !important;
+  max-height: 8rem;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -79,9 +80,8 @@ export default {
   width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1263px) {
   .v-card {
-    margin-bottom: 1.2rem;
     outline: 1px solid $color-08;
 
     .v-image {

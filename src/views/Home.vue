@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <v-layout column>
       <v-flex xs12>
         <app-carousel :items="items" />
@@ -15,7 +15,7 @@
             xs12
             lg4
           >
-            <card :card="card" :index="index" :total="cards.length" />
+            <card class="mb-4" :card="card" :index="index" :total="cards.length" />
           </v-flex>
         </v-layout>
       </v-flex>
@@ -36,22 +36,9 @@ export default {
     Card
   },
   methods: {
-    lastCard (index) {
-      return (index === this.cards.length - 1) ? 'last-card' : ''
-    },
     spacing (index) {
-      // small devices padding
-      if (this.documentWidth < 600) {
-        return ''
-      }
-      // medium to large devices
-      if (index === 0) {
-        return 'pr-2'
-      } else if (index === 1) {
-        return 'pl-1 pr-1'
-      } else if (index === 2) {
-        return 'pl-2'
-      }
+      const isSmall = this.$vuetify.breakpoint.smAndDown
+      return isSmall ? '' : (index === 0 ? 'pr-2' : (index === 1 ? 'pl-1 pr-1' : 'pl-2'))
     }
   },
   computed: mapState(['items', 'cards', 'documentWidth'])
@@ -60,21 +47,20 @@ export default {
 <style lang="scss" scoped>
 .container {
   max-width: 100%;
+
+  .cards-content {
+    margin-top: -5rem;
+    padding: 0 8em;
+  }
 }
 
-.cards-content {
-  margin-top: -5rem;
-  padding: 0 8em;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1263px) {
   .cards-content {
     padding: 0 2rem;
 
     .layout > div {
       padding-left: 0 !important;
       padding-right: 0 !important;
-      margin-bottom: 0.7rem;
     }
   }
 }
