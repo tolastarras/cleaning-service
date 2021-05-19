@@ -1,18 +1,47 @@
 <template lang="html">
-  <v-container fluid>
-    <top-footer
-      :class="horizontalPadding"
-      :business="business"
-      :services="services"
-      :contact-methods="contactMethods"
-    />
-    <bottom-footer :class="horizontalPadding" :business="business" />
-  </v-container>
+  <v-footer
+    height="auto"
+    color="blue-grey darken-4"
+    class="mt-5"
+  >
+    <v-layout
+      justify-center
+      row
+      wrap
+    >
+      <top-footer
+        :class="horizontalPadding"
+        :business="business"
+        :services="services"
+        :contact-methods="contactMethods"
+      />
+      <v-flex
+        text-xs-center
+        white--text
+        xs12
+      >
+        <bottom-footer :class="horizontalPadding" :business="business" />
+      </v-flex>
+    </v-layout>
+  </v-footer>
 </template>
 
 <script>
+import TopFooter from './Top'
+import BottomFooter from './Bottom'
+
 export default {
   name: 'AppFooter',
+  data: () => ({
+    links: [
+      'Home',
+      'About Us',
+      'Team',
+      'Services',
+      'Blog',
+      'Contact Us'
+    ]
+  }),
   props: {
     business: {
       type: Object,
@@ -28,8 +57,8 @@ export default {
     }
   },
   components: {
-    TopFooter: () => import('./Top'),
-    BottomFooter: () => import('./Bottom')
+    TopFooter,
+    BottomFooter
   },
   computed: {
     horizontalPadding () {

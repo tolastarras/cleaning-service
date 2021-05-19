@@ -1,7 +1,8 @@
 <template lang="html">
-  <v-footer
+  <v-card
+    dark
+    flat
     class="white--text py-4"
-    :fixed="false"
     height="auto"
   >
     <v-container>
@@ -41,7 +42,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </v-footer>
+  </v-card>
 </template>
 
 <script>
@@ -55,17 +56,17 @@ export default {
   },
   computed: {
     phoneLink () {
-      return 'tel:' + this.business.phone
+      return `tel: ${this.business.phone}`
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.v-footer {
+.v-card {
   box-sizing: border-box;
   font-size: $font-12;
-  background: darken($color-10, 4);
+  background: darken($color-10, 4) !important;
 
   a {
     text-decoration: none;

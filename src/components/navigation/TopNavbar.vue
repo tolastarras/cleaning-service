@@ -11,12 +11,12 @@
           class="hidden-md-and-up white--text"
           @click.stop="closeDrawer"
         />
-        <v-toolbar-title>
+        <v-toolbar-title class="logo">
           <router-link :to="{ name: 'home' }" tag="button">
             <img width="180" height="50" :src="logo" :alt="businessName"/>
           </router-link>
         </v-toolbar-title>
-        <v-spacer />
+        <v-spacer class="hidden-sm-and-down" />
         <v-toolbar-items class="hidden-sm-and-down">
           <router-link
             v-for="item in menuItems"
@@ -118,6 +118,12 @@ export default {
     &:hover {
       color: $color-02 !important;
     }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .logo {
+    margin: auto;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-content>
+  <v-card flat>
     <top-navbar
       :logo="logo"
       :scrolled="scrolled "
@@ -15,7 +15,7 @@
       @close-drawer="drawer = !drawer"
     />
     <parallax v-if="parallaxData" :data="parallaxData" />
-  </v-content>
+  </v-card>
 </template>
 
 <script>

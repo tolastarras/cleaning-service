@@ -1,26 +1,28 @@
 <template>
-  <v-container>
+  <v-content>
     <v-layout column>
       <v-flex xs12>
         <app-carousel :items="items" />
       </v-flex>
     </v-layout>
-    <v-layout row justify-center class="cards-content mb-4">
-      <v-flex xs12 xl8>
-        <v-layout align-center row wrap>
-          <v-flex
-            v-for="(card, index) in cards"
-            :key="card.title"
-            :class="spacing(index)"
-            xs12
-            lg4
-          >
-            <card class="mb-4" :card="card" :index="index" :total="cards.length" />
-          </v-flex>
-        </v-layout>
-      </v-flex>
-    </v-layout>
-  </v-container>
+      <v-layout row justify-center class="cards-content mb-4">
+        <v-flex xs12 xl8>
+          <v-container>
+            <v-layout align-center row wrap>
+              <v-flex
+                v-for="(card, index) in cards"
+                :key="card.title"
+                :class="spacing(index)"
+                xs12
+                lg4
+              >
+                <card class="mb-4" :card="card" :index="index" :total="cards.length" />
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-flex>
+      </v-layout>
+  </v-content>
 </template>
 
 <script>
@@ -45,13 +47,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.container {
-  max-width: 100%;
-
-  .cards-content {
-    margin-top: -5rem;
-    padding: 0 8em;
-  }
+.cards-content {
+  margin-top: -5rem;
+  padding: 0 8em;
 }
 
 @media (max-width: 1263px) {

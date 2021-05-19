@@ -12,7 +12,7 @@
               :src="srcImage"
               width="460"
               :alt="business.name"
-              class="pl-5 girl"
+              class="pl-5 girl mb-2"
             />
             <div v-html="content" />
           </v-card-text>
@@ -28,7 +28,12 @@
         </v-layout>
       </v-flex>
       <v-flex xs12 lg6>
-        <v-layout class="testimonials-layout" row wrap>
+        <v-layout
+          class="testimonials-layout"
+          :class="`mt-${this.$vuetify.breakpoint.mdAndUp ? 4 : 0}`"
+          row
+          wrap
+        >
           <v-flex order-xs4 xs12 offset-xs1>
             <v-card flat>
               <testimonials title="Clients comments!" />
@@ -45,7 +50,7 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'About',
-  mounted () {
+  updated () {
     const SMALL_DEVICE_WIDTH = 425
     if (this.documentWidth < SMALL_DEVICE_WIDTH) {
       const element = document.querySelector('.insert-image')
@@ -107,7 +112,9 @@ export default {
     margin-left: 0;
     padding: 2.5rem 0;
   }
+}
 
+@media (max-width: 734px) {
   .girl {
     width: 100% !important;
     margin-bottom: 1rem;

@@ -1,10 +1,9 @@
 <template lang="html">
-  <v-footer
-    :class="`py-4 mt-${$vuetify.breakpoint.smAndDown ? 0 : 5}`"
+  <v-card
     dark
+    flat
     height="auto"
-    :fixed="false"
-    color="white--text"
+    class="py-4 transparent white--text"
   >
     <v-container class="top-footer">
       <v-layout justify-space-between row>
@@ -81,7 +80,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </v-footer>
+  </v-card>
 </template>
 
 <script>
@@ -120,8 +119,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.v-footer {
-  background: $color-10;
+.v-card {
   box-sizing: border-box;
 
   a {
