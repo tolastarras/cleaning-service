@@ -25,7 +25,7 @@ export default {
   name: 'App',
   components: {
     AppHeader,
-    AppFooter: () => import(/* webpackChunkName: "footer" */ '@/components/navigation/footer')
+    AppFooter: () => import(/* webpackPreload: true */ /* webpackChunkName: "footer" */ '@/components/navigation/footer')
   },
   created () {
     this.init(data)
