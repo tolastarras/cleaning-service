@@ -6,8 +6,18 @@ Cleaning service site built using VueJs and Vuetify. It has a contact form that 
 ## Author
 [Tolastarras](https://github.com/tolastarras)
 
+### About
+Authentication|Database|Api
+:-:|:-:|:-:
+None|None|None
+
 ## License
 This project is licensed under the MIT License
 
 ### Tags
-VueJs, Vuetify
+<table>
+  <tr>
+    <td width="25%">VueJs</td>
+    <td width="25%">Vuetify</td>
+  </tr>
+</table>
