@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const API_URL = process.env.NODE_ENV === 'development' ? process.env.VUE_APP_BASE_URL_DEV : process.env.VUE_APP_BASE_API_URL_PROD
+const API_URL = process.env.NODE_ENV === 'development' ? process.env.VUE_APP_BASE_URL_DEV : process.env.VUE_APP_BASE_API_URL_PROD || 'localhost:8080'
 
 const apiClient = axios.create({
-  baseURL: `//${API_URL}`,
+  baseURL: `${API_URL}`,
   withCredentials: false,
   // timeout: 1000,
   headers: {

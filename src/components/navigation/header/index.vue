@@ -6,6 +6,7 @@
       :business-name="business.name"
       :menu-items="menuItems"
       @close-drawer="drawer = !drawer"
+      z-index="2"
     />
     <left-navbar
       :show-drawer="drawer"

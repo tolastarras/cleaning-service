@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container class="contact my-4">
+  <v-container class="contact my-5">
     <v-layout row wrap>
       <h1 class="text-xs-left display-2 primary-title font-weight-bold">
         Contact Us
@@ -73,9 +73,9 @@ export default {
     vertical-align: top;
     border: 2px solid $color-04;
     color: $color-04;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 8px;
-    width: 3.3rem !important;
+    width: 3.3rem;
   }
 
   .v-list__tile__content {
@@ -85,7 +85,7 @@ export default {
       height: auto;
       white-space: normal;
       line-height: 1.5rem;
-      font-size: $font-24;
+      font-size: $font-20;
       overflow: visible;
 
       &.access_time {

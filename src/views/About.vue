@@ -98,7 +98,7 @@ export default {
   .girl {
     float: right;
 
-    /deep/ .v-responsive__content {
+    ::v-deep .v-responsive__content {
       background: none !important;
     }
   }
